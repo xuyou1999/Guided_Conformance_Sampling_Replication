@@ -1,2 +1,10 @@
 # feedback_guided_sampling
-Repository for the implementation and evaluation of dynamic & feedback-based sampling procedures in the context of Process Mining
+
+This repository contains scripts, as well as used evaluation data for the guided sampling procedure for conformance checking scenarios, as described in "Sampling What Matters: Relevence-guided Sampling of Event Logs".
+Please cite this work as ...
+
+## Useage ##
+The syntax for starting a sampling procesdure is: ...
+
+## Benchmarking ##
+Additionally we provide a benchmarking script, that executes the sampling procedure ....
