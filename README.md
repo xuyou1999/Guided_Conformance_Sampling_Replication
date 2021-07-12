@@ -1,4 +1,4 @@
-# feedback_guided_sampling
+# Feedback-guided Sampling
 
 This repository contains scripts, as well as used evaluation data for the guided sampling procedure for conformance checking scenarios, as described in "Sampling What Matters: Relevence-guided Sampling of Event Logs" (under review), which learns correlations between trace properties and samplign goals (currently conformance checking) to steer the sampling to be more representative.
 
