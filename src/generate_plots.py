@@ -51,11 +51,12 @@ def plot_no_deviating_traces(df, input_name):
     plt.ylim((-5, 510))
 
     g = sns.boxplot(x="sample_size", y="deviating_traces", hue="approach", data=df)
+    plt.legend(loc='upper left', fontsize=18)
+
     g.legend_.texts[0].set_text('Random')
     g.legend_.texts[1].set_text('Longest')
     g.legend_.texts[2].set_text('Feature')
-    g.legend_.texts[3].set_text('Feature+Sim.')
-    plt.legend(loc='upper left', fontsize=18)
+    g.legend_.texts[3].set_text('Behavioural')
 
     plt.xlabel("Sample size", fontsize=20)
     plt.ylabel("No of deviating traces", fontsize = 20)
@@ -196,7 +197,7 @@ def plot_deviation_distributions(df, input_name):
     g.legend_.texts[0].set_text('Random')
     g.legend_.texts[1].set_text('Longest')
     g.legend_.texts[2].set_text('Feature')
-    g.legend_.texts[3].set_text('Feature+Sim.')
+    g.legend_.texts[3].set_text('Behavioural')
 
     plt.xlabel("Activity", fontsize = 20)
     plt.ylabel("Deviation frequency", fontsize = 20)
@@ -207,8 +208,10 @@ def plot_deviation_distributions(df, input_name):
     plt.axvline(1.5, ls="--", c="lightgrey")
     plt.axvline(2.5, ls="--", c="lightgrey")
     plt.axvline(3.5, ls="--", c="lightgrey")
-    plt.tight_layout()
     plt.xlim(-.51,4.51)
+    plt.ylim(-.1, .41)
+    plt.tight_layout()
+
     plt.savefig(os.path.join("figures", "deviation_distribution_" + input_name + ".pdf"), format="pdf")
     plt.clf()
 
@@ -255,7 +258,7 @@ def plot_knowledge_base_convergence(df, input_name):
 
     g.legend(loc='upper right', fontsize=18)
     g.legend_.texts[0].set_text('Feature')
-    g.legend_.texts[1].set_text('Feature+Sim.')
+    g.legend_.texts[1].set_text('Behavioural')
 
     plt.xlabel("No of sampled traces", fontsize=20)
     plt.ylabel("Abs. change", fontsize=20)

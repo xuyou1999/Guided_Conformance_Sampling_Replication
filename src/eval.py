@@ -11,8 +11,8 @@ from pm4py.objects.log.importer.xes import importer as xes_importer
 from pm4py.objects.petri_net.exporter import exporter as pnml_exporter
 from pm4py.algo.conformance.alignments.petri_net import algorithm as alignments
 
-import LogPartitioning
-from LogSampling import FeatureGuidedLogSampler, SequenceGuidedLogSampler, RandomLogSampler, LongestTraceVariantLogSampler
+import LogIndexing
+from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler, RandomLogSampler, LongestTraceVariantLogSampler
 from pm4py.objects.log.obj import EventLog as el
 from pm4py.algo.filtering.log.variants import variants_filter
 
@@ -52,7 +52,7 @@ def eval_partitions(log, log_name):
             pass
 
         if approach == "Feature":
-            partitioned_log, partition_time = LogPartitioning.FeatureBasedPartitioning().partition(log_name, log)
+            partitioned_log, partition_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log)
             for partition in partitioned_log.keys():
                 t.write(
                     ";".join((str(approach), str(len(partitioned_log)), str(partition),
@@ -175,7 +175,7 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                         .construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 if approach == "Feature":
-                    partitioned_log, pre_time = LogPartitioning.FeatureBasedPartitioning().partition(log_name, log)
+                    partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log)
                     sampling_controller = FeatureGuidedLogSampler(use_cache=True,
                                                                   alignment_cache=alignment_cache,
                                                                   preprocessing_time=pre_time)
@@ -396,7 +396,7 @@ def eval_sampling_batches(log, log_name, model, initial_marking, final_marking):
                     .construct_sample(log, model, initial_marking, final_marking, sample_size)
 
             if approach == "Feature":
-                partitioned_log, pre_time = LogPartitioning.FeatureBasedPartitioning().partition(log_name, log)
+                partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log)
                 sampling_controller = FeatureGuidedLogSampler(use_cache=True, alignment_cache=alignment_cache,
                                                               preprocessing_time=pre_time)
                 sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
