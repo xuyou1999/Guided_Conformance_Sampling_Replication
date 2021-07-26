@@ -1,6 +1,6 @@
 # Feedback-guided Sampling for Conformance Checking
 
-This repository contains scripts, as well as used evaluation data for the guided sampling procedure for conformance checking scenarios, as described in "Sampling What Matters: Relevence-guided Sampling of Event Logs" (under review), which learns correlations between trace properties and samplign goals (currently conformance checking) to steer the sampling to be more representative.
+This repository contains scripts, as well as used evaluation data for the guided sampling procedure for conformance checking scenarios, as described in "Sampling What Matters: Relevence-guided Sampling of Event Logs" (under review). The approach learns correlations between trace properties and sampling goals (currently conformance checking) to steer the sampling to be more representative.
 
 ## Usage ##
 The syntax for starting the sampling procedure from the command line interface is
@@ -49,4 +49,4 @@ If no index file is provided, all features and 3-grams are considered, and no di
 If you want to use the provided algorithms directly in your code, please have look at the function ```construct_sample``` in LogSampling.py, where the differnet algorithms are instantiated.
 
 ## Benchmarking and Evaluation ##
-Additionally we provide the benchmarking and evaluation script ```eval.py```, that repeatedly constructs sampels for provided log files using the different algorithms and writes the results in to .csv-files. The results, used within the publication, are located in the result directory.
+Additionally we provide the benchmarking and evaluation script ```eval.py```. The script repeatedly constructs samples for the provided log files using the different algorithms and writes the results into .csv-files. The explicit .csv-filed used during the evaluation in the publication are located under src/results
