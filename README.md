@@ -21,9 +21,9 @@ For instance, executing
 ```
 python3 Logsampling.py example.xes feature 200 example_index.xml --verbose
 ```
-creates a conformance sample of size 200 using the feature-based guided-sampling approach on the log file named 'example.xes'. Furthermore, features are created akin to the information provided in the file example_index.html.
+creates a conformance sample of size 200 using the feature-based guided-sampling approach on the log file named 'example.xes'. Furthermore, features are created akin to the information provided in the file example_index.xml .
 
-The structure of the index file is:
+The index file allows the specification of the used k-gram length, the considered features of the log, as well as what features need to be discretitized before sampling. Its syntactical structure is:
 ```xml
 <index>
   <k>2</k>
