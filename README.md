@@ -1,6 +1,6 @@
-# Relevence-guided Sampling for Conformance Checking
+# Relevance-guided Sampling for Conformance Checking
 
-This repository contains scripts, as well as used evaluation data for the guided sampling procedure for conformance checking scenarios, as described in "Sampling What Matters: Relevence-guided Sampling of Event Logs" (under review). The approach learns correlations between trace properties and sampling goals (currently conformance checking) to steer the sampling to be more representative.
+This repository contains scripts, as well as used evaluation data for the guided sampling procedure for conformance checking scenarios, as described in "Sampling What Matters: Relevance-guided Sampling of Event Logs" (under review). The approach learns correlations between trace properties and sampling goals (currently conformance checking) to steer the sampling to be more representative.
 
 ## Usage ##
 
