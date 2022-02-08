@@ -1,0 +1,5 @@
+log_name;n_traces;n_trace_variants;deviating_traces;total_deviations;num_deviating_activities;fitness
+Sepsis_Cases_-_Event_Log.xes;1050;846;712;1408;14;0.9345542437482569
+BPI_Challenge_2012.xes;13087;4366;7389;67935;21;0.764420509477276
+Road_Traffic_Fines_Management_Process.xes;150370;231;1860;1975;8;0.9972255001123848
+BPI_Challenge_2018.xes;43809;28457;39234;125202;38;0.9487037875420207
