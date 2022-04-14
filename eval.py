@@ -13,16 +13,12 @@ from pm4py.algo.conformance.alignments.petri_net import algorithm as alignments
 
 import LogIndexing
 from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler, RandomLogSampler, LongestTraceVariantLogSampler
-from pm4py.objects.log.obj import EventLog as el
-from pm4py.algo.filtering.log.variants import variants_filter
 
 # EVALUATION PARAMETER #
 log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
 approaches = ["Random", "Longest", "Feature", "Sequence"]
 
 samples_sizes = [100, 200, 300, 400, 500]
-#pruning_ps = [1, 2, 3, 4, 5]
-#quality_ps = [1, 5]
 repetitions = 10
 cached_alignments = True
 
@@ -31,7 +27,7 @@ def main():
     for log_name in log_names:
         log, model, initial_marking, final_marking = load_inputs(log_name, modelpath="models")
 
-        eval_partitions(log, log_name)
+        #eval_partitions(log, log_name)
         eval_quality(log, log_name, model, initial_marking, final_marking)
         #eval_runtime(log, log_name, model, initial_marking, final_marking)
         #eval_sampling_batches(log, log_name, model, initial_marking, final_marking)
@@ -50,9 +46,8 @@ def eval_partitions(log, log_name):
 
         if approach == "Longest":
             pass
-
         if approach == "Feature":
-            partitioned_log, partition_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log)
+            partitioned_log, partition_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log, index_file="index_files/"+log_name+".index")
             for partition in partitioned_log.keys():
                 t.write(
                     ";".join((str(approach), str(len(partitioned_log)), str(partition),
@@ -103,42 +98,28 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
         alignment_cache = {}
 
     #quick fix for BPI-2018 - remove traces for whom alignment has not been precomputed
-    print(f" > Log size: {len(log)}")
-    deleted = 0
-    del_list = []
-    variants = variants_filter.get_variants(log)
-    for variant in variants.keys():
-        #print(variant)
-        event_representation = ""
-        for event in variants[variant][0]:
-            event_representation = event_representation + " >> " + event["concept:name"]
-        if alignment_cache[event_representation] is None:
-            del_list.append(variant)
-            deleted += 1
+    #this should not be needed anymore
+    #print(f" > Log size: {len(log)}")
+    #deleted = 0
+    #del_list = []
+    #variants = variants_filter.get_variants(log)
+    #for variant in variants.keys():
+    #    event_representation = ""
+    #    for event in variants[variant][0]:
+    #        event_representation = event_representation + " >> " + event["concept:name"]
+    #    if alignment_cache[event_representation] is None:
+    #        del_list.append(variant)
+    #        deleted += 1
 
-    for item in del_list:
-         variants[item] = None
-
-
-    # for idx, trace in reversed(list(enumerate(log))):
-    #     event_representation = ""
-    #     for event in trace:
-    #         event_representation = event_representation + " >> " + event["concept:name"]
-    #     if alignment_cache[event_representation] is None:
-    #         print(f"    > Removing trace with empty alignment (idx = {idx})")
-    #         del_list.append(trace)
-    #         deleted += 1
-    #print(type(log), isinstance(log, list))
-    #print(dir(el))
-    #print(del_list)
-
-    log = variants_filter.apply(log, del_list , parameters={variants_filter.Parameters.POSITIVE: False})
-    print(len(log))
-
-    print(f" > Deleted {deleted} traces without precomputed alignments")
-    print(f" > New log size: {len(log)}")
+    #for item in del_list:
+    #     variants[item] = None
 
 
+    #log = variants_filter.apply(log, del_list , parameters={variants_filter.Parameters.POSITIVE: False})
+    #print(len(log))
+
+    #print(f" > Deleted {deleted} traces without precomputed alignments")
+    #print(f" > New log size: {len(log)}")
 
     fitness_results = open(os.path.join("results", "fitness_" + log_name + ".csv"), "w")
     fitness_results.write(
@@ -175,10 +156,11 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                         .construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 if approach == "Feature":
-                    partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log)
+                    partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log, index_file="index_files/"+log_name+".index")
                     sampling_controller = FeatureGuidedLogSampler(use_cache=True,
                                                                   alignment_cache=alignment_cache,
-                                                                  preprocessing_time=pre_time)
+                                                                  preprocessing_time=pre_time,
+                                                                  index_file="index_files/"+log_name+".index")
                     sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
                                                                   final_marking, partitioned_log, sample_size)
 
@@ -189,18 +171,6 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                                                                    alignment_cache=alignment_cache)
                     sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
                                                                   final_marking, sample_size)
-
-                # if approach == "Combined":
-                #     sampling_controller = CombinedLogSampler(log_name,
-                #                                              log,
-                #                                              k=3,
-                #                                              p=p,
-                #                                              batch_size=1,
-                #                                              window_size=3,
-                #                                              use_cache=True,
-                #                                              alignment_cache=alignment_cache)
-                #     sample = sampling_controller.construct_sample(log, model, initial_marking,
-                #                                                   final_marking, sample_size)
 
                 # get number of trace variants / constructed alignments
                 trace_variants = {}
@@ -222,28 +192,28 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                               str(sample.times["partitioning"]), str(sample.times["sampling"]),
                               str(sample.times["alignment"]) + "\n")))
 
-                # next, get dist of knowledge base to groudn truth
-                dist = ""
+                # next, get dist of knowledge base to ground truth
                 if approach != "Random" and approach != "Longest":
                     sample_knowledge_base = sample.correlations
                     ground_truth_correlations = None
                     if approach == "Feature":
                         ground_truth_correlations = pickle.load(
                             open(os.path.join("knowledge_base_cache", log_name + "_feature.knowledge_base"), "rb"))
+
                     if approach == "Sequence":
                         ground_truth_correlations = pickle.load(
                             open(os.path.join("knowledge_base_cache", log_name + "_sequence.knowledge_base"), "rb"))
-                    # if approach == "Combined":
-                    #     ground_truth_correlations = pickle.load(
-                    #         open(os.path.join("knowledge_base_cache", log_name + "_combined.knowledge_base"), "rb"))
 
-                    del_keys = []
-                    for key in ground_truth_correlations.keys():
-                        if key not in sample_knowledge_base:
-                            del_keys.append(key)
+                    #Not needed anymore, was a workaround for filtered logs
+                    #del_keys = []
+                    #for key in ground_truth_correlations.keys():
+                    #    if key not in sample_knowledge_base.keys():
+                    #        del_keys.append(key)
 
-                    for key in del_keys:
-                        del ground_truth_correlations[key]
+                    #for key in del_keys:
+                    #    print("DELETING MISSING KEY IN SAMPLE: " + key)
+                    #    del ground_truth_correlations[key]
+
                     a = np.array([x.correlation for x in ground_truth_correlations.values()])
                     b = np.array([x.correlation for x in sample_knowledge_base.values()])
                     dist = numpy.linalg.norm(a - b)
@@ -307,8 +277,8 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
     activity_results.close()
 
 
-# evaluates total runtime of alignment calculations on increasing sampek sizes until either one run exceeds timeout or
-# compelte log has been considered
+# evaluates total runtime of alignment calculations on increasing sample sizes until either one run exceeds timeout or
+# complete log has been considered
 def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=10800):
     runtime_results = open(os.path.join("results", "alignment_runtime_" + log_name + ".csv"), "w")
     runtime_results.write(
@@ -408,18 +378,6 @@ def eval_sampling_batches(log, log_name, model, initial_marking, final_marking):
                                                                use_cache=True, alignment_cache=alignment_cache)
                 sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
                                                               final_marking, sample_size)
-
-            # if approach == "Combined":
-            #     sampling_controller = CombinedLogSampler(log_name,
-            #                                              log,
-            #                                              k=3,
-            #                                              p=p,
-            #                                              batch_size=1,
-            #                                              window_size=3,
-            #                                              use_cache=True,
-            #                                              alignment_cache=alignment_cache)
-            #     sample = sampling_controller.construct_sample(log, model, initial_marking,
-            #                                                   final_marking, sample_size)
 
             print(" > " + str(approach) + " : " + str(sample.times["partitioning"]) + ", " + str(
                 sample.times["alignment"]) + ", "

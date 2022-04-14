@@ -4,12 +4,9 @@ from pm4py.objects.log.importer.xes import importer as xes_importer
 from pm4py.objects.petri_net.exporter import exporter as pnml_exporter
 
 from CompleteLogAnalysis.CompleteLogKnowledgeBaseCalculation import CompleteFeatureLogAnalyzer, CompleteSequenceLogAnalyzer
-from LogSampling import ConstantList
-import LogPartitioning
+from SamplingAlgorithms import ConstantList
+import LogIndexing
 import pickle
-
-# import pm4py
-# from pm4py.algo.conformance.alignments.petri_net import algorithm as alignments
 
 """
 Performs analysis on complete logs instead of samples using multi-threaded computations.
@@ -22,8 +19,8 @@ Performs analysis on complete logs instead of samples using multi-threaded compu
 # Sepsis_Cases_-_Event_Log.xes
 
 def main(log_name, log, aligned_traces):
-    partitioned_log, t = LogPartitioning.FeatureBasedPartitioning().partition(log_name, log)
-    feature_analyzer = CompleteFeatureLogAnalyzer()
+    partitioned_log, t = LogIndexing.FeatureBasedPartitioning().partition(log_name, log, index_file="index_files/"+log_name+".index")
+    feature_analyzer = CompleteFeatureLogAnalyzer(index_file="index_files/"+log_name+".index")
     feature_knowledge_base = feature_analyzer.analyze_log(log_name, log, aligned_traces, partitioned_log, verbose=True)
 
     pickle.dump(feature_knowledge_base, open(log_name + "_feature.knowledge_base", "wb"))
@@ -64,8 +61,8 @@ if __name__ == '__main__':
     t_start = time.time()
     import pm4py
 
-    log_names = ["BPI_Challenge_2018.xes"]
-    #log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
+    #log_names = ["BPI_Challenge_2018.xes"]
+    log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
     for log_name in log_names:
         print(log_name)
         log = pm4py.read_xes(os.path.join("logs", log_name))

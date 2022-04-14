@@ -1,7 +1,7 @@
 import collections
 
 import feature_encodings
-from feature_encodings import create_feature_encoding, create_feature_encoding_from_index
+from feature_encodings import create_feature_encoding_from_index
 from itertools import combinations
 from tqdm import tqdm
 import sys
@@ -392,98 +392,6 @@ class SequenceBasedLogPreprocessor:
         else:
             sample_indices.extend(candidates)
 
-        return sample_indices
-
-
-class CombinedLogPartitioning:
-    """
-    Partitions the log based on activity sequence k-grams and event+trace features.
-    """
-    def __init__(self):
-        pass
-
-    def partition(self, log_name, log, k=3, p=5, verbose=False):
-        preprocessing_time = time.time()
-        if verbose:
-            print("Partitionining Log")
-
-        # Partitioning based on event+trace features
-        data, feature_names = create_feature_encoding(log, log_name, include_event_level=True, include_trace_level=True)
-        partitioned_log = collections.defaultdict(list)
-
-        for idx, encoded_trace in enumerate(data):
-            for i in range(len(feature_names)):
-                if encoded_trace[i] != 0:
-                    partitioned_log[feature_names[i]].append(idx)
-
-        # Partitioning based on sequence features
-        self.traces = [self._get_activity_sequence(t) for t in log]
-        self.trace_k_grams = [self._get_k_grams(t, k) for t in self.traces]
-
-        for idx, trace_k_grams in enumerate(self.trace_k_grams):
-            for k_gram in trace_k_grams:
-                partitioned_log[k_gram].append(idx)
-
-        del_list = []
-        for partition in partitioned_log.keys():
-            if len(partitioned_log[partition]) < p:
-                del_list.append(partition)
-        for partition in del_list:
-            if verbose:
-                print(f"Pruning away {partition} from partitioned log")
-            del partitioned_log[partition]
-
-        if verbose:
-            print(f"There are {len(partitioned_log)} features in the event log for p={p}")
-
-        return partitioned_log, time.time() - preprocessing_time
-
-    def _get_activity_sequence(self, trace):
-        """
-        Transforms a trace to a sequence of activities.
-        """
-        return [*map(lambda x: x['concept:name'], trace)]
-
-    def _get_k_grams(self, trace, k=3):
-        """
-        Returns the k-grams (aka k-shingles) of an activity sequence.
-        """
-        k_grams = set()
-        for i in range(len(trace) - k + 1):
-            k_grams.add(tuple(trace[i:i + k]))
-
-        # Fallback for traces that are shorter than k
-        if len(k_grams) == 0 and k > 1:
-            return self._get_k_grams(trace, k - 1)
-        return k_grams
-
-    def get_ordered_k_grams(self, trace_index, k):
-        """
-        Returns the k-grams (aka k-shingles) of an activity sequence, in the correct order.
-        """
-        trace = self.traces[trace_index]
-        k_grams = []
-        for i in range(len(trace) - k + 1):
-            k_grams.append(tuple(trace[i:i + k]))
-
-        # Fallback for traces that are shorter than k
-        if len(k_grams) == 0 and k > 1:
-            return self.get_ordered_k_grams(trace_index, k - 1)
-        return k_grams
-
-    def get_random_sample(self, sample_size, indices=None):
-        """
-        Returns a random sample of trace indices, either from the whole log or from a selected set of indices.
-        params:
-            sample_size: The size of the sample to produce.
-            (optional) indices: The indices to sample from.
-        """
-        if indices:
-            if len(indices) <= sample_size:
-                return indices
-            sample_indices = random.sample(indices, sample_size)
-        else:
-            sample_indices = random.sample([*range(len(self.traces))], sample_size)
         return sample_indices
 
 class FeatureVectorBasedPartitioning:

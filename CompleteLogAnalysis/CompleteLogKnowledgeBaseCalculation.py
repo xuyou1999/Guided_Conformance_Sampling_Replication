@@ -2,22 +2,22 @@ import pickle
 
 import Coocurrence
 import feature_encodings
-from LogSampling import Sample
-from feature_encodings import create_feature_encoding
+from SamplingAlgorithms import Sample
 from tqdm import tqdm
 
-from LogPartitioning import SequenceBasedLogPreprocessor, CombinedLogPartitioning
+from LogIndexing import SequenceBasedLogPreprocessor
 
 #TODO get rid of skipping of traces, for which no alignment has been precomputed
 class CompleteFeatureLogAnalyzer:
     """
     Computes feature correlations for the complete log.
     """
-    def __init__(self, window_size=3, n_gram_size=3):
+    def __init__(self, window_size=3, n_gram_size=3, index_file=None):
         self.partitioned_log = {}
         self.knowledge_base = {}
         self.window_size = window_size
         self.n_gram_size = n_gram_size
+        self.index_file = index_file
 
     def analyze_log(self, log_name, log, aligned_traces, partitioned_log, verbose=False):
 
@@ -84,8 +84,9 @@ class CompleteFeatureLogAnalyzer:
         non_conformance_in_trace = False
         for idx, is_deviating in enumerate(deviation_contexts):
             current_event = {trace[idx]}
-            data, features = create_feature_encoding([current_event], log_name,
-                                                     considered_feature_types=feature_encodings.feature_types.EVENT_LEVEL)
+            data, features = feature_encodings.create_feature_encoding_from_index([current_event],
+                                                                                  feature_encodings.feature_types.EVENT_LEVEL,
+                                                                                  self.index_file)
             if is_deviating:
                 deviating_features.extend(features)
                 non_conformance_in_trace = True
@@ -107,8 +108,9 @@ class CompleteFeatureLogAnalyzer:
                 conforming_features.append(events_string)
 
         # add trace-level feature to set, either conforming or deviating, depending on existence of non-conformance
-        data, features = create_feature_encoding([trace], log_name,
-                                                 considered_feature_types=feature_encodings.feature_types.TRACE_LEVEL)
+        data, features = feature_encodings.create_feature_encoding_from_index([trace],
+                                                 feature_encodings.feature_types.TRACE_LEVEL,
+                                                 self.index_file)
         if non_conformance_in_trace:
             deviating_features.extend(features)
         else:

@@ -9,7 +9,7 @@ import seaborn as sns
 
 
 def main():
-    inputs = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
+    inputs = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes"]#, "BPI_Challenge_2018.xes"]
     base_dir = "results"
     sns.set_theme(style="ticks")
 
@@ -21,9 +21,9 @@ def main():
     # plot_fitness(df, input_name)
     # plot_preprocessing_sampling_runtimes(df, input_name)
 
-    for input_name in inputs:
-        df = pd.read_csv(os.path.join(base_dir, "deviation_distribution_" + input_name + ".csv"), delimiter=";")
-        plot_deviation_distributions(df, input_name)
+    #for input_name in inputs:
+        #df = pd.read_csv(os.path.join(base_dir, "deviation_distribution_" + input_name + ".csv"), delimiter=";")
+        #plot_deviation_distributions(df, input_name)
 
     # for input_name in inputs:
     #    df = pd.read_csv(os.path.join(base_dir, "activities_" + input_name + ".csv"), delimiter=";")
