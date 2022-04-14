@@ -66,4 +66,4 @@ If no index file is provided, the approach considers all features, as well as 3-
 If you want to incorporate the procedure in your project, please have a look at the function ```construct_sample``` in LogSampling.py, that serves as the top-level entrypoint of the approach.
 
 ## Benchmarking and Evaluation ##
-Additionally, we provide the benchmarking and evaluation script ```eval.py```. The script repeatedly constructs samples for the provided log files using different sampling methods and writes the results into .csv-files. The explicit .csv-filed used during the evaluation in the publication are located under 'src/results'
+Additionally, we provide the benchmarking and evaluation script ```eval.py```. The script repeatedly constructs samples for the provided log files using different sampling methods and writes the results into .csv-files. The explicit .csv-filed used during the evaluation in the publication are located under 'results'
