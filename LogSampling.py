@@ -16,7 +16,7 @@ def construct_sample(log_name, model_name, algorithm, sample_size, index_file, a
     #TODO turn this into optional parameter cached_alignments, that, if set, uses the specified file to construct the alignment index
     #TODO do we even want this in the final published code?
 
-    use_cache = True
+    use_cache = False
 
     if alignment_file is not None:
         print("Quality Evaluation: Loading precomputed alignments...")
