@@ -12,12 +12,12 @@ from pm4py.objects.petri_net.exporter import exporter as pnml_exporter
 from pm4py.algo.conformance.alignments.petri_net import algorithm as alignments
 
 import LogIndexing
-from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler, RandomLogSampler, LongestTraceVariantLogSampler
+from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler, RandomLogSampler, \
+    LongestTraceVariantLogSampler
 
 # EVALUATION PARAMETER #
 log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
 approaches = ["Random", "Longest", "Feature", "Sequence"]
-
 samples_sizes = [100, 200, 300, 400, 500]
 repetitions = 10
 cached_alignments = True
@@ -27,27 +27,29 @@ def main():
     for log_name in log_names:
         log, model, initial_marking, final_marking = load_inputs(log_name, modelpath="models")
 
-        #eval_partitions(log, log_name)
+        eval_partitions(log, log_name)
         eval_quality(log, log_name, model, initial_marking, final_marking)
-        #eval_runtime(log, log_name, model, initial_marking, final_marking)
-        #eval_sampling_batches(log, log_name, model, initial_marking, final_marking)
+        eval_runtime(log, log_name, model, initial_marking, final_marking)
+
 
 
 def eval_partitions(log, log_name):
+    """
+    For a given log, for each of the guided sampling procedures, constructs the log index, and writes partition
+    statistics to partitions_<log_name>.csv
+    """
     t = open(os.path.join("results", "partitions_" + log_name + ".csv"), "w")
     t.write("approach;total_size;partition;partition_size\n")
 
-    #for p in pruning_ps:
-    partitioning = None
     for approach in approaches:
         print("Partition Evaluation: " + str(log_name) + " : " + str(approach))
         if approach == "Random":
             pass
-
         if approach == "Longest":
             pass
         if approach == "Feature":
-            partitioned_log, partition_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log, index_file="index_files/"+log_name+".index")
+            partitioned_log, partition_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log,
+                                                                                               index_file="index_files/" + log_name + ".index")
             for partition in partitioned_log.keys():
                 t.write(
                     ";".join((str(approach), str(len(partitioned_log)), str(partition),
@@ -63,26 +65,25 @@ def eval_partitions(log, log_name):
                 t.write(
                     ";".join((str(approach), str(len(partitioning)), str(partition),
                               str(len(partitioning[partition])) + "\n")))
-
-        #additional analysis of partition sizes after potentialpruning
-        # for i in range (0,6):
-        #     del_list = []
-        #     for partition in partitioning.keys():
-        #         if len(partitioning[partition])<i:
-        #             del_list.append(partition)
-        #     for partition in del_list:
-        #         del partitioning[partition]
-        #     print(f"Approch: {approach}, Pruning Cutoff: {i}, Length: {len(partitioning)}")
     t.close()
 
 
-def jaccard_sim(s, t):
-    if len(s) == 0 and len(t) == 0:
-        return 1
-    return float(len(s.intersection(t)) / float(len(s.union(t))))
-
-
 def eval_quality(log, log_name, model, initial_marking, final_marking):
+    """
+    For a given log and model, for each sampling procedure, repeatedly executes the complete sampling chain (for guided
+    approaches this includes partitioning + sampling), writing different stats to files.
+    The files are:
+        fitness_<log_name>.csv
+            for each repetition, sample fitness, number of deviating traces,
+            number of deviating activities, runtimes sampling + partitioning
+        knowledge_base_convergence_<log_name>.csv
+            for each repetition, for each drawn trace, absolute change in knowledge based induced by this trace,
+            the distance in correlations to the knowledge base correlations evaluated over the complete log
+        knowledge_base_correlation_<log_name>.csv
+            for each repetition, each considered feature in the knowledge with its correlation to deviations
+        activities_<log_name>.csv
+            for each repetition, statistics about the number of activities found to be deviating
+    """
     if cached_alignments:
         print("Quality Evaluation: Loading precomputed alignments...")
         aligned_traces = pickle.load(open(os.path.join("alignment_cache", log_name + ".align"), "rb"))
@@ -97,34 +98,11 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
     else:
         alignment_cache = {}
 
-    #quick fix for BPI-2018 - remove traces for whom alignment has not been precomputed
-    #this should not be needed anymore
-    #print(f" > Log size: {len(log)}")
-    #deleted = 0
-    #del_list = []
-    #variants = variants_filter.get_variants(log)
-    #for variant in variants.keys():
-    #    event_representation = ""
-    #    for event in variants[variant][0]:
-    #        event_representation = event_representation + " >> " + event["concept:name"]
-    #    if alignment_cache[event_representation] is None:
-    #        del_list.append(variant)
-    #        deleted += 1
-
-    #for item in del_list:
-    #     variants[item] = None
-
-
-    #log = variants_filter.apply(log, del_list , parameters={variants_filter.Parameters.POSITIVE: False})
-    #print(len(log))
-
-    #print(f" > Deleted {deleted} traces without precomputed alignments")
-    #print(f" > New log size: {len(log)}")
-
     fitness_results = open(os.path.join("results", "fitness_" + log_name + ".csv"), "w")
     fitness_results.write(
         "approach;sample_size;repetition;trace_variants;deviating_traces;total_deviations;num_deviating_activities"
         ";fitness;time_partitioning;time_sampling;time_alignments\n")
+
     knowledge_base_results = open(os.path.join("results", "knowledge_base_convergence_" + log_name + ".csv"), "w")
     knowledge_base_results.write(
         "approach;sample_size;repetition;dist_to_baseline;first_positive_at;trace_idx;cor_change\n")
@@ -132,13 +110,12 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
     correlation_results = open(os.path.join("results", "knowledge_base_correlations_" + log_name + ".csv"), "w")
     correlation_results.write("approach;sample_size;repetition;feature;informative;correlation\n")
 
-    deviation_dist = open(os.path.join("results", "deviation_distribution_" + log_name + ".csv"), "w")
-    deviation_dist.write("approach;sample_size;repetition;activity;prob\n")
+    # deviation_dist = open(os.path.join("results", "deviation_distribution_" + log_name + ".csv"), "w")
+    # deviation_dist.write("approach;sample_size;repetition;activity;prob\n")
 
     activity_results = open(os.path.join("results", "activities_" + log_name + ".csv"), "w")
     activity_results.write("approach;sample_size;avg_dev_activities;stddev;avg_pw_similarity;stddev\n")
 
-    # TODO make nicer
     for approach in approaches:
         for sample_size in samples_sizes:
             deviating_activities = []
@@ -156,11 +133,12 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                         .construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 if approach == "Feature":
-                    partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log, index_file="index_files/"+log_name+".index")
+                    partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log,
+                                                                                                 index_file="index_files/" + log_name + ".index")
                     sampling_controller = FeatureGuidedLogSampler(use_cache=True,
                                                                   alignment_cache=alignment_cache,
                                                                   preprocessing_time=pre_time,
-                                                                  index_file="index_files/"+log_name+".index")
+                                                                  index_file="index_files/" + log_name + ".index")
                     sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
                                                                   final_marking, partitioned_log, sample_size)
 
@@ -180,7 +158,6 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                         event_representation = event_representation + " >> " + event["concept:name"]
 
                     if event_representation not in trace_variants:
-                        # TODO ugly :(
                         trace_variants[event_representation] = ""
 
                 print(" > " + str(sample.times["partitioning"]) + ", " + str(sample.times["alignment"]) + ", "
@@ -203,16 +180,6 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                     if approach == "Sequence":
                         ground_truth_correlations = pickle.load(
                             open(os.path.join("knowledge_base_cache", log_name + "_sequence.knowledge_base"), "rb"))
-
-                    #Not needed anymore, was a workaround for filtered logs
-                    #del_keys = []
-                    #for key in ground_truth_correlations.keys():
-                    #    if key not in sample_knowledge_base.keys():
-                    #        del_keys.append(key)
-
-                    #for key in del_keys:
-                    #    print("DELETING MISSING KEY IN SAMPLE: " + key)
-                    #    del ground_truth_correlations[key]
 
                     a = np.array([x.correlation for x in ground_truth_correlations.values()])
                     b = np.array([x.correlation for x in sample_knowledge_base.values()])
@@ -240,21 +207,21 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                             ";".join((str(approach), str(sample_size), str(i), str(name), str(False),
                                       str(correlations[name]) + "\n")))
 
-                deviating_activities.append(set(sample.activity_deviations.keys()))
-
-                total_deviations = sample.total_deviations
-                distribution = {}
-                for deviating_activity in sample.activity_deviations.keys():
-                    distribution[deviating_activity] = sample.activity_deviations[
-                                                           deviating_activity] / total_deviations
-                sorted_dist = sorted(distribution.items(), key=lambda item: item[1])
-                sorted_dist.reverse()
-                for deviation in sorted_dist:
-                    deviation_dist.write(";".join((str(approach),
-                                                   str(sample_size),
-                                                   str(i),
-                                                   str(deviation[0]),
-                                                   str(deviation[1]) + "\n")))
+                # deviating_activities.append(set(sample.activity_deviations.keys()))
+                #
+                # total_deviations = sample.total_deviations
+                # distribution = {}
+                # for deviating_activity in sample.activity_deviations.keys():
+                #     distribution[deviating_activity] = sample.activity_deviations[
+                #                                            deviating_activity] / total_deviations
+                # sorted_dist = sorted(distribution.items(), key=lambda item: item[1])
+                # sorted_dist.reverse()
+                # for deviation in sorted_dist:
+                #     deviation_dist.write(";".join((str(approach),
+                #                                    str(sample_size),
+                #                                    str(i),
+                #                                    str(deviation[0]),
+                #                                    str(deviation[1]) + "\n")))
 
             # Compute deviating activity stats
             pw_similarities = []
@@ -273,13 +240,23 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
     fitness_results.close()
     knowledge_base_results.close()
     correlation_results.close()
-    deviation_dist.close()
+    # deviation_dist.close()
     activity_results.close()
+
+
+def jaccard_sim(s, t):
+    if len(s) == 0 and len(t) == 0:
+        return 1
+    return float(len(s.intersection(t)) / float(len(s.union(t))))
 
 
 # evaluates total runtime of alignment calculations on increasing sample sizes until either one run exceeds timeout or
 # complete log has been considered
 def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=10800):
+    """
+    For a given log and model, samples n traces, constructing alignments for newly sampled trace variants, until
+    n trace have been sampled, or a timeout is reached. Results are written to alignment_runtime_<log_name>.csv
+    """
     runtime_results = open(os.path.join("results", "alignment_runtime_" + log_name + ".csv"), "w")
     runtime_results.write(
         "sample_size;time\n")
@@ -314,23 +291,8 @@ def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=1
         if (not timeout_reached) and mean_runtime * len(log) < timeout:
             print(f" > FULL LOG ANALYSIS (Expected time={mean_runtime * len(log)})")
             start_t = time.time()
-            model_cost_function = dict()
-            sync_cost_function = dict()
-            for t in model.transitions:
-                if t.label is not None:
-                    model_cost_function[t] = 1
-                    sync_cost_function[t] = 0
-                else:
-                    model_cost_function[t] = 0
 
-            # Will always return 1, for every index
-            trace_cost_function = ConstantList(1)
-
-            alignment_params = {alignments.Parameters.PARAM_MODEL_COST_FUNCTION: model_cost_function,
-                                alignments.Parameters.PARAM_SYNC_COST_FUNCTION: sync_cost_function,
-                                alignments.Parameters.PARAM_TRACE_COST_FUNCTION: trace_cost_function}
-
-            alignments.apply(log, model, initial_marking, final_marking, parameters=alignment_params)
+            alignments.apply(log, model, initial_marking, final_marking, parameters=construct_alignment_param(model))
             total_t = time.time() - start_t
             print(" > " + str(str(total_t)))
 
@@ -343,49 +305,10 @@ def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=1
     runtime_results.close()
 
 
-def eval_sampling_batches(log, log_name, model, initial_marking, final_marking):
-    sample_size = 500
-
-    aligned_traces = pickle.load(open(os.path.join("alignment_cache", log_name + ".align"), "rb"))
-    trace_keys = []
-    for trace in log:
-        event_representation = ""
-        for event in trace:
-            event_representation = event_representation + " >> " + event["concept:name"]
-        trace_keys.append(event_representation)
-
-    assert (len(trace_keys) == len(log))
-    alignment_cache = dict(zip(trace_keys, aligned_traces))
-
-    print(str(log_name))
-    for approach in approaches:
-        for i in range(5):
-            sample = None
-            if approach == "Random":
-                sample = RandomLogSampler(use_cache=True, alignment_cache=alignment_cache) \
-                    .construct_sample(log, model, initial_marking, final_marking, sample_size)
-
-            if approach == "Feature":
-                partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log)
-                sampling_controller = FeatureGuidedLogSampler(use_cache=True, alignment_cache=alignment_cache,
-                                                              preprocessing_time=pre_time)
-                sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
-                                                              final_marking, partitioned_log, sample_size)
-
-            if approach == "Sequence":
-                sampling_controller = SequenceGuidedLogSampler(log,
-                                                               batch_size=1,
-                                                               use_cache=True, alignment_cache=alignment_cache)
-                sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
-                                                              final_marking, sample_size)
-
-            print(" > " + str(approach) + " : " + str(sample.times["partitioning"]) + ", " + str(
-                sample.times["alignment"]) + ", "
-                  + str(sample.times["sampling"]))
-        print()
-
-
 def load_inputs(log_name, modelpath=None):
+    """
+    loads a .xes-log, and discovers a model from it, if no model is present already
+    """
     log = xes_importer.apply(os.path.join("logs", log_name))
     model = None
     if modelpath is None or not os.path.exists(os.path.join(str(modelpath), str(log_name) + ".pnml")):
@@ -398,6 +321,24 @@ def load_inputs(log_name, modelpath=None):
         model, initial_marking, final_marking = pm4py.read_pnml(os.path.join(str(modelpath), str(log_name) + ".pnml"))
     print("Done")
     return log, model, initial_marking, final_marking
+
+
+def construct_alignment_param(model):
+    """
+    constructs the cost function used for alignment construction
+    """
+    model_cost_function = dict()
+    sync_cost_function = dict()
+    for t in model.transitions:
+        if t.label is not None:
+            model_cost_function[t] = 1
+            sync_cost_function[t] = 0
+        else:
+            model_cost_function[t] = 0
+    trace_cost_function = ConstantList(1)
+    return {alignments.Parameters.PARAM_MODEL_COST_FUNCTION: model_cost_function,
+                        alignments.Parameters.PARAM_SYNC_COST_FUNCTION: sync_cost_function,
+                        alignments.Parameters.PARAM_TRACE_COST_FUNCTION: trace_cost_function}
 
 
 class ConstantList:
