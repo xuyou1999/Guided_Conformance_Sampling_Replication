@@ -5,32 +5,39 @@ This repository contains an implementation, as well as the used experimental res
 The proposed sampling procedures guide the selection of traces to be included in a sample by learning which features of a trace correlate with trace properties of interest (so far we used deviating traces as interesting).
 
 ## How to use ##
-
-
 ### Using the command line interface ###
 To generate a sample of the log from the command line, run:
 
 ```
 python3 Logsampling.py <-index_file INDEX_FILE> <feature|behavioural> <sample size> <log_file> <model_file>
 ```
+
 The parameters are
 * ``algorithm`` - the indexing type to use. Can be either "feature" or "behavioural"
-* ``sample size`` - the size of the final sample to be generated
+* ``sample size`` - the desired sample size
 * ``log_file`` - the provided log file, in .xes format
 * ``model_file`` - the model file used during sampling, in .pnml format
-* ``(Optional) index_file`` - the index file containing information on considered features for the indexing phase
+* ``index_file`` - (Optional)  the index file, containing the features to consider during sampling
 
 ### Invoking the classes from code ###
-To directly invoke the provided classes in your own project, add the following lines to your project:
+Alternatively, you can invoke the provided classes in your own project. To do this, add the following lines to your project:
 
 #### Feature-based ####
-
+```python
+partitioned_log = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
+sampler = FeatureGuidedLogSampler(index_file=index_file)
+sample = sampler.construct_sample(log, model, initial_marking, final_marking, partitioned_log, sample_size)
+```
 
 #### Behavioural-based ####
+```python
+sampler = SequenceGuidedLogSampler(log, batch_size=5, index_file=index_file)
+sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
+```
 
-### Index Files ###
-
-To specify, what log properties should be taken into account for the relevance-guided log sampling procedure, you can specify an index file in .xml-format, that describes the trace-level attributes, event-level attributes, k-gram lengths and potential preceeding discreditization steps, that comprise the built feature index.
+## Index Files ##
+By providing an index-file, you can specify, what log attributes may be considered as relevant during the generation of the sample.
+In this xml-file you can specify the trace-level attributes, event-level attributes, k-gram lengths and potential preceeding discreditization steps, that comprise the feature index, that guides the sampling procedure.
 
 The structure of the .xml-file is as follows
 ```xml
@@ -62,14 +69,14 @@ The structure of the .xml-file is as follows
   </features>
 </index>
 ```
-If no index file is provided, the approach considers all features, as well as 3-grams, and no discretization step is conducted.
-If you want to incorporate the procedure in your project, please have a look at the function ```construct_sample``` in LogSampling.py, that serves as the top-level entrypoint of the approach.
+If no index file is provided, all features without discretization, as well as 3-grams, are considered.
 
 ## Evaluation and result files ##
-Additionally, we provide the benchmarking and evaluation script ```eval.py```. The script repeatedly constructs samples for the provided log files using different sampling methods and writes the results into .csv-files. The explicit .csv-filed used during the evaluation in the publication are located under 'results'
+Under [results](https://github.com/MartinKabierski/Guided_Conformance_Sampling/tree/MartinKabierski-patch-1/results/ICPM_2021), we provide the scripts used for the experimental evaluation of the proposed sampling procedures ([eval.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/eval.py)) and the plot generation ([generate_plots.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/generate_plots.py)). Furthermore, the directory contains the result files generated during the experimental evaluation.
+
 
 ## Citing this work ##
-If you use this repository, please cite the following paper:
+If you use this repository, please cite the article:
 ```
 @INPROCEEDINGS{9576875,
   author={Kabierski, Martin and 
