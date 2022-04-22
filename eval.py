@@ -245,6 +245,9 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
 
 
 def jaccard_sim(s, t):
+    """
+    Computes the Jaccard similarity of two sets s and t
+    """
     if len(s) == 0 and len(t) == 0:
         return 1
     return float(len(s.intersection(t)) / float(len(s.union(t))))
