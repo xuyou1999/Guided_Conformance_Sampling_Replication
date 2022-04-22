@@ -35,7 +35,7 @@ sampler = SequenceGuidedLogSampler(log, batch_size=5, index_file=index_file)
 sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
 ```
 
-## Index Files ##
+## Index files ##
 By providing an index-file, you can specify, what log attributes may be considered as relevant during the generation of the sample.
 In this xml-file you can specify the trace-level attributes, event-level attributes, k-gram lengths and potential preceeding discreditization steps, that comprise the feature index, that guides the sampling procedure.
 
@@ -71,8 +71,8 @@ The structure of the .xml-file is as follows
 ```
 If no index file is provided, all features without discretization, as well as 3-grams, are considered.
 
-## Evaluation and result files ##
-Under [results](https://github.com/MartinKabierski/Guided_Conformance_Sampling/tree/master/results), we provide the scripts used for the experimental evaluation of the proposed sampling procedures ([eval.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/eval.py)) and plot generation ([generate_plots.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/generate_plots.py)). Furthermore, the directory contains the .csv-files and the plots generated using those scripts, that were used in the article.
+## Evaluation scripts and data ##
+Under [results](https://github.com/MartinKabierski/Guided_Conformance_Sampling/tree/master/results), we provide the scripts used for experimental evaluation([eval.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/eval.py)) and plot generation([generate_plots.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/generate_plots.py)), as well as the .csv-files and plots, that were generated using these scripts and used for the article.
 
 
 ## Citing this work ##
