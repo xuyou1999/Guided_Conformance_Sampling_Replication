@@ -46,9 +46,6 @@ def main():
 
 
 def plot_no_deviating_traces(df, input_name):
-    """
-    Plots, for each sampling procedure, the number of sampled deviating traces for different sample sizes
-    """
     print("> Deviating Traces")
     # plt.figure(figsize=(6, 5))
     plt.ylim((-5, 510))

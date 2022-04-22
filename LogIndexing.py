@@ -18,7 +18,7 @@ class FeatureBasedPartitioning:
 
     # TODO properly include index file
     # returns indices of traces in log
-    def partition(self, logname, log, index_file=None, verbose=False):
+    def partition(self, log, index_file=None, verbose=False):
         preprocessing_time = time.time()
         if verbose:
             print("Partitionining Log")
