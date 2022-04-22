@@ -1,36 +1,43 @@
 # Relevance-guided Sampling for Conformance Checking
 
-This repository contains scripts, as well as used evaluation data for the guided sampling procedure for conformance checking scenarios, as described in "Sampling What Matters: Relevance-guided Sampling of Event Logs" (under review). The approach learns correlations between trace properties and sampling goals (currently conformance checking) to steer the sampling to be more representative.
+This repository contains an implementation, as well as the used experimental result data for the article ["Sampling What Matters: Relevance-guided Sampling of Event Logs"](https://ieeexplore.ieee.org/document/9576875).
 
-## Usage ##
+The proposed sampling procedures guide the selection of traces to be included in a sample by learning which features of a trace correlate with trace properties of interest (so far we used deviating traces as interesting).
 
-### Sampling a log ###
-The syntax for executing a guided sampling-procedure of an event log is
+## How to use ##
+### Using the command line interface ###
+To generate a sample of the log from the command line, run:
 
 ```
-python3 Logsampling.py [--verbose] [-index_file INDEX_FILE] [log_file] [model_file] [algorithm] [sample size]
+python3 Logsampling.py <-index_file INDEX_FILE> <feature|behavioural> <sample size> <log_file> <model_file>
 ```
+
 The parameters are
-* log_file - the provided log file, in .xes format
-* model_file - the model file used during sampling, in .pnml format
-* (Optional) index_file - the index file containing information on considered features for the indexing phase
-* algorithm - the algorithm to use for the guided sampling procedure. Can be either "feature" or "behavioural"
-* sample size - the size of the final sample to be returned
-* (Optional) verbose - if set, the output is more detailed
+* ``algorithm`` - the indexing type to use. Can be either "feature" or "behavioural"
+* ``sample size`` - the desired sample size
+* ``log_file`` - the provided log file, in .xes format
+* ``model_file`` - the model file used during sampling, in .pnml format
+* ``index_file`` - (Optional)  the index file, containing the features to consider during sampling
 
+### Invoking the classes from code ###
+Alternatively, you can invoke the provided classes in your own project. To do this, add the following lines to your project:
 
-For instance, executing
-
+#### Feature-based ####
+```python
+partitioned_log = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
+sampler = FeatureGuidedLogSampler(index_file=index_file)
+sample = sampler.construct_sample(log, model, initial_marking, final_marking, partitioned_log, sample_size)
 ```
-python3 Logsampling.py --verbose -index_file example_index.xml example-log.xes example-model.pnml feature 200
+
+#### Behavioural-based ####
+```python
+sampler = SequenceGuidedLogSampler(log, batch_size=5, index_file=index_file)
+sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
 ```
-generates a sample of '200' traces from the log file 'exampe-log.xes', the model file 'example-model.pnml', using the log features specified in 'example-log.index' using a 'feature'-based knowledge-based.
 
-
-
-### Index Files ###
-
-To specify, what log properties should be taken into account for the relevance-guided log sampling procedure, you can specify an index file in .xml-format, that describes the trace-level attributes, event-level attributes, k-gram lengths and potential preceeding discreditization steps, that comprise the built feature index.
+## Index Files ##
+By providing an index-file, you can specify, what log attributes may be considered as relevant during the generation of the sample.
+In this xml-file you can specify the trace-level attributes, event-level attributes, k-gram lengths and potential preceeding discreditization steps, that comprise the feature index, that guides the sampling procedure.
 
 The structure of the .xml-file is as follows
 ```xml
@@ -62,8 +69,26 @@ The structure of the .xml-file is as follows
   </features>
 </index>
 ```
-If no index file is provided, the approach considers all features, as well as 3-grams, and no discretization step is conducted.
-If you want to incorporate the procedure in your project, please have a look at the function ```construct_sample``` in LogSampling.py, that serves as the top-level entrypoint of the approach.
+If no index file is provided, all features without discretization, as well as 3-grams, are considered.
 
-## Benchmarking and Evaluation ##
-Additionally, we provide the benchmarking and evaluation script ```eval.py```. The script repeatedly constructs samples for the provided log files using different sampling methods and writes the results into .csv-files. The explicit .csv-filed used during the evaluation in the publication are located under 'results'
+## Evaluation and result files ##
+Under [results](https://github.com/MartinKabierski/Guided_Conformance_Sampling/tree/MartinKabierski-patch-1/results/ICPM_2021), we provide the scripts used for the experimental evaluation of the proposed sampling procedures ([eval.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/eval.py)) and plot generation ([generate_plots.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/generate_plots.py)). Furthermore, the directory contains the .csv-files and the plots generated using those scripts, that were used in the article.
+
+
+## Citing this work ##
+If you use this repository, please cite the article:
+```
+@INPROCEEDINGS{9576875,
+  author={Kabierski, Martin and 
+    Nguyen, Hoang Lam and 
+    Grunske, Lars and 
+    Weidlich, Matthias},
+  booktitle={2021 3rd International Conference on Process Mining (ICPM)}, 
+  title={Sampling What Matters: Relevance-guided Sampling of Event Logs}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={64-71},
+  doi={10.1109/ICPM53251.2021.9576875}}
+}
+```

@@ -20,7 +20,7 @@ class Sample:
     """
     A sample of traces from a log.
     """
-
+    #TODO decide on what to return in what way
     def __init__(self):
         self.fitness = -1.0
         self.correlations = {}
@@ -52,9 +52,6 @@ class ConstantList:
 
 
 def init_alignment_params(model):
-    """
-    Sets common parameters for alignment computation.
-    """
     """
     Sets common parameters for alignment computation using unit cost function.
     """
@@ -322,7 +319,7 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
 
         return sampled_trace
 
-    def construct_sample(self, log_name, log, model, initial_marking, final_marking, partitioned_log, sample_size):
+    def construct_sample(self, log, model, initial_marking, final_marking, partitioned_log, sample_size):
         start_time = time.time()
         # stop right away if sample size is larger than log size
         if len(log) <= sample_size:
@@ -354,7 +351,7 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
 
             # check trace wrt property of interest - here alignments - and update knowledge base accordingly
             # c_time = time.time()
-            self._check_for_property(log_name, log[sampled_trace], model, initial_marking, final_marking)
+            self._check_for_property(log[sampled_trace], model, initial_marking, final_marking)
             if self.verbose:
                 print(" > Updated knowledge base after trace analysis(only positive correlations):")
                 for feature in self.knowledge_base.keys():
@@ -368,7 +365,7 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
 
         return self.sample
 
-    def _check_for_property(self, log_name, trace, model, initial_marking, final_marking):
+    def _check_for_property(self, trace, model, initial_marking, final_marking):
         alignment = self._calculate_alignment(trace, model, initial_marking, final_marking)
         deviation_contexts, deviating_n_grams = self.__get_deviation_context(trace, alignment)
 
@@ -599,7 +596,7 @@ class SequenceGuidedLogSampler(GuidedLogSampler):
             print(" > No candidate traces found for exploitation. Falling back to exploration.")
         return self.explore()
 
-    def construct_sample(self, log_name, log, model, initial_marking, final_marking, sample_size):
+    def construct_sample(self, log, model, initial_marking, final_marking, sample_size):
         """
         Constructs a sample based on an exploration vs. exploitation guided sampling strategy.
         """
