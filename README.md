@@ -72,7 +72,7 @@ The structure of the .xml-file is as follows
 If no index file is provided, all features without discretization, as well as 3-grams, are considered.
 
 ## Evaluation and result files ##
-Under [results](https://github.com/MartinKabierski/Guided_Conformance_Sampling/tree/MartinKabierski-patch-1/results/ICPM_2021), we provide the scripts used for the experimental evaluation of the proposed sampling procedures ([eval.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/eval.py)) and plot generation ([generate_plots.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/generate_plots.py)). Furthermore, the directory contains the .csv-files and the plots generated using those scripts, that were used in the article.
+Under [results](https://github.com/MartinKabierski/Guided_Conformance_Sampling/tree/master/results), we provide the scripts used for the experimental evaluation of the proposed sampling procedures ([eval.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/eval.py)) and plot generation ([generate_plots.py](https://github.com/MartinKabierski/Guided_Conformance_Sampling/blob/MartinKabierski-patch-1/generate_plots.py)). Furthermore, the directory contains the .csv-files and the plots generated using those scripts, that were used in the article.
 
 
 ## Citing this work ##
