@@ -71,7 +71,7 @@ def plot_no_deviating_traces(df, input_name):
     plt.axvline(3.5, ls="--", c="lightgrey")
     plt.tight_layout()
 
-    plt.savefig(os.path.join("figures", "deviating_traces_" + input_name + ".pdf"), format="pdf")
+    plt.savefig(os.path.join("results", "figures", "deviating_traces_" + input_name + ".pdf"), format="pdf")
     plt.clf()
 
 
@@ -95,7 +95,7 @@ def plot_knowledge_base_convergence(df, input_name):
     # plt.axvline(statistics.mean(subset_df), ls="--", c="lightgrey")
     plt.tight_layout()
 
-    plt.savefig(os.path.join("figures", "knowledge_base_convergence_" + input_name + ".pdf"), format="pdf")
+    plt.savefig(os.path.join("results", "figures", "knowledge_base_convergence_" + input_name + ".pdf"), format="pdf")
     plt.clf()
 
 # ADDITIONAL UNUSED PLOTTING FUNCTIONS
@@ -106,7 +106,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #     print("> Pruning Parameter Quality Impact")
 #     subset_df = df.loc[df["sample_size"] == 500]
 #     sns.boxplot(x="p", y="deviating_traces", hue="approach", data=subset_df)
-#     plt.savefig(os.path.join("figures", "pruning_impact_on_deviating_traces_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "pruning_impact_on_deviating_traces_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
@@ -114,14 +114,14 @@ def plot_knowledge_base_convergence(df, input_name):
 #     print("> Constructed alignments")
 #     subset_df = df.loc[df["p"] == 5]
 #     sns.boxplot(x="sample_size", y="trace_variants", hue="approach", data=subset_df)
-#     plt.savefig(os.path.join("figures", "constructed_alignments_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "constructed_alignments_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
 # def plot_fitness(df, input_name):
 #     print("> Fitness")
 #     sns.boxplot(x="sample_size", y="fitness", hue="approach", data=df)
-#     plt.savefig(os.path.join("figures", "fitness_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "fitness_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
@@ -242,7 +242,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #     plt.ylim(-.1, .41)
 #     plt.tight_layout()
 #
-#     plt.savefig(os.path.join("figures", "deviation_distribution_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures",  "deviation_distribution_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #     activities = df["activity"].unique()
@@ -267,7 +267,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #     print("> Average deviating activitiy set sizes")
 #     subset_df = df.loc[df["p"] == 5]
 #     sns.lineplot(x="sample_size", y="avg_dev_activities", hue="approach", data=subset_df)
-#     plt.savefig(os.path.join("figures", "avg_dev_activities_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "avg_dev_activities_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
@@ -275,7 +275,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #     print("> Average deviating activity set similarity")
 #     subset_df = df.loc[df["p"] == 5]
 #     sns.lineplot(x="sample_size", y="avg_pw_similarity", hue="approach", data=subset_df)
-#     plt.savefig(os.path.join("figures", "avg_pw_similarity_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "avg_pw_similarity_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
@@ -283,7 +283,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #     print("> Mean distance of knowledge base")
 #     subset_df = df.loc[df["p"] == 5]
 #     sns.boxplot(x="sample_size", y="dist_to_baseline", hue="approach", data=subset_df)
-#     plt.savefig(os.path.join("figures", "knowledge_base_distance_to_baseline_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "knowledge_base_distance_to_baseline_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
@@ -293,7 +293,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #     subset_df = subset_df.loc[subset_df["sample_size"] == 500]
 #     subset_df = subset_df.loc[subset_df["informative"] == True]
 #     sns.lineplot(x="feature", y="correlation", hue="approach", data=subset_df)
-#     plt.savefig(os.path.join("figures", "knowledge_base_feature_correlations_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "knowledge_base_feature_correlations_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
@@ -366,7 +366,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #
 #         times_perc.T.plot.bar(stacked=True)
 #
-#         plt.savefig(os.path.join("figures", "runtimes_perc_" + input_name + ".pdf"), format="pdf")
+#         plt.savefig(os.path.join("results", "figures", "runtimes_perc_" + input_name + ".pdf"), format="pdf")
 #         plt.clf()
 #
 #         times_abs = pd.concat([pd.DataFrame({'Random': t_list_random}, index=phases),
@@ -378,7 +378,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #
 #         times_abs.T.plot.bar(stacked=True)
 #
-#         plt.savefig(os.path.join("figures", "runtimes_" + input_name + ".pdf"), format="pdf")
+#         plt.savefig(os.path.join("results", "figures", "runtimes_" + input_name + ".pdf"), format="pdf")
 #         plt.clf()
 #
 #
@@ -389,14 +389,14 @@ def plot_knowledge_base_convergence(df, input_name):
 #     my_order = subset_df.groupby(by=["feature"])["correlation"].median().iloc[::-1].index
 #     sns.boxplot(x="feature", y="correlation", data=subset_df, order=my_order)
 #
-#     plt.savefig(os.path.join("figures", "correlation_distribution_positive_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "correlation_distribution_positive_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
 # def plot_partition_pruning(df, input_name):
 #     print("> Pruning of Partitioning")
 #     sns.barplot(x="p", y="total_size", hue="approach", data=df)
-#     plt.savefig(os.path.join("figures", "partition_sizes_different_p_" + input_name + ".pdf"), format="pdf")
+#     plt.savefig(os.path.join("results", "figures", "partition_sizes_different_p_" + input_name + ".pdf"), format="pdf")
 #     plt.clf()
 #
 #
@@ -406,7 +406,7 @@ def plot_knowledge_base_convergence(df, input_name):
 #         subset_df = df.loc[df['p'] == 5]
 #         subset_df = subset_df.loc[subset_df['approach'] == approach]
 #         sns.lineplot(x="partition", y="partition_size", data=subset_df)
-#         plt.savefig(os.path.join("figures", "partition_" + approach + "_" + input_name + ".pdf"), format="pdf")
+#         plt.savefig(os.path.join("results", "figures", "partition_" + approach + "_" + input_name + ".pdf"), format="pdf")
 #         plt.clf()
 
 
