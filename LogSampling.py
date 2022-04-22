@@ -15,7 +15,7 @@ def construct_sample(log_name, model_name, algorithm, sample_size, index_file):
     t_start = time.time()
     sample = None
     if algorithm == "feature":
-        partitioned_log = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
+        partitioned_log, _ = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
         sampling_controller = FeatureGuidedLogSampler(index_file=index_file)
         sample = sampling_controller.construct_sample(log, model, initial_marking, final_marking, partitioned_log,
                                                       int(sample_size))
