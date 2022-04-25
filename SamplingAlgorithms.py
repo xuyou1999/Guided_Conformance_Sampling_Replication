@@ -267,12 +267,12 @@ class GuidedLogSampler(LogSampler):
 
 # TODO make this consistent with BehaviouralLogSampler, i.e give it the index file upon creating and let it create the index file
 class FeatureGuidedLogSampler(GuidedLogSampler):
-    def __init__(self, use_cache=True, alignment_cache={}, preprocessing_time=None, index_file=None, verbose=False):
+    def __init__(self, use_cache=True, preprocessing_time=None, index_file=None, verbose=False):
         super().__init__(partitioned_log={},
                          window_size=3,
                          n_gram_size=3,
                          use_cache=use_cache,
-                         alignment_cache=alignment_cache,
+                         alignment_cache={},
                          prep_time=preprocessing_time,
                          index_file=index_file,
                          verbose=verbose)
@@ -517,7 +517,7 @@ class SequenceGuidedLogSampler(GuidedLogSampler):
     """
 
     # TODO properly include index_file, i.e talk to Lam, if this is actually needed here?
-    def __init__(self, log, k=3, b=10, r=10, p=3, batch_size=10, window_size=5, use_cache=True, alignment_cache={},
+    def __init__(self, log, k=3, b=10, r=10, p=3, batch_size=10, window_size=5, use_cache=True,
                  index_file=None, verbose=False):
         self.log_manager = SequenceBasedLogPreprocessor(log, k, b, r, p, verbose)
 
@@ -525,7 +525,7 @@ class SequenceGuidedLogSampler(GuidedLogSampler):
                          window_size=window_size,
                          n_gram_size=k,
                          use_cache=use_cache,
-                         alignment_cache=alignment_cache,
+                         alignment_cache={},
                          index_file=index_file,
                          prep_time=self.log_manager.time,
                          verbose=verbose)
