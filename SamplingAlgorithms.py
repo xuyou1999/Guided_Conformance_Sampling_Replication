@@ -10,6 +10,7 @@ from pm4py.objects.petri_net.utils import align_utils as utils
 from tqdm import tqdm
 
 import Coocurrence
+import LogIndexing
 import feature_encodings
 from ExploreExploitDecision import should_explore_greedy
 from LogIndexing import SequenceBasedLogPreprocessor
@@ -265,9 +266,9 @@ class GuidedLogSampler(LogSampler):
             self.knowledge_base[feature].add_unrelated_to_deviating()
 
 
-# TODO make this consistent with BehaviouralLogSampler, i.e give it the index file upon creating and let it create the index file
+# TODO should we save log and/or model during creation?
 class FeatureGuidedLogSampler(GuidedLogSampler):
-    def __init__(self, use_cache=True, preprocessing_time=None, index_file=None, verbose=False):
+    def __init__(self, log, use_cache=True, preprocessing_time=None, index_file=None, verbose=False):
         super().__init__(partitioned_log={},
                          window_size=3,
                          n_gram_size=3,
@@ -276,6 +277,7 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
                          prep_time=preprocessing_time,
                          index_file=index_file,
                          verbose=verbose)
+        self.partitioned_log, _ = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
 
     def explore(self, log):
         sampled_trace = random.choice([idx for idx in [*range(len(log))] if log[idx] not in self.sample.traces])
@@ -319,7 +321,7 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
 
         return sampled_trace
 
-    def construct_sample(self, log, model, initial_marking, final_marking, partitioned_log, sample_size):
+    def construct_sample(self, log, model, initial_marking, final_marking, sample_size):
         start_time = time.time()
         # stop right away if sample size is larger than log size
         if len(log) <= sample_size:
@@ -327,9 +329,7 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
             return log
 
         # Initializing some stuff
-        self._prepare_sampling(partitioned_log, model)
-        # TODO check if we need partitioned log here because it might have initialised in constructor already?
-        self.partitioned_log = partitioned_log
+        self._prepare_sampling(self.partitioned_log, model)
 
         # Sampling process
         pbar = tqdm(list(range(sample_size)), desc=" > Sampling...", file=sys.stdout, disable=False)
