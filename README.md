@@ -20,18 +20,16 @@ The parameters are
 * ``index_file`` - (Optional)  the index file, containing the features to consider during sampling
 
 ### Invoking the classes from code ###
-Alternatively, you can invoke the provided classes in your own project. To do this, add the following lines to your project:
-
-#### Feature-based ####
+Alternatively, you can use the sampling procedures directly in your own project. 
+For this, you first need to create the desired sampler:
 ```python
-partitioned_log = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
-sampler = FeatureGuidedLogSampler(index_file=index_file)
-sample = sampler.construct_sample(log, model, initial_marking, final_marking, partitioned_log, sample_size)
-```
-
-#### Behavioural-based ####
-```python
+#Feature-based index
+sampler = FeatureGuidedLogSampler(log, index_file=index_file)
+#Sequence-based index
 sampler = SequenceGuidedLogSampler(log, batch_size=5, index_file=index_file)
+```
+Then, you may generate a sample by calling the following line:
+```python
 sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
 ```
 
