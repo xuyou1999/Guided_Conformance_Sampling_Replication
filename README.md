@@ -22,10 +22,13 @@ The parameters are
 ### Invoking the classes from code ###
 Alternatively, you can use the sampling procedures directly in your own project. 
 For this, you first need to create the desired sampler:
+
+#### Feature-based index
 ```python
-#Feature-based index
 sampler = FeatureGuidedLogSampler(log, index_file=index_file)
-#Sequence-based index
+```
+#### Sequence-based index
+```python
 sampler = SequenceGuidedLogSampler(log, batch_size=5, index_file=index_file)
 ```
 Then, you may generate a sample by calling the following line:
