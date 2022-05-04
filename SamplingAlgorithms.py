@@ -80,11 +80,11 @@ def init_alignment_params(model):
 
 
 class LogSampler:
-    def __init__(self, use_cache=True, alignment_cache={}, prep_time=0.0, verbose=False):
+    def __init__(self, use_cache=True, prep_time=0.0, verbose=False):
         # manually define alignment cost function
         self.alignment_params = {}
         self.use_cache = use_cache
-        self.alignment_cache = alignment_cache
+        self.alignment_cache = {}
 
         # initialize result container
         self.sample = Sample()
@@ -151,8 +151,8 @@ class LogSampler:
 
 class GuidedLogSampler(LogSampler):
     def __init__(self, partitioned_log={}, window_size=3, n_gram_size=3,
-                 use_cache=True, alignment_cache={}, index_file=None, prep_time=0.0, verbose=False):
-        super().__init__(use_cache, alignment_cache, prep_time, verbose);
+                 use_cache=True, index_file=None, prep_time=0.0, verbose=False):
+        super().__init__(use_cache, prep_time, verbose);
 
         # TODO add self.log and verbose as field? because used throughout exploit and explore
 
@@ -268,16 +268,14 @@ class GuidedLogSampler(LogSampler):
 
 # TODO should we save log and/or model during creation?
 class FeatureGuidedLogSampler(GuidedLogSampler):
-    def __init__(self, log, use_cache=True, preprocessing_time=None, index_file=None, verbose=False):
+    def __init__(self, log, use_cache=True, index_file=None, verbose=False):
         super().__init__(partitioned_log={},
                          window_size=3,
                          n_gram_size=3,
                          use_cache=use_cache,
-                         alignment_cache={},
-                         prep_time=preprocessing_time,
                          index_file=index_file,
                          verbose=verbose)
-        self.partitioned_log, _ = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
+        self.partitioned_log, self.sample.times["partitioning"] = LogIndexing.FeatureBasedPartitioning().partition(log, index_file=index_file)
 
     def explore(self, log):
         sampled_trace = random.choice([idx for idx in [*range(len(log))] if log[idx] not in self.sample.traces])
@@ -525,7 +523,6 @@ class SequenceGuidedLogSampler(GuidedLogSampler):
                          window_size=window_size,
                          n_gram_size=k,
                          use_cache=use_cache,
-                         alignment_cache={},
                          index_file=index_file,
                          prep_time=self.log_manager.time,
                          verbose=verbose)
@@ -751,8 +748,8 @@ class NaiveLogSampler(LogSampler):
         Requires implementation of sampling strategy
     '''
 
-    def __init__(self, use_cache=True, alignment_cache={}, verbose=False):
-        super().__init__(use_cache, alignment_cache, 0.0, verbose)
+    def __init__(self, use_cache=True, verbose=False):
+        super().__init__(use_cache, 0.0, verbose)
 
     def construct_sample(self, log, model, initial_marking, final_marking, sample_size, calculate_alignments=True):
         sampled_traces = self._compute_traces_in_sample(log, sample_size)
@@ -798,8 +795,8 @@ class NaiveLogSampler(LogSampler):
 
 
 class RandomLogSampler(NaiveLogSampler):
-    def __init__(self, use_cache=True, alignment_cache={}, verbose=False):
-        super().__init__(use_cache, alignment_cache, verbose)
+    def __init__(self, use_cache=True, verbose=False):
+        super().__init__(use_cache, verbose)
 
     def _compute_traces_in_sample(self, log, sample_size):
         sampling_t = time.time()
@@ -811,8 +808,8 @@ class RandomLogSampler(NaiveLogSampler):
 
 
 class LongestTraceVariantLogSampler(NaiveLogSampler):
-    def __init__(self, use_cache=True, alignment_cache={}, verbose=False):
-        super().__init__(use_cache, alignment_cache, verbose)
+    def __init__(self, use_cache=True, verbose=False):
+        super().__init__(use_cache, verbose)
 
     def _compute_traces_in_sample(self, log, sample_size):
         sampling_t = time.time()

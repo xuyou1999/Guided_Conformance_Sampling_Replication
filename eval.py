@@ -32,7 +32,6 @@ def main():
         eval_runtime(log, log_name, model, initial_marking, final_marking)
 
 
-
 def eval_partitions(log, log_name):
     """
     For a given log, for each of the guided sampling procedures, constructs the log index, and writes partition
@@ -48,19 +47,15 @@ def eval_partitions(log, log_name):
         if approach == "Longest":
             pass
         if approach == "Feature":
-            partitioned_log, partition_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log,
-                                                                                               index_file="index_files/" + log_name + ".index")
-            for partition in partitioned_log.keys():
+            sampler = FeatureGuidedLogSampler(log, index_file="index_files/" + log_name + ".index")
+            partitioning = sampler.partitioned_log
+            for partition in partitioning.keys():
                 t.write(
-                    ";".join((str(approach), str(len(partitioned_log)), str(partition),
-                              str(len(partitioned_log[partition])) + "\n")))
-            partitioning = partitioned_log
+                    ";".join((str(approach), str(len(partitioning)), str(partition),
+                              str(len(partitioning[partition])) + "\n")))
         if approach == "Sequence":
-            sampling_controller = SequenceGuidedLogSampler(log,
-                                                           batch_size=1,
-                                                           use_cache=False,
-                                                           alignment_cache={})
-            partitioning = sampling_controller.partitioned_log
+            sampler = SequenceGuidedLogSampler(log, batch_size=1, index_file="index_files/" + log_name + ".index")
+            partitioning = sampler.partitioned_log
             for partition in partitioning.keys():
                 t.write(
                     ";".join((str(approach), str(len(partitioning)), str(partition),
@@ -110,9 +105,6 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
     correlation_results = open(os.path.join("results", "knowledge_base_correlations_" + log_name + ".csv"), "w")
     correlation_results.write("approach;sample_size;repetition;feature;informative;correlation\n")
 
-    # deviation_dist = open(os.path.join("results", "deviation_distribution_" + log_name + ".csv"), "w")
-    # deviation_dist.write("approach;sample_size;repetition;activity;prob\n")
-
     activity_results = open(os.path.join("results", "activities_" + log_name + ".csv"), "w")
     activity_results.write("approach;sample_size;avg_dev_activities;stddev;avg_pw_similarity;stddev\n")
 
@@ -125,30 +117,26 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
 
                 sample = None
                 if approach == "Random":
-                    sample = RandomLogSampler(use_cache=True, alignment_cache=alignment_cache) \
-                        .construct_sample(log, model, initial_marking, final_marking, sample_size)
+                    sampler = RandomLogSampler(use_cache=True)
+                    sampler.alignment_cache = alignment_cache
+                    sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 if approach == "Longest":
-                    sample = LongestTraceVariantLogSampler(use_cache=True, alignment_cache=alignment_cache) \
-                        .construct_sample(log, model, initial_marking, final_marking, sample_size)
+                    sampler = LongestTraceVariantLogSampler(use_cache=True)
+                    sampler.alignment_cache = alignment_cache
+                    sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 if approach == "Feature":
-                    partitioned_log, pre_time = LogIndexing.FeatureBasedPartitioning().partition(log_name, log,
-                                                                                                 index_file="index_files/" + log_name + ".index")
-                    sampling_controller = FeatureGuidedLogSampler(use_cache=True,
-                                                                  alignment_cache=alignment_cache,
-                                                                  preprocessing_time=pre_time,
-                                                                  index_file="index_files/" + log_name + ".index")
-                    sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
-                                                                  final_marking, partitioned_log, sample_size)
+                    sampler = FeatureGuidedLogSampler(log, use_cache=True,
+                                                      index_file="index_files/" + log_name + ".index")
+                    sampler.alignment_cache = alignment_cache
+                    sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 if approach == "Sequence":
-                    sampling_controller = SequenceGuidedLogSampler(log,
-                                                                   batch_size=1,
-                                                                   use_cache=True,
-                                                                   alignment_cache=alignment_cache)
-                    sample = sampling_controller.construct_sample(log_name, log, model, initial_marking,
-                                                                  final_marking, sample_size)
+                    sampler = SequenceGuidedLogSampler(log, batch_size=1, use_cache=True,
+                                                       index_file="index_files/" + log_name + ".index")
+                    sampler.alignment_cache = alignment_cache
+                    sample = sampler.construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 # get number of trace variants / constructed alignments
                 trace_variants = {}
@@ -207,21 +195,6 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                             ";".join((str(approach), str(sample_size), str(i), str(name), str(False),
                                       str(correlations[name]) + "\n")))
 
-                # deviating_activities.append(set(sample.activity_deviations.keys()))
-                #
-                # total_deviations = sample.total_deviations
-                # distribution = {}
-                # for deviating_activity in sample.activity_deviations.keys():
-                #     distribution[deviating_activity] = sample.activity_deviations[
-                #                                            deviating_activity] / total_deviations
-                # sorted_dist = sorted(distribution.items(), key=lambda item: item[1])
-                # sorted_dist.reverse()
-                # for deviation in sorted_dist:
-                #     deviation_dist.write(";".join((str(approach),
-                #                                    str(sample_size),
-                #                                    str(i),
-                #                                    str(deviation[0]),
-                #                                    str(deviation[1]) + "\n")))
 
             # Compute deviating activity stats
             pw_similarities = []
@@ -340,8 +313,8 @@ def construct_alignment_param(model):
             model_cost_function[t] = 0
     trace_cost_function = ConstantList(1)
     return {alignments.Parameters.PARAM_MODEL_COST_FUNCTION: model_cost_function,
-                        alignments.Parameters.PARAM_SYNC_COST_FUNCTION: sync_cost_function,
-                        alignments.Parameters.PARAM_TRACE_COST_FUNCTION: trace_cost_function}
+            alignments.Parameters.PARAM_SYNC_COST_FUNCTION: sync_cost_function,
+            alignments.Parameters.PARAM_TRACE_COST_FUNCTION: trace_cost_function}
 
 
 class ConstantList:
