@@ -1,59 +1,58 @@
-{
-    "k": 3,
-    "discretize": [
-      {
-        "attribute": "Age",
-        "trace_level": false,
-        "bucket_width": 5
-      },
-      {
-        "attribute": "Leucocytes",
-        "trace_level": false,
-        "bucket_width": 1
-      },
-      {
-        "attribute": "CRP",
-        "trace_level": false,
-        "bucket_width": 1
-      },
-      {
-        "attribute": "LacticAcid",
-        "trace_level": false,
-        "bucket_width": 1
-      }
-    ],
-    "features": {
-      "trace_level": [],
-      "event_level": [
-          "concept:name",
-          "Age",
-          "Diagnose",
-          "Leucocytes",
-          "CRP",
-          "LacticAcid",
-          "org:group",
-          "DiagnosticArtAstrup",
-          "DiagnosticBlood",
-          "DiagnosticECG",
-          "DiagnosticIC",
-          "DiagnosticLacticAcid",
-          "DiagnosticLiquor",
-          "DiagnosticOther",
-          "DiagnosticSputum",
-          "DiagnosticUrinaryCulture",
-          "DiagnosticUrinarySediment",
-          "DiagnosticXthorax",
-          "DisfuncOrg",
-          "Hypotensie",
-          "Hypoxie",
-          "InfectionSuspected",
-          "Infusion",
-          "Oligurie",
-          "SIRSCritHeartRate",
-          "SIRSCritLeucos",
-          "SIRSCritTachypnea",
-          "SIRSCritTemperature",
-          "SIRSCriteria2OrMore"
-        ]
-    }
-}
+<index>
+  <k>3</k>
+  <discretize>
+    <attribute>Age</attribute>
+    <trace-level>False</trace-level>
+    <bucket_width>5</bucket_width>
+  </discretize>
+    <discretize>
+    <attribute>Leucocytes</attribute>
+    <trace-level>False</trace-level>
+    <bucket_width>1</bucket_width>
+  </discretize>
+    <discretize>
+    <attribute>CRP</attribute>
+    <trace-level>False</trace-level>
+    <bucket_width>1</bucket_width>
+  </discretize>
+    <discretize>
+    <attribute>LacticAcid</attribute>
+    <trace-level>False</trace-level>
+    <bucket_width>1</bucket_width>
+  </discretize>
+  <features>
+  	<trace-level>
+  	</trace-level>
+  	<event-level>
+  		<attribute>concept:name</attribute>
+  		<attribute>Age</attribute>  		
+  		<attribute>Diagnose</attribute>
+  		<attribute>Leucocytes</attribute>
+  		<attribute>CRP</attribute>
+  		<attribute>LacticAcid</attribute>
+  		<attribute>org:group</attribute>
+  		<attribute>DiagnosticArtAstrup</attribute>
+  		<attribute>DiagnosticBlood</attribute>
+  		<attribute>DiagnosticECG</attribute>
+  		<attribute>DiagnosticIC</attribute>
+  		<attribute>DiagnosticLacticAcid</attribute>
+  		<attribute>DiagnosticLiquor</attribute>
+  		<attribute>DiagnosticOther</attribute>
+  		<attribute>DiagnosticSputum</attribute>
+  		<attribute>DiagnosticUrinaryCulture</attribute>
+  		<attribute>DiagnosticUrinarySediment</attribute>
+  		<attribute>DiagnosticXthorax</attribute>
+  		<attribute>DisfuncOrg</attribute>
+  		<attribute>Hypotensie</attribute>
+  		<attribute>Hypoxie</attribute>
+  		<attribute>InfectionSuspected</attribute>
+  		<attribute>Infusion</attribute>
+  		<attribute>Oligurie</attribute>
+  		<attribute>SIRSCritHeartRate</attribute>
+  		<attribute>SIRSCritLeucos</attribute>
+  		<attribute>SIRSCritTachypnea</attribute>
+  		<attribute>SIRSCritTemperature</attribute>
+  		<attribute>SIRSCriteria2OrMore</attribute>
+  	</event-level>
+  </features>
+</index>

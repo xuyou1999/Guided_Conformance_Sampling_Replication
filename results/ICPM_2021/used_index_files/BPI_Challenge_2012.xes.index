@@ -1,17 +1,17 @@
-{
-    "k": 3,
-    "discretize": [{
-      "attribute": "AMOUNT_REQ",
-      "trace_level": true,
-      "bucket_width": 100
-    }],
-    "features": {
-      "trace_level": [
-          "AMOUNT_REQ"
-      ],
-      "event_level": [
-          "concept:name",
-          "org:resource"
-      ]
-    }
-}
+<index>
+  <k>3</k>
+  <discretize>
+    <attribute>AMOUNT_REQ</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>100</bucket_width>
+  </discretize>
+  <features>
+  	<trace-level>
+  		<attribute>AMOUNT_REQ</attribute>
+  	</trace-level>
+  	<event-level>
+  		<attribute>concept:name</attribute>
+  		<attribute>org:resource</attribute>
+  	</event-level>
+  </features>
+</index>

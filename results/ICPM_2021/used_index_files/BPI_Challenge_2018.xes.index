@@ -1,99 +1,97 @@
-{
-    "k": 3,
-    "discretize": [
-      {
-        "attribute": "amount_applied0",
-        "trace_level": true,
-        "bucket_width": 1000
-      },
-      {
-        "attribute": "area",
-        "trace_level": true,
-        "bucket_width": 1.0
-      },
-      {
-        "attribute": "cross_compliance",
-        "trace_level": true,
-        "bucket_width": 1.0
-      },
-      {
-        "attribute": "risk_factor",
-        "trace_level": true,
-        "bucket_width": 1.0
-      },
-      {
-        "attribute": "payment_actual0",
-        "trace_level": true,
-        "bucket_width": 1000
-      },
-      {
-        "attribute": "penalty_amount0",
-        "trace_level": true,
-        "bucket_width": 100
-      },
-      {
-        "attribute": "number_parcels",
-        "trace_level": true,
-        "bucket_width": 5
-      }
-    ],
-    "features": {
-      "trace_level": [
-          "basic payment",
-          "greening",
-          "penalty_ABP",
-          "penalty_AGP",
-          "penalty_AJLP",
-          "penalty_AUVP",
-          "penalty_AVBP",
-          "penalty_AVGP",
-          "penalty_AVJLP",
-          "penalty_AVUVP",
-          "penalty_B16",
-          "penalty_B2",
-          "penalty_B3",
-          "penalty_B4",
-          "penalty_B5",
-          "penalty_B5f",
-          "penalty_B6",
-          "penalty_BGK",
-          "penalty_BGKV",
-          "penalty_BGP",
-          "penalty_C16",
-          "penalty_C4",
-          "penalty_C9",
-          "penalty_CC",
-          "penalty_GP1",
-          "penalty_JLP1",
-          "penalty_JLP2",
-          "penalty_JLP3",
-          "penalty_JLP5",
-          "penalty_JLP6",
-          "penalty_JLP7",
-          "penalty_V5",
-          "redistribution",
-          "rejected",
-          "selected_manually",
-          "selected_random",
-          "selected_risk",
-          "small farmer",
-          "young farmer",
-          "amount_applied0",
-          "area",
-          "cross_compliance",
-          "payment_actual0",
-          "penalty_amount0",
-          "risk_factor",
-          "number_parcels",
-          "department",
-          "year"
-        ],
-      "event_level": [
-          "concept:name",
-          "org:resource",
-          "success",
-          "doctype",
-          "subprocess"
-        ]
-    }
-}
+<index>
+  <k>3</k>
+  <discretize>
+    <attribute>amount_applied0</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>1000</bucket_width>
+  </discretize>
+    <discretize>
+    <attribute>area</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>1.0</bucket_width>
+  </discretize>  
+  <discretize>
+    <attribute>cross_compliance</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>1.0</bucket_width>
+  </discretize>  
+  <discretize>
+    <attribute>risk_factor</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>1.0</bucket_width>
+  </discretize>  
+  <discretize>
+    <attribute>payment_actual0</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>1000</bucket_width>
+  </discretize>  
+  <discretize>
+    <attribute>penalty_amount0</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>100</bucket_width>
+  </discretize>  
+  <discretize>
+    <attribute>number_parcels</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>5</bucket_width>
+  </discretize>
+  <features>
+  	<trace-level>
+  		<attribute>basic payment</attribute>
+		<attribute>greening</attribute>
+		<attribute>penalty_ABP</attribute>
+		<attribute>penalty_AGP</attribute>
+		<attribute>penalty_AJLP</attribute>
+		<attribute>penalty_AUVP</attribute>
+		<attribute>penalty_AVBP</attribute>
+		<attribute>penalty_AVGP</attribute>
+		<attribute>penalty_AVJLP</attribute>
+		<attribute>penalty_AVUVP</attribute>
+		<attribute>penalty_B16</attribute>
+		<attribute>penalty_B2</attribute>
+		<attribute>penalty_B3</attribute>
+		<attribute>penalty_B4</attribute>
+		<attribute>penalty_B5</attribute>
+		<attribute>penalty_B5f</attribute>
+		<attribute>penalty_B6</attribute>
+		<attribute>penalty_BGK</attribute>
+		<attribute>penalty_BGKV</attribute>
+		<attribute>penalty_BGP</attribute>
+		<attribute>penalty_C16</attribute>
+		<attribute>penalty_C4</attribute>
+		<attribute>penalty_C9</attribute>
+		<attribute>penalty_CC</attribute>
+		<attribute>penalty_GP1</attribute>
+		<attribute>penalty_JLP1</attribute>
+		<attribute>penalty_JLP2</attribute>
+		<attribute>penalty_JLP3</attribute>
+		<attribute>penalty_JLP5</attribute>
+		<attribute>penalty_JLP6</attribute>
+		<attribute>penalty_JLP7</attribute>
+		<attribute>penalty_V5</attribute>
+		<attribute>redistribution</attribute>
+		<attribute>rejected</attribute>
+		<attribute>selected_manually</attribute>
+		<attribute>selected_random</attribute>
+		<attribute>selected_risk</attribute>
+		<attribute>small farmer</attribute>
+		<attribute>young farmer</attribute>
+		<attribute>amount_applied0</attribute>
+		<attribute>area</attribute>
+		<attribute>cross_compliance</attribute>
+		<attribute>payment_actual0</attribute>
+		<attribute>penalty_amount0</attribute>
+		<attribute>risk_factor</attribute>
+		<attribute>number_parcels</attribute>
+		<attribute>department</attribute>
+		<attribute>year</attribute>
+  	</trace-level>
+  	<event-level>
+  		<attribute>concept:name</attribute>
+  		<attribute>org:resource</attribute>
+  		<attribute>success</attribute>  		
+  		<attribute>doctype</attribute>  		
+  		 <attribute>subprocess</attribute>
+  	</event-level>
+  </features>
+</index>

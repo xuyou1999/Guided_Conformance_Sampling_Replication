@@ -1,0 +1,27 @@
+<index>
+  <k>3</k>
+  <discretize>
+    <attribute>amount</attribute>
+    <trace-level>False</trace-level>
+    <bucket_width>5</bucket_width>
+  </discretize>
+    <discretize>
+    <attribute>expense</attribute>
+    <trace-level>False</trace-level>
+    <bucket_width>5</bucket_width>
+  </discretize>
+  <features>
+  	<trace-level>
+  	</trace-level>
+  	<event-level>
+  		<attribute>concept:name</attribute>
+  		<attribute>org:resource</attribute>
+  		<attribute>amount</attribute>
+  		<attribute>dismissal</attribute>  		
+  		<attribute>vehicleClass</attribute>
+  		<attribute>article</attribute>
+  		<attribute>points</attribute>
+  		<attribute>expense</attribute>
+  	</event-level>
+  </features>
+</index>
