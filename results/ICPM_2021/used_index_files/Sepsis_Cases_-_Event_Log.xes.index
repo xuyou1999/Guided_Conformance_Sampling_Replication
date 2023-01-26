@@ -1,0 +1,59 @@
+{
+    "k": 3,
+    "discretize": [
+      {
+        "attribute": "Age",
+        "trace_level": false,
+        "bucket_width": 5
+      },
+      {
+        "attribute": "Leucocytes",
+        "trace_level": false,
+        "bucket_width": 1
+      },
+      {
+        "attribute": "CRP",
+        "trace_level": false,
+        "bucket_width": 1
+      },
+      {
+        "attribute": "LacticAcid",
+        "trace_level": false,
+        "bucket_width": 1
+      }
+    ],
+    "features": {
+      "trace_level": [],
+      "event_level": [
+          "concept:name",
+          "Age",
+          "Diagnose",
+          "Leucocytes",
+          "CRP",
+          "LacticAcid",
+          "org:group",
+          "DiagnosticArtAstrup",
+          "DiagnosticBlood",
+          "DiagnosticECG",
+          "DiagnosticIC",
+          "DiagnosticLacticAcid",
+          "DiagnosticLiquor",
+          "DiagnosticOther",
+          "DiagnosticSputum",
+          "DiagnosticUrinaryCulture",
+          "DiagnosticUrinarySediment",
+          "DiagnosticXthorax",
+          "DisfuncOrg",
+          "Hypotensie",
+          "Hypoxie",
+          "InfectionSuspected",
+          "Infusion",
+          "Oligurie",
+          "SIRSCritHeartRate",
+          "SIRSCritLeucos",
+          "SIRSCritTachypnea",
+          "SIRSCritTemperature",
+          "SIRSCriteria2OrMore"
+        ]
+    }
+}

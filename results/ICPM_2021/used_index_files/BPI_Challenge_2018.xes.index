@@ -1,0 +1,99 @@
+{
+    "k": 3,
+    "discretize": [
+      {
+        "attribute": "amount_applied0",
+        "trace_level": true,
+        "bucket_width": 1000
+      },
+      {
+        "attribute": "area",
+        "trace_level": true,
+        "bucket_width": 1.0
+      },
+      {
+        "attribute": "cross_compliance",
+        "trace_level": true,
+        "bucket_width": 1.0
+      },
+      {
+        "attribute": "risk_factor",
+        "trace_level": true,
+        "bucket_width": 1.0
+      },
+      {
+        "attribute": "payment_actual0",
+        "trace_level": true,
+        "bucket_width": 1000
+      },
+      {
+        "attribute": "penalty_amount0",
+        "trace_level": true,
+        "bucket_width": 100
+      },
+      {
+        "attribute": "number_parcels",
+        "trace_level": true,
+        "bucket_width": 5
+      }
+    ],
+    "features": {
+      "trace_level": [
+          "basic payment",
+          "greening",
+          "penalty_ABP",
+          "penalty_AGP",
+          "penalty_AJLP",
+          "penalty_AUVP",
+          "penalty_AVBP",
+          "penalty_AVGP",
+          "penalty_AVJLP",
+          "penalty_AVUVP",
+          "penalty_B16",
+          "penalty_B2",
+          "penalty_B3",
+          "penalty_B4",
+          "penalty_B5",
+          "penalty_B5f",
+          "penalty_B6",
+          "penalty_BGK",
+          "penalty_BGKV",
+          "penalty_BGP",
+          "penalty_C16",
+          "penalty_C4",
+          "penalty_C9",
+          "penalty_CC",
+          "penalty_GP1",
+          "penalty_JLP1",
+          "penalty_JLP2",
+          "penalty_JLP3",
+          "penalty_JLP5",
+          "penalty_JLP6",
+          "penalty_JLP7",
+          "penalty_V5",
+          "redistribution",
+          "rejected",
+          "selected_manually",
+          "selected_random",
+          "selected_risk",
+          "small farmer",
+          "young farmer",
+          "amount_applied0",
+          "area",
+          "cross_compliance",
+          "payment_actual0",
+          "penalty_amount0",
+          "risk_factor",
+          "number_parcels",
+          "department",
+          "year"
+        ],
+      "event_level": [
+          "concept:name",
+          "org:resource",
+          "success",
+          "doctype",
+          "subprocess"
+        ]
+    }
+}
