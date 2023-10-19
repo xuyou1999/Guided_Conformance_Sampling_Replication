@@ -1,0 +1,17 @@
+<index>
+  <k>3</k>
+  <discretize>
+    <attribute>AMOUNT_REQ</attribute>
+    <trace-level>True</trace-level>
+    <bucket_width>100</bucket_width>
+  </discretize>
+  <features>
+  	<trace-level>
+  		<attribute>AMOUNT_REQ</attribute>
+  	</trace-level>
+  	<event-level>
+  		<attribute>concept:name</attribute>
+  		<attribute>org:resource</attribute>
+  	</event-level>
+  </features>
+</index>

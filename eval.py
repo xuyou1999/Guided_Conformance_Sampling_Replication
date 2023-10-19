@@ -20,7 +20,8 @@ log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Chal
 approaches = ["Random", "Longest", "Feature", "Sequence"]
 samples_sizes = [100, 200, 300, 400, 500]
 repetitions = 10
-cached_alignments = True
+# cached_alignments = True
+cached_alignments = False
 
 
 def main():
@@ -160,22 +161,23 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
                 # next, get dist of knowledge base to ground truth
                 if approach != "Random" and approach != "Longest":
                     sample_knowledge_base = sample.correlations
-                    ground_truth_correlations = None
-                    if approach == "Feature":
-                        ground_truth_correlations = pickle.load(
-                            open(os.path.join("knowledge_base_cache", log_name + "_feature.knowledge_base"), "rb"))
+                    # ground_truth_correlations = None
+                    # if approach == "Feature":
+                    #     ground_truth_correlations = pickle.load(
+                    #         open(os.path.join("knowledge_base_cache", log_name + "_feature.knowledge_base"), "rb"))
 
-                    if approach == "Sequence":
-                        ground_truth_correlations = pickle.load(
-                            open(os.path.join("knowledge_base_cache", log_name + "_sequence.knowledge_base"), "rb"))
+                    # if approach == "Sequence":
+                    #     ground_truth_correlations = pickle.load(
+                    #         open(os.path.join("knowledge_base_cache", log_name + "_sequence.knowledge_base"), "rb"))
 
-                    a = np.array([x.correlation for x in ground_truth_correlations.values()])
-                    b = np.array([x.correlation for x in sample_knowledge_base.values()])
-                    dist = numpy.linalg.norm(a - b)
+                    # a = np.array([x.correlation for x in ground_truth_correlations.values()])
+                    # b = np.array([x.correlation for x in sample_knowledge_base.values()])
+                    # dist = numpy.linalg.norm(a - b)
 
                     for idx, change in enumerate(sample.correlation_changes):
                         knowledge_base_results.write(";".join((str(approach), str(sample_size), str(i),
-                                                               str(dist),
+                                                            #    str(dist),
+                                                               "",
                                                                str(sample.first_positive_correlation_at), str(idx),
                                                                str(change) + "\n")))
 
