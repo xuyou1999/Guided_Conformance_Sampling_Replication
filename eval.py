@@ -247,7 +247,10 @@ def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=1
                 sample_size) + " : " + str(i))
 
             if not timeout_reached:
-                sample_t = RandomLogSampler(use_cache=True, alignment_cache={}) \
+                # sample_t = RandomLogSampler(use_cache=True, alignment_cache={}) \
+                    # .construct_sample(log, model, initial_marking, final_marking, sample_size)
+                
+                sample_t = RandomLogSampler(use_cache=True) \
                     .construct_sample(log, model, initial_marking, final_marking, sample_size)
 
                 print(" > " + str(str(sample_t.times["alignment"])))
@@ -269,8 +272,7 @@ def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=1
         if (not timeout_reached) and mean_runtime * len(log) < timeout:
             print(f" > FULL LOG ANALYSIS (Expected time={mean_runtime * len(log)})")
             start_t = time.time()
-
-            alignments.apply(log, model, initial_marking, final_marking, parameters=construct_alignment_param(model))
+            alignments.apply_log(log, model, initial_marking, final_marking, parameters=construct_alignment_param(model))
             total_t = time.time() - start_t
             print(" > " + str(str(total_t)))
 
@@ -313,10 +315,12 @@ def construct_alignment_param(model):
             sync_cost_function[t] = 0
         else:
             model_cost_function[t] = 0
-    trace_cost_function = ConstantList(1)
+    # trace_cost_function = ConstantList(1)
+    print("Done parameter")
     return {alignments.Parameters.PARAM_MODEL_COST_FUNCTION: model_cost_function,
-            alignments.Parameters.PARAM_SYNC_COST_FUNCTION: sync_cost_function,
-            alignments.Parameters.PARAM_TRACE_COST_FUNCTION: trace_cost_function}
+            alignments.Parameters.PARAM_SYNC_COST_FUNCTION: sync_cost_function
+            # alignments.Parameters.PARAM_TRACE_COST_FUNCTION: trace_cost_function
+            }
 
 
 class ConstantList:

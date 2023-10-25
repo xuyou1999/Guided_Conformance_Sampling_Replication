@@ -306,13 +306,17 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
         #  partitions) - this will blow up for larger sample sizes
         sampled_trace = None
 
+        count = 0
         while sampled_trace is None or log[sampled_trace] in self.sample.traces:
             # choose a feature using distribtution
             chosen_feature = self._choose_feature(distribution)
 
             # choose a trace from those that contain selected feature
             potential_traces = self.partitioned_log[chosen_feature]
+            if count >= len(potential_traces) * len(distribution):
+                return self.explore(log)
             sampled_trace = random.choice(potential_traces)
+            count += 1
 
         if self.verbose:
             print(" > " + str(log[sampled_trace]))
