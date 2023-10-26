@@ -1,0 +1,2817 @@
+approach;total_size;partition;partition_size
+Feature;821;trace:basic payment@True;43809
+Feature;821;trace:greening@True;43809
+Feature;821;trace:penalty_ABP@False;43105
+Feature;821;trace:penalty_AGP@False;43107
+Feature;821;trace:penalty_AJLP@False;43748
+Feature;821;trace:penalty_AUVP@False;42980
+Feature;821;trace:penalty_AVBP@False;43807
+Feature;821;trace:penalty_AVGP@False;43807
+Feature;821;trace:penalty_AVJLP@False;43806
+Feature;821;trace:penalty_AVUVP@False;43807
+Feature;821;trace:penalty_B16@False;43698
+Feature;821;trace:penalty_B2@False;32282
+Feature;821;trace:penalty_B3@False;43004
+Feature;821;trace:penalty_B4@False;43618
+Feature;821;trace:penalty_B5@False;43653
+Feature;821;trace:penalty_B5f@UNDEFINED;43809
+Feature;821;trace:penalty_B6@False;43686
+Feature;821;trace:penalty_BGK@False;43516
+Feature;821;trace:penalty_BGKV@False;43794
+Feature;821;trace:penalty_BGP@False;43437
+Feature;821;trace:penalty_C16@False;43804
+Feature;821;trace:penalty_C4@False;43461
+Feature;821;trace:penalty_C9@False;43783
+Feature;821;trace:penalty_CC@False;42466
+Feature;821;trace:penalty_GP1@False;41484
+Feature;821;trace:penalty_JLP1@False;43640
+Feature;821;trace:penalty_JLP2@False;43764
+Feature;821;trace:penalty_JLP3@False;43797
+Feature;821;trace:penalty_JLP5@False;43784
+Feature;821;trace:penalty_JLP6@False;43685
+Feature;821;trace:penalty_JLP7@False;43808
+Feature;821;trace:penalty_V5@False;43808
+Feature;821;trace:redistribution@True;43736
+Feature;821;trace:rejected@False;43539
+Feature;821;trace:selected_manually@False;43486
+Feature;821;trace:selected_random@False;41112
+Feature;821;trace:selected_risk@False;42002
+Feature;821;trace:small farmer@True;2015
+Feature;821;trace:young farmer@False;40255
+Feature;821;trace:amount_applied0@0.0;3709
+Feature;821;trace:area@2.0;1700
+Feature;821;trace:cross_compliance@0.0;42424
+Feature;821;trace:payment_actual0@0.0;3924
+Feature;821;trace:penalty_amount0@0.0;37837
+Feature;821;trace:risk_factor@1.0;43808
+Feature;821;trace:number_parcels@0.0;11209
+Feature;821;trace:department@e7;13170
+Feature;821;trace:year@2015;14750
+Feature;821;event:concept:name@abort payment;26633
+Feature;821;event:concept:name@begin editing;43809
+Feature;821;event:concept:name@begin payment;43727
+Feature;821;event:concept:name@calculate;43809
+Feature;821;event:concept:name@decide;43794
+Feature;821;event:concept:name@finish editing;43809
+Feature;821;event:concept:name@finish payment;43721
+Feature;821;event:concept:name@initialize;43809
+Feature;821;event:concept:name@insert document;38868
+Feature;821;event:concept:name@mail income;43808
+Feature;821;event:concept:name@mail valid;43808
+Feature;821;event:concept:name@performed;43803
+Feature;821;event:concept:name@save;29707
+Feature;821;event:org:resource@0;n/a;43808
+Feature;821;event:org:resource@520882;8337
+Feature;821;event:org:resource@727350;43808
+Feature;821;event:org:resource@76f30e;1772
+Feature;821;event:org:resource@DP-Z;43669
+Feature;821;event:org:resource@Document processing automaton;43808
+Feature;821;event:org:resource@Processing automaton;14745
+Feature;821;event:org:resource@Reference alignment processor;29461
+Feature;821;event:org:resource@c98a4a;4114
+Feature;821;event:org:resource@dde669;1608
+Feature;821;event:org:resource@fb5fa8;2926
+Feature;821;event:success@True;43809
+Feature;821;event:doctype@Control summary;43808
+Feature;821;event:doctype@Department control parcels;29297
+Feature;821;event:doctype@Entitlement application;15260
+Feature;821;event:doctype@Parcel document;14750
+Feature;821;event:doctype@Payment application;43809
+Feature;821;event:doctype@Reference alignment;43802
+Feature;821;event:subprocess@Application;43809
+Feature;821;event:subprocess@Main;43809
+Feature;821;trace:penalty_B2@True;11527
+Feature;821;trace:small farmer@False;41794
+Feature;821;trace:amount_applied0@28000.0;600
+Feature;821;trace:area@93.0;300
+Feature;821;trace:payment_actual0@28000.0;609
+Feature;821;trace:number_parcels@15.0;4100
+Feature;821;trace:department@d4;5744
+Feature;821;event:concept:name@revoke decision;20781
+Feature;821;event:org:resource@167893;848
+Feature;821;event:org:resource@a5ae3f;5723
+Feature;821;event:org:resource@c7c478;2704
+Feature;821;trace:amount_applied0@6000.0;1200
+Feature;821;trace:area@19.0;400
+Feature;821;trace:payment_actual0@6000.0;1204
+Feature;821;trace:number_parcels@10.0;5000
+Feature;821;event:concept:name@check;6386
+Feature;821;event:org:resource@d8639c;612
+Feature;821;trace:number_parcels@5.0;7300
+Feature;821;trace:department@4e;13639
+Feature;821;event:org:resource@8beb64;4886
+Feature;821;event:org:resource@ea52aa;1196
+Feature;821;trace:young farmer@True;3554
+Feature;821;trace:amount_applied0@43000.0;300
+Feature;821;trace:area@133.0;100
+Feature;821;trace:payment_actual0@43000.0;277
+Feature;821;trace:number_parcels@20.0;3700
+Feature;821;event:concept:name@remove document;2995
+Feature;821;event:org:resource@51d239;624
+Feature;821;event:subprocess@Change;4740
+Feature;821;trace:amount_applied0@19000.0;800
+Feature;821;trace:area@59.0;300
+Feature;821;trace:payment_actual0@19000.0;761
+Feature;821;event:org:resource@7b9b55;1133
+Feature;821;trace:area@17.0;300
+Feature;821;trace:payment_actual0@5000.0;1234
+Feature;821;trace:department@6b;11256
+Feature;821;event:org:resource@155add;7318
+Feature;821;event:org:resource@4fac6d;3792
+Feature;821;event:org:resource@c966f4;1026
+Feature;821;event:org:resource@fa68d2;807
+Feature;821;trace:amount_applied0@2000.0;3100
+Feature;821;trace:area@8.0;900
+Feature;821;trace:payment_actual0@2000.0;2959
+Feature;821;trace:area@6.0;1100
+Feature;821;event:org:resource@4298e3;7470
+Feature;821;trace:amount_applied0@40000.0;300
+Feature;821;trace:payment_actual0@40000.0;314
+Feature;821;trace:number_parcels@25.0;2900
+Feature;821;event:org:resource@28b6bf;1257
+Feature;821;event:org:resource@425ee3;550
+Feature;821;event:org:resource@83c7b7;859
+Feature;821;trace:penalty_C4@True;348
+Feature;821;event:org:resource@059abc;320
+Feature;821;event:org:resource@7fb8a5;1579
+Feature;821;event:org:resource@97d224;6756
+Feature;821;trace:amount_applied0@1000.0;4500
+Feature;821;trace:area@4.0;1600
+Feature;821;trace:payment_actual0@1000.0;4563
+Feature;821;trace:area@1.0;1900
+Feature;821;trace:amount_applied0@8000.0;900
+Feature;821;trace:area@24.0;300
+Feature;821;trace:payment_actual0@8000.0;876
+Feature;821;event:org:resource@6f6a4e;483
+Feature;821;event:org:resource@44798d;1341
+Feature;821;event:org:resource@7d03a0;791
+Feature;821;event:org:resource@ad25fc;1223
+Feature;821;event:org:resource@b33ed5;393
+Feature;821;trace:selected_random@True;2697
+Feature;821;trace:selected_risk@True;1807
+Feature;821;trace:area@3.0;1700
+Feature;821;event:concept:name@abort external;2248
+Feature;821;event:concept:name@begin preparations;3039
+Feature;821;event:concept:name@finish preparations;3040
+Feature;821;event:concept:name@plan;3044
+Feature;821;event:concept:name@prepare external;2251
+Feature;821;event:org:resource@Inspection automaton;2817
+Feature;821;event:org:resource@Remote inspection export;2245
+Feature;821;event:org:resource@Remote inspection import;2249
+Feature;821;event:org:resource@dee71b;1366
+Feature;821;event:doctype@Inspection;3044
+Feature;821;event:subprocess@Remote;2249
+Feature;821;trace:amount_applied0@36000.0;500
+Feature;821;trace:area@121.0;100
+Feature;821;trace:payment_actual0@35000.0;355
+Feature;821;trace:number_parcels@30.0;2400
+Feature;821;event:org:resource@019209;2811
+Feature;821;event:org:resource@2c546f;1102
+Feature;821;trace:penalty_B16@True;111
+Feature;821;trace:amount_applied0@11000.0;600
+Feature;821;trace:area@29.0;200
+Feature;821;trace:payment_actual0@11000.0;610
+Feature;821;event:org:resource@023bb9;1266
+Feature;821;event:org:resource@439089;987
+Feature;821;event:org:resource@dfd1d4;761
+Feature;821;event:org:resource@6ad4a6;573
+Feature;821;trace:amount_applied0@14000.0;700
+Feature;821;trace:area@44.0;300
+Feature;821;trace:payment_actual0@14000.0;648
+Feature;821;event:org:resource@346f05;960
+Feature;821;trace:penalty_B3@True;805
+Feature;821;event:concept:name@performed offline;1750
+Feature;821;event:concept:name@prepare offline;1755
+Feature;821;event:org:resource@4b9a7f;1684
+Feature;821;event:org:resource@7850e8;192
+Feature;821;event:org:resource@9e088c;1091
+Feature;821;event:subprocess@On-Site;2553
+Feature;821;trace:amount_applied0@29000.0;600
+Feature;821;trace:area@97.0;300
+Feature;821;trace:payment_actual0@29000.0;595
+Feature;821;trace:penalty_amount0@100.0;1978
+Feature;821;event:org:resource@f9fe07;1627
+Feature;821;trace:area@98.0;100
+Feature;821;event:org:resource@c70c37;69
+Feature;821;trace:amount_applied0@10000.0;900
+Feature;821;trace:area@32.0;300
+Feature;821;trace:payment_actual0@10000.0;858
+Feature;821;event:org:resource@354865;554
+Feature;821;event:org:resource@5a21a5;1146
+Feature;821;event:org:resource@60b0b8;213
+Feature;821;event:org:resource@71ffe8;320
+Feature;821;event:org:resource@00037f;639
+Feature;821;event:org:resource@75992a;1795
+Feature;821;event:org:resource@9aaf68;715
+Feature;821;trace:penalty_CC@True;1343
+Feature;821;trace:amount_applied0@47000.0;300
+Feature;821;trace:area@157.0;100
+Feature;821;trace:cross_compliance@13.0;4
+Feature;821;trace:payment_actual0@41000.0;290
+Feature;821;trace:penalty_amount0@5700.0;5
+Feature;821;trace:number_parcels@35.0;1900
+Feature;821;event:concept:name@revoke withdrawal;206
+Feature;821;event:concept:name@withdraw;419
+Feature;821;event:org:resource@2ca0ae;2034
+Feature;821;event:org:resource@4af6fb;1332
+Feature;821;event:org:resource@DP-R;1647
+Feature;821;event:org:resource@27cc37;127
+Feature;821;event:org:resource@fcb55b;2892
+Feature;821;trace:amount_applied0@5000.0;1200
+Feature;821;trace:area@14.0;400
+Feature;821;event:success@False;18929
+Feature;821;trace:amount_applied0@4000.0;1500
+Feature;821;trace:payment_actual0@4000.0;1457
+Feature;821;trace:amount_applied0@56000.0;300
+Feature;821;trace:area@187.0;100
+Feature;821;trace:payment_actual0@56000.0;267
+Feature;821;trace:penalty_amount0@300.0;506
+Feature;821;event:concept:name@approve;522
+Feature;821;event:concept:name@begin admissibility check;805
+Feature;821;event:concept:name@check admissibility;803
+Feature;821;event:org:resource@2ac4ac;647
+Feature;821;event:org:resource@bfa0ec;997
+Feature;821;event:org:resource@ffb56b;984
+Feature;821;event:subprocess@Objection;870
+Feature;821;trace:amount_applied0@50000.0;300
+Feature;821;trace:area@167.0;100
+Feature;821;trace:payment_actual0@50000.0;278
+Feature;821;event:concept:name@take original document;886
+Feature;821;event:org:resource@af1e1e;1718
+Feature;821;trace:area@26.0;300
+Feature;821;event:org:resource@0087cf;391
+Feature;821;event:org:resource@39be3e;2972
+Feature;821;event:org:resource@5e018b;330
+Feature;821;event:org:resource@eb7015;668
+Feature;821;event:org:resource@815d19;354
+Feature;821;trace:penalty_GP1@True;2325
+Feature;821;trace:amount_applied0@69000.0;100
+Feature;821;trace:area@215.0;100
+Feature;821;trace:payment_actual0@67000.0;5
+Feature;821;trace:penalty_amount0@1900.0;38
+Feature;821;trace:number_parcels@65.0;300
+Feature;821;event:org:resource@79367e;897
+Feature;821;event:org:resource@d0f451;723
+Feature;821;event:org:resource@dd04e2;1118
+Feature;821;trace:amount_applied0@52000.0;300
+Feature;821;trace:area@172.0;100
+Feature;821;trace:payment_actual0@52000.0;288
+Feature;821;trace:number_parcels@45.0;1100
+Feature;821;event:org:resource@65bf34;216
+Feature;821;trace:amount_applied0@23000.0;700
+Feature;821;trace:area@78.0;200
+Feature;821;trace:payment_actual0@23000.0;653
+Feature;821;event:org:resource@237892;365
+Feature;821;event:org:resource@5d9e09;1120
+Feature;821;event:org:resource@c0aa4a;598
+Feature;821;trace:amount_applied0@112000.0;200
+Feature;821;trace:area@327.0;100
+Feature;821;trace:payment_actual0@112000.0;170
+Feature;821;event:org:resource@2dc625;300
+Feature;821;trace:amount_applied0@24000.0;600
+Feature;821;trace:area@79.0;300
+Feature;821;trace:payment_actual0@24000.0;654
+Feature;821;trace:amount_applied0@59000.0;300
+Feature;821;trace:payment_actual0@58000.0;88
+Feature;821;event:org:resource@13c937;394
+Feature;821;event:org:resource@7d12ba;2389
+Feature;821;event:org:resource@8a1fba;1451
+Feature;821;trace:amount_applied0@16000.0;700
+Feature;821;trace:area@50.0;200
+Feature;821;trace:payment_actual0@16000.0;776
+Feature;821;event:org:resource@465290;220
+Feature;821;event:org:resource@478c4f;1361
+Feature;821;event:org:resource@9e337f;1055
+Feature;821;trace:area@76.0;200
+Feature;821;trace:amount_applied0@74000.0;100
+Feature;821;trace:area@244.0;100
+Feature;821;trace:payment_actual0@74000.0;81
+Feature;821;trace:penalty_amount0@200.0;742
+Feature;821;trace:number_parcels@70.0;200
+Feature;821;event:org:resource@0d884f;930
+Feature;821;trace:amount_applied0@7000.0;900
+Feature;821;trace:area@18.0;600
+Feature;821;trace:payment_actual0@7000.0;878
+Feature;821;trace:area@95.0;300
+Feature;821;trace:area@123.0;200
+Feature;821;trace:payment_actual0@36000.0;444
+Feature;821;trace:amount_applied0@35000.0;300
+Feature;821;trace:area@119.0;100
+Feature;821;trace:area@12.0;600
+Feature;821;trace:amount_applied0@20000.0;600
+Feature;821;trace:area@55.0;100
+Feature;821;trace:payment_actual0@20000.0;610
+Feature;821;trace:amount_applied0@21000.0;600
+Feature;821;trace:area@67.0;300
+Feature;821;trace:payment_actual0@21000.0;615
+Feature;821;event:org:resource@556da9;1078
+Feature;821;trace:area@5.0;1200
+Feature;821;trace:cross_compliance@3.0;474
+Feature;821;trace:payment_actual0@109000.0;6
+Feature;821;trace:penalty_amount0@3300.0;19
+Feature;821;trace:number_parcels@75.0;200
+Feature;821;event:org:resource@f3e81e;414
+Feature;821;trace:amount_applied0@9000.0;700
+Feature;821;trace:payment_actual0@9000.0;723
+Feature;821;event:org:resource@1c1894;1055
+Feature;821;event:org:resource@aea7c8;640
+Feature;821;trace:amount_applied0@18000.0;600
+Feature;821;trace:area@58.0;100
+Feature;821;trace:payment_actual0@18000.0;629
+Feature;821;trace:amount_applied0@587000.0;200
+Feature;821;trace:area@536.0;100
+Feature;821;trace:payment_actual0@587000.0;140
+Feature;821;trace:number_parcels@60.0;400
+Feature;821;event:org:resource@1bd3b5;1031
+Feature;821;event:org:resource@ee28de;1340
+Feature;821;trace:area@38.0;200
+Feature;821;trace:penalty_amount0@1400.0;63
+Feature;821;trace:penalty_B6@True;123
+Feature;821;trace:area@33.0;200
+Feature;821;event:org:resource@0fe39b;275
+Feature;821;trace:cross_compliance@5.0;201
+Feature;821;trace:payment_actual0@17000.0;712
+Feature;821;trace:penalty_amount0@1100.0;103
+Feature;821;trace:amount_applied0@13000.0;600
+Feature;821;trace:area@40.0;200
+Feature;821;trace:payment_actual0@13000.0;636
+Feature;821;event:org:resource@abe845;345
+Feature;821;trace:penalty_ABP@True;704
+Feature;821;trace:penalty_AGP@True;702
+Feature;821;trace:penalty_AUVP@True;829
+Feature;821;trace:area@7.0;1000
+Feature;821;event:org:resource@46e3af;107
+Feature;821;event:org:resource@f6846a;177
+Feature;821;trace:area@62.0;300
+Feature;821;trace:area@104.0;100
+Feature;821;event:org:resource@bc063d;105
+Feature;821;event:org:resource@f8da29;126
+Feature;821;trace:amount_applied0@34000.0;500
+Feature;821;trace:area@102.0;100
+Feature;821;trace:payment_actual0@34000.0;473
+Feature;821;event:org:resource@3d952e;606
+Feature;821;trace:amount_applied0@81000.0;100
+Feature;821;trace:area@262.0;100
+Feature;821;trace:payment_actual0@81000.0;78
+Feature;821;trace:area@228.0;100
+Feature;821;trace:payment_actual0@69000.0;99
+Feature;821;trace:area@28.0;300
+Feature;821;trace:rejected@True;270
+Feature;821;trace:amount_applied0@3000.0;1800
+Feature;821;trace:area@10.0;600
+Feature;821;event:concept:name@refuse;256
+Feature;821;trace:payment_actual0@12000.0;817
+Feature;821;trace:penalty_amount0@700.0;167
+Feature;821;trace:area@20.0;300
+Feature;821;trace:cross_compliance@1.0;367
+Feature;821;event:org:resource@9765da;414
+Feature;821;event:org:resource@b4755f;587
+Feature;821;trace:amount_applied0@150000.0;100
+Feature;821;trace:area@398.0;100
+Feature;821;trace:payment_actual0@139000.0;4
+Feature;821;trace:penalty_amount0@4500.0;14
+Feature;821;event:concept:name@begin editing from refused;119
+Feature;821;event:concept:name@revoke approval;57
+Feature;821;event:org:resource@f01c35;457
+Feature;821;trace:area@68.0;100
+Feature;821;trace:area@196.0;100
+Feature;821;event:org:resource@822fb7;266
+Feature;821;trace:amount_applied0@17000.0;800
+Feature;821;trace:cross_compliance@6.0;17
+Feature;821;trace:penalty_amount0@2200.0;40
+Feature;821;trace:number_parcels@40.0;1400
+Feature;821;trace:area@65.0;300
+Feature;821;event:org:resource@483029;450
+Feature;821;trace:amount_applied0@42000.0;300
+Feature;821;trace:area@144.0;200
+Feature;821;trace:payment_actual0@42000.0;272
+Feature;821;event:org:resource@7d4a25;785
+Feature;821;event:org:resource@e25f20;271
+Feature;821;event:org:resource@f48280;254
+Feature;821;event:org:resource@c4f075;281
+Feature;821;trace:area@61.0;100
+Feature;821;trace:area@56.0;300
+Feature;821;trace:amount_applied0@48000.0;200
+Feature;821;trace:area@147.0;100
+Feature;821;trace:payment_actual0@48000.0;200
+Feature;821;trace:amount_applied0@33000.0;400
+Feature;821;trace:area@111.0;100
+Feature;821;trace:payment_actual0@33000.0;420
+Feature;821;trace:area@21.0;300
+Feature;821;event:org:resource@c39cb2;194
+Feature;821;trace:amount_applied0@25000.0;700
+Feature;821;trace:area@85.0;200
+Feature;821;trace:payment_actual0@25000.0;629
+Feature;821;trace:area@16.0;400
+Feature;821;trace:area@84.0;200
+Feature;821;trace:amount_applied0@37000.0;300
+Feature;821;trace:area@127.0;100
+Feature;821;trace:payment_actual0@37000.0;315
+Feature;821;trace:penalty_amount0@400.0;384
+Feature;821;trace:area@25.0;300
+Feature;821;event:org:resource@40178c;47
+Feature;821;trace:selected_manually@True;323
+Feature;821;trace:area@11.0;600
+Feature;821;trace:payment_actual0@3000.0;1832
+Feature;821;trace:payment_actual0@32000.0;490
+Feature;821;trace:penalty_amount0@5500.0;6
+Feature;821;event:org:resource@5dd4ec;302
+Feature;821;trace:amount_applied0@65000.0;200
+Feature;821;trace:area@204.0;100
+Feature;821;trace:payment_actual0@65000.0;179
+Feature;821;trace:area@75.0;200
+Feature;821;trace:area@109.0;100
+Feature;821;trace:payment_actual0@149000.0;12
+Feature;821;trace:penalty_amount0@1500.0;63
+Feature;821;trace:number_parcels@95.0;200
+Feature;821;trace:penalty_B4@True;191
+Feature;821;trace:payment_actual0@72000.0;9
+Feature;821;trace:penalty_amount0@900.0;105
+Feature;821;trace:amount_applied0@26000.0;600
+Feature;821;trace:area@87.0;200
+Feature;821;trace:payment_actual0@26000.0;604
+Feature;821;trace:area@15.0;500
+Feature;821;trace:area@51.0;300
+Feature;821;trace:amount_applied0@92000.0;100
+Feature;821;trace:area@287.0;100
+Feature;821;trace:payment_actual0@92000.0;92
+Feature;821;trace:area@70.0;300
+Feature;821;trace:amount_applied0@39000.0;300
+Feature;821;trace:payment_actual0@39000.0;305
+Feature;821;trace:area@27.0;300
+Feature;821;event:org:resource@a5c3dd;385
+Feature;821;trace:amount_applied0@27000.0;600
+Feature;821;trace:area@90.0;200
+Feature;821;trace:payment_actual0@27000.0;599
+Feature;821;trace:amount_applied0@15000.0;800
+Feature;821;trace:area@48.0;300
+Feature;821;trace:payment_actual0@15000.0;807
+Feature;821;trace:area@43.0;200
+Feature;821;trace:penalty_amount0@600.0;190
+Feature;821;event:org:resource@b90293;4549
+Feature;821;event:org:resource@82518f;10
+Feature;821;trace:cross_compliance@15.0;109
+Feature;821;trace:penalty_amount0@6400.0;5
+Feature;821;trace:amount_applied0@38000.0;300
+Feature;821;trace:area@130.0;100
+Feature;821;trace:payment_actual0@38000.0;303
+Feature;821;event:org:resource@36c75c;455
+Feature;821;trace:penalty_amount0@500.0;278
+Feature;821;trace:penalty_amount0@2400.0;34
+Feature;821;trace:penalty_amount0@800.0;140
+Feature;821;trace:area@45.0;200
+Feature;821;trace:area@13.0;500
+Feature;821;trace:amount_applied0@31000.0;500
+Feature;821;trace:payment_actual0@31000.0;492
+Feature;821;trace:payment_actual0@586000.0;18
+Feature;821;trace:amount_applied0@22000.0;700
+Feature;821;trace:area@73.0;200
+Feature;821;trace:penalty_amount0@1000.0;102
+Feature;821;trace:area@162.0;100
+Feature;821;trace:payment_actual0@47000.0;298
+Feature;821;trace:number_parcels@50.0;700
+Feature;821;trace:area@22.0;200
+Feature;821;trace:area@9.0;700
+Feature;821;trace:payment_actual0@584000.0;87
+Feature;821;event:org:resource@5bf77a;218
+Feature;821;trace:area@72.0;300
+Feature;821;trace:payment_actual0@22000.0;751
+Feature;821;trace:area@64.0;200
+Feature;821;trace:area@88.0;200
+Feature;821;event:org:resource@99e048;204
+Feature;821;trace:area@116.0;100
+Feature;821;trace:area@53.0;200
+Feature;821;trace:area@82.0;200
+Feature;821;trace:area@31.0;200
+Feature;821;trace:amount_applied0@30000.0;500
+Feature;821;trace:payment_actual0@30000.0;494
+Feature;821;trace:redistribution@False;73
+Feature;821;trace:amount_applied0@32000.0;500
+Feature;821;trace:area@106.0;100
+Feature;821;trace:penalty_JLP1@True;169
+Feature;821;trace:penalty_JLP2@True;45
+Feature;821;trace:area@101.0;300
+Feature;821;trace:amount_applied0@44000.0;300
+Feature;821;trace:payment_actual0@44000.0;296
+Feature;821;trace:amount_applied0@12000.0;800
+Feature;821;trace:area@36.0;300
+Feature;821;trace:number_parcels@55.0;500
+Feature;821;trace:amount_applied0@41000.0;300
+Feature;821;trace:area@140.0;200
+Feature;821;trace:area@52.0;200
+Feature;821;trace:area@80.0;200
+Feature;821;event:org:resource@21612d;89
+Feature;821;trace:payment_actual0@57000.0;24
+Feature;821;trace:payment_actual0@45000.0;205
+Feature;821;trace:penalty_amount0@3000.0;24
+Feature;821;trace:payment_actual0@150000.0;69
+Feature;821;trace:area@41.0;300
+Feature;821;trace:penalty_amount0@1300.0;74
+Feature;821;trace:area@23.0;300
+Feature;821;event:concept:name@discard;55
+Feature;821;trace:area@152.0;100
+Feature;821;trace:penalty_amount0@4000.0;41
+Feature;821;trace:area@47.0;300
+Feature;821;trace:area@113.0;100
+Feature;821;trace:area@136.0;100
+Feature;821;trace:area@34.0;300
+Feature;821;event:org:resource@352a49;136
+Feature;821;trace:area@37.0;200
+Feature;821;trace:payment_actual0@70000.0;122
+Feature;821;trace:penalty_amount0@4700.0;9
+Feature;821;trace:amount_applied0@54000.0;300
+Feature;821;trace:cross_compliance@9.0;47
+Feature;821;trace:amount_applied0@62000.0;300
+Feature;821;trace:payment_actual0@62000.0;259
+Feature;821;trace:penalty_amount0@1800.0;39
+Feature;821;event:org:resource@03b214;824
+Feature;821;trace:area@179.0;100
+Feature;821;trace:payment_actual0@54000.0;269
+Feature;821;event:org:resource@dd12cf;147
+Feature;821;trace:payment_actual0@585000.0;10
+Feature;821;event:org:resource@fc6177;154
+Feature;821;trace:cross_compliance@20.0;36
+Feature;821;trace:payment_actual0@583000.0;10
+Feature;821;event:org:resource@ef80e3;30
+Feature;821;event:org:resource@6d6ae5;98
+Feature;821;trace:penalty_amount0@2500.0;28
+Feature;821;event:org:resource@5c1b3c;685
+Feature;821;event:org:resource@2b8616;321
+Feature;821;trace:amount_applied0@45000.0;200
+Feature;821;trace:payment_actual0@76000.0;174
+Feature;821;trace:penalty_amount0@4800.0;9
+Feature;821;trace:cross_compliance@4.0;42
+Feature;821;trace:penalty_amount0@1600.0;60
+Feature;821;trace:area@91.0;200
+Feature;821;trace:area@0.0;209
+Feature;821;trace:payment_actual0@60000.0;17
+Feature;821;event:org:resource@ee262f;1613
+Feature;821;trace:payment_actual0@146000.0;3
+Feature;821;trace:penalty_amount0@4100.0;19
+Feature;821;trace:payment_actual0@79000.0;16
+Feature;821;trace:penalty_amount0@1200.0;97
+Feature;821;trace:penalty_amount0@4600.0;3
+Feature;821;trace:penalty_amount0@13900.0;3
+Feature;821;event:org:resource@fa6437;599
+Feature;821;trace:penalty_amount0@4300.0;15
+Feature;821;trace:payment_actual0@55000.0;19
+Feature;821;trace:payment_actual0@80000.0;11
+Feature;821;trace:penalty_amount0@1700.0;38
+Feature;821;event:org:resource@b2b786;41
+Feature;821;trace:penalty_amount0@7800.0;2
+Feature;821;trace:payment_actual0@64000.0;13
+Feature;821;trace:payment_actual0@111000.0;16
+Feature;821;event:org:resource@796771;147
+Feature;821;event:org:resource@2044b6;378
+Feature;821;trace:penalty_JLP3@True;12
+Feature;821;event:org:resource@7886b1;22
+Feature;821;trace:payment_actual0@68000.0;12
+Feature;821;trace:penalty_C9@True;26
+Feature;821;trace:penalty_amount0@3200.0;16
+Feature;821;trace:penalty_amount0@5300.0;3
+Feature;821;event:concept:name@cancel offline;131
+Feature;821;trace:payment_actual0@51000.0;19
+Feature;821;trace:penalty_amount0@2600.0;26
+Feature;821;trace:payment_actual0@88000.0;5
+Feature;821;trace:cross_compliance@2.0;4
+Feature;821;trace:penalty_amount0@6000.0;5
+Feature;821;trace:penalty_amount0@2800.0;20
+Feature;821;trace:penalty_amount0@7000.0;2
+Feature;821;trace:penalty_amount0@5200.0;4
+Feature;821;event:org:resource@8d8538;238
+Feature;821;event:org:resource@c522f8;106
+Feature;821;trace:cross_compliance@21.0;2
+Feature;821;trace:penalty_amount0@2700.0;18
+Feature;821;event:org:resource@2bf205;69
+Feature;821;trace:payment_actual0@63000.0;8
+Feature;821;trace:penalty_AJLP@True;61
+Feature;821;trace:payment_actual0@61000.0;25
+Feature;821;event:org:resource@d4758f;118
+Feature;821;trace:payment_actual0@78000.0;6
+Feature;821;trace:penalty_amount0@3100.0;15
+Feature;821;trace:payment_actual0@90000.0;13
+Feature;821;trace:cross_compliance@12.0;19
+Feature;821;trace:payment_actual0@53000.0;14
+Feature;821;trace:penalty_amount0@13700.0;2
+Feature;821;trace:penalty_amount0@2100.0;31
+Feature;821;trace:payment_actual0@59000.0;197
+Feature;821;trace:payment_actual0@73000.0;13
+Feature;821;event:org:resource@d114c8;8
+Feature;821;trace:penalty_amount0@3800.0;11
+Feature;821;trace:payment_actual0@75000.0;17
+Feature;821;trace:penalty_amount0@6700.0;3
+Feature;821;trace:payment_actual0@49000.0;104
+Feature;821;trace:payment_actual0@145000.0;2
+Feature;821;trace:payment_actual0@582000.0;7
+Feature;821;trace:penalty_amount0@5100.0;6
+Feature;821;trace:penalty_amount0@3400.0;19
+Feature;821;event:org:resource@Inspection service;86
+Feature;821;event:org:resource@313338;2
+Feature;821;trace:penalty_amount0@3900.0;79
+Feature;821;event:concept:name@change department;11
+Feature;821;event:org:resource@bbd307;74
+Feature;821;trace:penalty_amount0@9700.0;2
+Feature;821;trace:penalty_amount0@17600.0;2
+Feature;821;trace:penalty_amount0@6200.0;6
+Feature;821;trace:penalty_amount0@7200.0;3
+Feature;821;trace:penalty_amount0@10000.0;2
+Feature;821;trace:penalty_amount0@2900.0;22
+Feature;821;trace:penalty_amount0@3600.0;9
+Feature;821;trace:penalty_amount0@7300.0;3
+Feature;821;trace:payment_actual0@86000.0;2
+Feature;821;trace:cross_compliance@35.0;10
+Feature;821;trace:penalty_amount0@6800.0;2
+Feature;821;trace:penalty_amount0@3700.0;16
+Feature;821;trace:payment_actual0@581000.0;6
+Feature;821;trace:penalty_AVBP@True;2
+Feature;821;trace:penalty_AVGP@True;2
+Feature;821;trace:penalty_amount0@2000.0;27
+Feature;821;trace:payment_actual0@148000.0;6
+Feature;821;trace:penalty_amount0@2300.0;19
+Feature;821;trace:payment_actual0@89000.0;8
+Feature;821;trace:cross_compliance@14.0;7
+Feature;821;trace:penalty_amount0@4200.0;8
+Feature;821;trace:penalty_amount0@6300.0;2
+Feature;821;trace:cross_compliance@23.0;6
+Feature;821;trace:payment_actual0@87000.0;3
+Feature;821;trace:payment_actual0@110000.0;7
+Feature;821;trace:cross_compliance@40.0;3
+Feature;821;trace:payment_actual0@46000.0;103
+Feature;821;trace:payment_actual0@91000.0;8
+Feature;821;event:org:resource@f6f7f1;119
+Feature;821;trace:penalty_amount0@10900.0;2
+Feature;821;event:org:resource@ba978b;426
+Feature;821;trace:penalty_amount0@4400.0;10
+Feature;821;trace:payment_actual0@77000.0;3
+Feature;821;event:org:resource@91bca0;40
+Feature;821;trace:penalty_amount0@7700.0;5
+Feature;821;event:org:resource@e99397;50
+Feature;821;trace:penalty_amount0@3500.0;11
+Feature;821;event:org:resource@07361d;6
+Feature;821;trace:payment_actual0@580000.0;5
+Feature;821;trace:penalty_amount0@5400.0;5
+Feature;821;trace:penalty_amount0@6100.0;4
+Feature;821;trace:payment_actual0@93000.0;166
+Feature;821;trace:penalty_amount0@19100.0;2
+Feature;821;trace:penalty_amount0@9800.0;2
+Feature;821;trace:payment_actual0@143000.0;2
+Feature;821;trace:payment_actual0@147000.0;3
+Feature;821;trace:penalty_amount0@8200.0;5
+Feature;821;trace:penalty_amount0@4900.0;12
+Feature;821;trace:cross_compliance@7.0;7
+Feature;821;trace:payment_actual0@66000.0;88
+Feature;821;event:org:resource@scheduler;14341
+Feature;821;trace:payment_actual0@106000.0;3
+Feature;821;trace:penalty_amount0@5000.0;7
+Feature;821;trace:penalty_C16@True;5
+Feature;821;trace:penalty_amount0@10400.0;4
+Feature;821;trace:payment_actual0@101000.0;2
+Feature;821;trace:penalty_AVJLP@True;3
+Feature;821;trace:penalty_amount0@13300.0;3
+Feature;821;trace:payment_actual0@577000.0;2
+Feature;821;trace:penalty_amount0@6500.0;5
+Feature;821;trace:cross_compliance@10.0;8
+Feature;821;trace:year@2016;14552
+Feature;821;event:concept:name@create;29059
+Feature;821;event:org:resource@Notification automaton;29020
+Feature;821;event:org:resource@Parcel automaton;14419
+Feature;821;event:doctype@Geo parcel document;29059
+Feature;821;event:subprocess@Declared;29059
+Feature;821;trace:area@99.0;200
+Feature;821;event:org:resource@d85681;3682
+Feature;821;trace:area@122.0;100
+Feature;821;trace:penalty_B5@True;156
+Feature;821;event:concept:name@finish pre-check;15032
+Feature;821;event:concept:name@restart editing;768
+Feature;821;trace:area@105.0;200
+Feature;821;event:subprocess@Reported;15351
+Feature;821;trace:area@92.0;100
+Feature;821;trace:area@190.0;100
+Feature;821;trace:area@81.0;100
+Feature;821;trace:amount_applied0@70000.0;200
+Feature;821;trace:area@249.0;100
+Feature;821;event:org:resource@d4d37d;72
+Feature;821;trace:area@158.0;100
+Feature;821;trace:area@110.0;200
+Feature;821;trace:area@176.0;100
+Feature;821;trace:amount_applied0@46000.0;100
+Feature;821;trace:area@153.0;100
+Feature;821;trace:area@134.0;100
+Feature;821;trace:penalty_BGK@True;293
+Feature;821;trace:area@107.0;100
+Feature;821;trace:area@183.0;100
+Feature;821;trace:penalty_JLP6@True;124
+Feature;821;trace:amount_applied0@93000.0;200
+Feature;821;trace:area@294.0;100
+Feature;821;trace:area@57.0;200
+Feature;821;event:org:resource@eb38eb;227
+Feature;821;trace:area@220.0;100
+Feature;821;trace:payment_actual0@71000.0;64
+Feature;821;trace:number_parcels@80.0;200
+Feature;821;trace:area@164.0;100
+Feature;821;trace:area@117.0;200
+Feature;821;trace:amount_applied0@49000.0;100
+Feature;821;trace:area@131.0;100
+Feature;821;trace:area@331.0;100
+Feature;821;trace:area@115.0;200
+Feature;821;trace:area@63.0;100
+Feature;821;trace:area@112.0;200
+Feature;821;trace:area@148.0;100
+Feature;821;trace:area@198.0;100
+Feature;821;trace:area@83.0;100
+Feature;821;trace:area@128.0;100
+Feature;821;trace:area@39.0;200
+Feature;821;trace:amount_applied0@83000.0;200
+Feature;821;trace:area@267.0;100
+Feature;821;trace:payment_actual0@83000.0;162
+Feature;821;event:org:resource@a21e1b;76
+Feature;821;trace:amount_applied0@76000.0;200
+Feature;821;trace:area@77.0;200
+Feature;821;trace:amount_applied0@156000.0;200
+Feature;821;trace:area@404.0;100
+Feature;821;trace:payment_actual0@156000.0;147
+Feature;821;event:org:resource@8c9a01;118
+Feature;821;trace:area@30.0;200
+Feature;821;trace:area@46.0;100
+Feature;821;trace:area@125.0;200
+Feature;821;event:concept:name@calculate protocol;81
+Feature;821;trace:area@137.0;100
+Feature;821;trace:area@208.0;100
+Feature;821;event:org:resource@7078c7;4172
+Feature;821;trace:area@60.0;200
+Feature;821;trace:area@169.0;100
+Feature;821;trace:area@54.0;200
+Feature;821;trace:amount_applied0@66000.0;100
+Feature;821;trace:area@103.0;200
+Feature;821;trace:area@120.0;200
+Feature;821;trace:area@233.0;100
+Feature;821;trace:area@69.0;200
+Feature;821;trace:area@561.0;100
+Feature;821;event:concept:name@clear;2342
+Feature;821;trace:area@86.0;200
+Feature;821;trace:penalty_amount0@6600.0;4
+Feature;821;trace:payment_actual0@152000.0;5
+Feature;821;trace:penalty_amount0@9200.0;2
+Feature;821;event:org:resource@8aab8f;133
+Feature;821;event:org:resource@2baab0;13
+Feature;821;trace:cross_compliance@30.0;3
+Feature;821;trace:penalty_amount0@10800.0;3
+Feature;821;trace:payment_actual0@154000.0;10
+Feature;821;trace:penalty_amount0@7400.0;2
+Feature;821;trace:penalty_amount0@7900.0;3
+Feature;821;trace:payment_actual0@82000.0;18
+Feature;821;trace:penalty_amount0@5600.0;3
+Feature;821;trace:cross_compliance@11.0;3
+Feature;821;trace:payment_actual0@151000.0;3
+Feature;821;trace:penalty_JLP5@True;25
+Feature;821;event:org:resource@08e484;4719
+Feature;821;trace:penalty_amount0@7600.0;3
+Feature;821;trace:payment_actual0@155000.0;27
+Feature;821;trace:penalty_amount0@5800.0;3
+Feature;821;trace:penalty_amount0@8800.0;2
+Feature;821;event:org:resource@5d8173;30
+Feature;821;trace:payment_actual0@579000.0;5
+Feature;821;trace:cross_compliance@100.0;3
+Feature;821;trace:penalty_AVUVP@True;2
+Feature;821;trace:penalty_amount0@9900.0;2
+Feature;821;trace:year@2017;14507
+Feature;821;trace:area@223.0;100
+Feature;821;trace:amount_applied0@584000.0;100
+Feature;821;trace:area@576.0;100
+Feature;821;trace:number_parcels@100.0;100
+Feature;821;trace:penalty_BGP@True;372
+Feature;821;trace:area@272.0;100
+Feature;821;trace:area@166.0;100
+Feature;821;trace:area@201.0;100
+Feature;821;trace:area@252.0;100
+Feature;821;trace:area@108.0;100
+Feature;821;trace:area@171.0;100
+Feature;821;trace:area@135.0;100
+Feature;821;trace:area@132.0;100
+Feature;821;trace:area@178.0;100
+Feature;821;trace:area@42.0;100
+Feature;821;trace:area@151.0;100
+Feature;821;trace:area@211.0;100
+Feature;821;trace:penalty_BGKV@True;15
+Feature;821;trace:area@146.0;100
+Feature;821;trace:area@129.0;100
+Feature;821;trace:area@74.0;100
+Feature;821;trace:area@49.0;100
+Feature;821;trace:area@143.0;100
+Feature;821;trace:area@35.0;100
+Feature;821;trace:amount_applied0@113000.0;100
+Feature;821;trace:area@338.0;100
+Feature;821;trace:payment_actual0@113000.0;85
+Feature;821;trace:area@185.0;100
+Feature;821;trace:area@89.0;100
+Feature;821;trace:area@160.0;100
+Feature;821;trace:area@301.0;100
+Feature;821;trace:area@155.0;100
+Feature;821;trace:area@193.0;100
+Feature;821;trace:area@418.0;100
+Feature;821;trace:area@139.0;100
+Feature;821;trace:area@235.0;100
+Feature;821;trace:cross_compliance@8.0;3
+Feature;821;event:concept:name@correction GFM17;17
+Feature;821;event:org:resource@parcel correction automaton;17
+Feature;821;trace:penalty_amount0@12600.0;2
+Feature;821;event:org:resource@6c720c;8
+Feature;821;trace:cross_compliance@25.0;2
+Feature;821;trace:payment_actual0@570000.0;2
+Feature;821;trace:penalty_amount0@10500.0;2
+Feature;821;trace:payment_actual0@569000.0;2
+Sequence;1995;('finish editing', 'begin editing', 'save');6446
+Sequence;1995;('finish editing', 'calculate', 'calculate');11939
+Sequence;1995;('insert document', 'save', 'save');4825
+Sequence;1995;('begin editing', 'save', 'insert document');1428
+Sequence;1995;('finish editing', 'initialize', 'performed');29687
+Sequence;1995;('performed', 'performed', 'initialize');12845
+Sequence;1995;('begin editing', 'finish editing', 'begin editing');1714
+Sequence;1995;('mail valid', 'mail valid', 'mail valid');14359
+Sequence;1995;('calculate', 'begin editing', 'calculate');17769
+Sequence;1995;('finish editing', 'decide', 'begin payment');41062
+Sequence;1995;('decide', 'begin payment', 'abort payment');24368
+Sequence;1995;('initialize', 'begin editing', 'finish editing');43756
+Sequence;1995;('begin editing', 'calculate', 'save');4929
+Sequence;1995;('save', 'finish editing', 'initialize');5049
+Sequence;1995;('performed', 'initialize', 'begin editing');27622
+Sequence;1995;('abort payment', 'begin payment', 'finish payment');12975
+Sequence;1995;('save', 'insert document', 'save');3783
+Sequence;1995;('finish editing', 'initialize', 'begin editing');18227
+Sequence;1995;('mail valid', 'initialize', 'initialize');850
+Sequence;1995;('finish editing', 'begin editing', 'calculate');41405
+Sequence;1995;('begin editing', 'calculate', 'begin editing');14940
+Sequence;1995;('save', 'save', 'finish editing');5510
+Sequence;1995;('finish editing', 'decide', 'calculate');14745
+Sequence;1995;('calculate', 'finish editing', 'begin editing');41444
+Sequence;1995;('initialize', 'performed', 'performed');16705
+Sequence;1995;('begin payment', 'abort payment', 'begin payment');24715
+Sequence;1995;('abort payment', 'begin payment', 'abort payment');6441
+Sequence;1995;('save', 'calculate', 'finish editing');12259
+Sequence;1995;('decide', 'calculate', 'finish editing');14803
+Sequence;1995;('calculate', 'finish editing', 'calculate');18099
+Sequence;1995;('calculate', 'save', 'calculate');6614
+Sequence;1995;('calculate', 'calculate', 'begin editing');10622
+Sequence;1995;('mail income', 'mail valid', 'mail valid');15218
+Sequence;1995;('calculate', 'finish editing', 'decide');43778
+Sequence;1995;('save', 'save', 'save');8655
+Sequence;1995;('mail valid', 'mail valid', 'initialize');15217
+Sequence;1995;('calculate', 'finish editing', 'initialize');13455
+Sequence;1995;('begin editing', 'calculate', 'finish editing');42116
+Sequence;1995;('initialize', 'initialize', 'begin editing');1124
+Sequence;1995;('initialize', 'begin editing', 'calculate');37905
+Sequence;1995;('mail valid', 'initialize', 'begin editing');39207
+Sequence;1995;('initialize', 'performed', 'finish editing');1399
+Sequence;1995;('initialize', 'begin editing', 'initialize');6532
+Sequence;1995;('finish editing', 'revoke decision', 'decide');1426
+Sequence;1995;('begin payment', 'finish payment', 'save');3934
+Sequence;1995;('begin editing', 'finish editing', 'insert document');2167
+Sequence;1995;('save', 'save', 'initialize');3595
+Sequence;1995;('finish editing', 'performed', 'initialize');5046
+Sequence;1995;('calculate', 'finish editing', 'revoke decision');1577
+Sequence;1995;('performed', 'finish editing', 'performed');1138
+Sequence;1995;('save', 'initialize', 'performed');2828
+Sequence;1995;('revoke decision', 'decide', 'begin payment');1403
+Sequence;1995;('finish editing', 'insert document', 'save');4031
+Sequence;1995;('calculate', 'calculate', 'calculate');19089
+Sequence;1995;('begin editing', 'initialize', 'begin editing');7061
+Sequence;1995;('save', 'save', 'check');2281
+Sequence;1995;('save', 'check', 'check');578
+Sequence;1995;('begin editing', 'calculate', 'performed');567
+Sequence;1995;('calculate', 'performed', 'initialize');439
+Sequence;1995;('abort payment', 'begin payment', 'save');1371
+Sequence;1995;('check', 'save', 'initialize');184
+Sequence;1995;('check', 'check', 'finish editing');519
+Sequence;1995;('performed', 'initialize', 'calculate');3701
+Sequence;1995;('save', 'check', 'finish editing');4766
+Sequence;1995;('insert document', 'save', 'check');3072
+Sequence;1995;('begin payment', 'save', 'save');293
+Sequence;1995;('finish editing', 'save', 'check');997
+Sequence;1995;('check', 'finish editing', 'finish payment');118
+Sequence;1995;('check', 'finish editing', 'save');3116
+Sequence;1995;('initialize', 'calculate', 'finish editing');4496
+Sequence;1995;('save', 'initialize', 'begin editing');5815
+Sequence;1995;('check', 'check', 'save');145
+Sequence;1995;('initialize', 'performed', 'check');1246
+Sequence;1995;('finish editing', 'calculate', 'begin editing');7176
+Sequence;1995;('finish editing', 'save', 'initialize');2413
+Sequence;1995;('performed', 'check', 'finish editing');856
+Sequence;1995;('revoke decision', 'calculate', 'finish editing');18899
+Sequence;1995;('finish editing', 'decide', 'revoke decision');18799
+Sequence;1995;('insert document', 'save', 'performed');122
+Sequence;1995;('begin editing', 'finish editing', 'initialize');24964
+Sequence;1995;('decide', 'revoke decision', 'calculate');18432
+Sequence;1995;('begin editing', 'finish editing', 'finish editing');15173
+Sequence;1995;('save', 'performed', 'initialize');2240
+Sequence;1995;('initialize', 'performed', 'insert document');1480
+Sequence;1995;('performed', 'insert document', 'save');2327
+Sequence;1995;('finish editing', 'finish editing', 'initialize');7508
+Sequence;1995;('calculate', 'remove document', 'insert document');1922
+Sequence;1995;('begin editing', 'finish editing', 'save');1460
+Sequence;1995;('remove document', 'insert document', 'save');1953
+Sequence;1995;('insert document', 'initialize', 'begin editing');4282
+Sequence;1995;('finish payment', 'insert document', 'initialize');1618
+Sequence;1995;('begin editing', 'calculate', 'remove document');2017
+Sequence;1995;('insert document', 'save', 'insert document');1777
+Sequence;1995;('begin payment', 'finish payment', 'insert document');1616
+Sequence;1995;('finish editing', 'save', 'insert document');720
+Sequence;1995;('save', 'insert document', 'initialize');2476
+Sequence;1995;('calculate', 'insert document', 'calculate');129
+Sequence;1995;('save', 'performed', 'save');2130
+Sequence;1995;('performed', 'save', 'save');4865
+Sequence;1995;('performed', 'save', 'performed');617
+Sequence;1995;('finish payment', 'save', 'save');2026
+Sequence;1995;('save', 'finish payment', 'save');751
+Sequence;1995;('insert document', 'calculate', 'remove document');36
+Sequence;1995;('initialize', 'performed', 'save');5708
+Sequence;1995;('begin editing', 'calculate', 'insert document');662
+Sequence;1995;('begin payment', 'save', 'finish payment');368
+Sequence;1995;('finish editing', 'save', 'save');4841
+Sequence;1995;('insert document', 'save', 'finish editing');5148
+Sequence;1995;('save', 'finish editing', 'save');7079
+Sequence;1995;('save', 'save', 'performed');3439
+Sequence;1995;('performed', 'save', 'finish editing');1757
+Sequence;1995;('initialize', 'finish editing', 'begin editing');95
+Sequence;1995;('performed', 'initialize', 'finish editing');35
+Sequence;1995;('finish editing', 'finish editing', 'insert document');488
+Sequence;1995;('finish payment', 'save', 'finish editing');1179
+Sequence;1995;('begin payment', 'insert document', 'save');409
+Sequence;1995;('save', 'finish editing', 'finish editing');789
+Sequence;1995;('finish editing', 'finish editing', 'finish payment');35
+Sequence;1995;('abort payment', 'begin payment', 'insert document');12335
+Sequence;1995;('performed', 'save', 'initialize');1972
+Sequence;1995;('calculate', 'begin editing', 'begin editing');501
+Sequence;1995;('save', 'save', 'calculate');5362
+Sequence;1995;('calculate', 'begin editing', 'insert document');1418
+Sequence;1995;('save', 'calculate', 'calculate');4678
+Sequence;1995;('begin editing', 'insert document', 'save');4763
+Sequence;1995;('calculate', 'begin editing', 'initialize');284
+Sequence;1995;('begin editing', 'calculate', 'calculate');20351
+Sequence;1995;('mail valid', 'mail income', 'mail valid');898
+Sequence;1995;('begin editing', 'initialize', 'save');114
+Sequence;1995;('finish editing', 'performed', 'save');1187
+Sequence;1995;('save', 'begin editing', 'calculate');4472
+Sequence;1995;('save', 'save', 'begin editing');2429
+Sequence;1995;('initialize', 'save', 'save');1613
+Sequence;1995;('begin editing', 'begin editing', 'calculate');1173
+Sequence;1995;('finish payment', 'insert document', 'save');1493
+Sequence;1995;('save', 'calculate', 'save');2413
+Sequence;1995;('check', 'finish editing', 'insert document');286
+Sequence;1995;('calculate', 'initialize', 'begin editing');2571
+Sequence;1995;('begin editing', 'check', 'finish editing');46
+Sequence;1995;('calculate', 'calculate', 'save');5009
+Sequence;1995;('begin editing', 'calculate', 'initialize');3219
+Sequence;1995;('initialize', 'begin editing', 'check');158
+Sequence;1995;('abort external', 'finish preparations', 'prepare external');869
+Sequence;1995;('prepare external', 'initialize', 'performed');1075
+Sequence;1995;('finish editing', 'plan', 'initialize');513
+Sequence;1995;('finish preparations', 'prepare external', 'begin preparations');1196
+Sequence;1995;('finish preparations', 'begin preparations', 'prepare external');2074
+Sequence;1995;('plan', 'initialize', 'save');958
+Sequence;1995;('abort external', 'finish preparations', 'begin preparations');1636
+Sequence;1995;('prepare external', 'begin preparations', 'abort external');1041
+Sequence;1995;('finish editing', 'finish editing', 'plan');110
+Sequence;1995;('begin preparations', 'abort external', 'finish preparations');737
+Sequence;1995;('save', 'save', 'finish preparations');1976
+Sequence;1995;('save', 'performed', 'finish editing');1510
+Sequence;1995;('begin preparations', 'prepare external', 'abort external');1985
+Sequence;1995;('prepare external', 'abort external', 'finish preparations');1554
+Sequence;1995;('begin preparations', 'prepare external', 'initialize');1000
+Sequence;1995;('save', 'finish preparations', 'begin preparations');1546
+Sequence;1995;('save', 'save', 'insert document');1946
+Sequence;1995;('finish editing', 'save', 'finish payment');377
+Sequence;1995;('finish payment', 'save', 'check');394
+Sequence;1995;('check', 'finish editing', 'performed');1057
+Sequence;1995;('finish editing', 'save', 'finish editing');4682
+Sequence;1995;('check', 'check', 'insert document');121
+Sequence;1995;('performed', 'initialize', 'save');821
+Sequence;1995;('begin editing', 'save', 'calculate');4949
+Sequence;1995;('initialize', 'save', 'calculate');404
+Sequence;1995;('initialize', 'check', 'check');7
+Sequence;1995;('check', 'insert document', 'save');779
+Sequence;1995;('performed', 'check', 'check');172
+Sequence;1995;('calculate', 'calculate', 'remove document');277
+Sequence;1995;('save', 'finish payment', 'insert document');128
+Sequence;1995;('save', 'finish editing', 'begin editing');4711
+Sequence;1995;('save', 'initialize', 'check');42
+Sequence;1995;('calculate', 'save', 'finish editing');1877
+Sequence;1995;('begin editing', 'save', 'save');5056
+Sequence;1995;('check', 'finish editing', 'begin editing');750
+Sequence;1995;('finish editing', 'finish preparations', 'save');438
+Sequence;1995;('save', 'save', 'begin preparations');1546
+Sequence;1995;('performed', 'initialize', 'plan');606
+Sequence;1995;('plan', 'save', 'finish editing');485
+Sequence;1995;('initialize', 'plan', 'save');2494
+Sequence;1995;('prepare offline', 'save', 'save');1355
+Sequence;1995;('performed offline', 'save', 'finish editing');1010
+Sequence;1995;('save', 'finish preparations', 'prepare external');501
+Sequence;1995;('begin preparations', 'prepare offline', 'save');1303
+Sequence;1995;('save', 'finish editing', 'performed offline');4
+Sequence;1995;('plan', 'save', 'save');1846
+Sequence;1995;('performed', 'performed', 'save');2318
+Sequence;1995;('save', 'finish editing', 'finish preparations');411
+Sequence;1995;('save', 'initialize', 'plan');819
+Sequence;1995;('finish preparations', 'save', 'save');1440
+Sequence;1995;('save', 'begin preparations', 'prepare offline');1634
+Sequence;1995;('finish editing', 'performed offline', 'save');17
+Sequence;1995;('check', 'finish editing', 'initialize');2039
+Sequence;1995;('finish editing', 'save', 'begin editing');2282
+Sequence;1995;('check', 'save', 'check');558
+Sequence;1995;('save', 'check', 'initialize');395
+Sequence;1995;('begin payment', 'save', 'finish editing');485
+Sequence;1995;('check', 'initialize', 'performed');515
+Sequence;1995;('save', 'save', 'finish payment');432
+Sequence;1995;('save', 'check', 'save');969
+Sequence;1995;('begin editing', 'save', 'check');121
+Sequence;1995;('check', 'save', 'save');424
+Sequence;1995;('finish editing', 'decide', 'save');451
+Sequence;1995;('calculate', 'calculate', 'finish editing');20788
+Sequence;1995;('revoke withdrawal', 'remove document', 'insert document');119
+Sequence;1995;('decide', 'insert document', 'save');1548
+Sequence;1995;('insert document', 'save', 'begin payment');1206
+Sequence;1995;('save', 'revoke decision', 'calculate');268
+Sequence;1995;('finish editing', 'decide', 'insert document');2444
+Sequence;1995;('decide', 'save', 'revoke decision');115
+Sequence;1995;('begin editing', 'calculate', 'withdraw');202
+Sequence;1995;('calculate', 'withdraw', 'revoke withdrawal');62
+Sequence;1995;('calculate', 'save', 'initialize');423
+Sequence;1995;('save', 'begin payment', 'finish payment');862
+Sequence;1995;('withdraw', 'revoke withdrawal', 'remove document');58
+Sequence;1995;('insert document', 'save', 'begin editing');863
+Sequence;1995;('check', 'save', 'finish editing');189
+Sequence;1995;('save', 'begin editing', 'save');2291
+Sequence;1995;('decide', 'decide', 'begin payment');346
+Sequence;1995;('finish editing', 'decide', 'decide');1275
+Sequence;1995;('calculate', 'finish editing', 'save');5584
+Sequence;1995;('check admissibility', 'calculate', 'approve');248
+Sequence;1995;('insert document', 'save', 'begin admissibility check');179
+Sequence;1995;('insert document', 'initialize', 'insert document');485
+Sequence;1995;('save', 'calculate', 'check admissibility');84
+Sequence;1995;('save', 'begin admissibility check', 'check admissibility');291
+Sequence;1995;('finish editing', 'initialize', 'insert document');80
+Sequence;1995;('check admissibility', 'approve', 'begin editing');200
+Sequence;1995;('initialize', 'insert document', 'save');388
+Sequence;1995;('begin admissibility check', 'check admissibility', 'calculate');408
+Sequence;1995;('insert document', 'insert document', 'save');472
+Sequence;1995;('begin admissibility check', 'check admissibility', 'begin admissibility check');219
+Sequence;1995;('decide', 'insert document', 'insert document');687
+Sequence;1995;('calculate', 'save', 'insert document');194
+Sequence;1995;('approve', 'begin editing', 'calculate');340
+Sequence;1995;('calculate', 'check admissibility', 'approve');229
+Sequence;1995;('calculate', 'performed', 'save');239
+Sequence;1995;('calculate', 'approve', 'calculate');140
+Sequence;1995;('save', 'initialize', 'insert document');252
+Sequence;1995;('begin admissibility check', 'save', 'calculate');84
+Sequence;1995;('initialize', 'insert document', 'initialize');482
+Sequence;1995;('save', 'begin payment', 'abort payment');535
+Sequence;1995;('performed', 'save', 'insert document');494
+Sequence;1995;('check admissibility', 'begin admissibility check', 'save');173
+Sequence;1995;('initialize', 'insert document', 'begin editing');60
+Sequence;1995;('calculate', 'begin editing', 'begin admissibility check');7
+Sequence;1995;('finish editing', 'finish payment', 'save');324
+Sequence;1995;('approve', 'calculate', 'begin editing');277
+Sequence;1995;('begin editing', 'begin admissibility check', 'check admissibility');8
+Sequence;1995;('finish payment', 'save', 'insert document');536
+Sequence;1995;('insert document', 'begin editing', 'save');121
+Sequence;1995;('save', 'finish editing', 'insert document');870
+Sequence;1995;('insert document', 'insert document', 'initialize');495
+Sequence;1995;('insert document', 'take original document', 'begin payment');8
+Sequence;1995;('finish editing', 'save', 'performed');1748
+Sequence;1995;('decide', 'insert document', 'take original document');7
+Sequence;1995;('decide', 'decide', 'insert document');734
+Sequence;1995;('take original document', 'begin payment', 'abort payment');22
+Sequence;1995;('insert document', 'insert document', 'insert document');283
+Sequence;1995;('begin admissibility check', 'calculate', 'check admissibility');367
+Sequence;1995;('finish payment', 'initialize', 'insert document');302
+Sequence;1995;('begin editing', 'finish editing', 'decide');148
+Sequence;1995;('calculate', 'begin editing', 'finish editing');382
+Sequence;1995;('begin admissibility check', 'save', 'check admissibility');103
+Sequence;1995;('initialize', 'insert document', 'begin admissibility check');198
+Sequence;1995;('calculate', 'approve', 'begin editing');142
+Sequence;1995;('check admissibility', 'approve', 'calculate');128
+Sequence;1995;('save', 'check admissibility', 'calculate');77
+Sequence;1995;('insert document', 'begin admissibility check', 'calculate');78
+Sequence;1995;('save', 'finish payment', 'initialize');52
+Sequence;1995;('finish editing', 'calculate', 'save');1536
+Sequence;1995;('insert document', 'finish editing', 'save');54
+Sequence;1995;('save', 'finish editing', 'calculate');4356
+Sequence;1995;('save', 'calculate', 'begin editing');990
+Sequence;1995;('decide', 'calculate', 'begin editing');22
+Sequence;1995;('calculate', 'initialize', 'save');588
+Sequence;1995;('initialize', 'insert document', 'finish editing');10
+Sequence;1995;('finish editing', 'save', 'begin admissibility check');34
+Sequence;1995;('save', 'begin admissibility check', 'calculate');156
+Sequence;1995;('check admissibility', 'approve', 'save');4
+Sequence;1995;('approve', 'save', 'finish editing');4
+Sequence;1995;('check admissibility', 'approve', 'begin admissibility check');8
+Sequence;1995;('finish editing', 'finish editing', 'save');1314
+Sequence;1995;('insert document', 'save', 'initialize');911
+Sequence;1995;('begin payment', 'finish payment', 'initialize');245
+Sequence;1995;('decide', 'begin payment', 'finish payment');27
+Sequence;1995;('decide', 'calculate', 'remove document');16
+Sequence;1995;('begin editing', 'finish editing', 'take original document');66
+Sequence;1995;('calculate', 'decide', 'calculate');175
+Sequence;1995;('take original document', 'initialize', 'performed');77
+Sequence;1995;('finish editing', 'insert document', 'initialize');649
+Sequence;1995;('finish editing', 'calculate', 'finish editing');4869
+Sequence;1995;('calculate', 'save', 'performed');61
+Sequence;1995;('calculate', 'finish editing', 'insert document');850
+Sequence;1995;('finish editing', 'take original document', 'initialize');49
+Sequence;1995;('begin editing', 'calculate', 'decide');168
+Sequence;1995;('initialize', 'performed', 'initialize');12594
+Sequence;1995;('begin preparations', 'finish preparations', 'save');127
+Sequence;1995;('save', 'performed offline', 'save');1418
+Sequence;1995;('save', 'begin preparations', 'finish preparations');123
+Sequence;1995;('save', 'finish preparations', 'save');568
+Sequence;1995;('plan', 'save', 'finish preparations');195
+Sequence;1995;('calculate', 'save', 'check');323
+Sequence;1995;('prepare offline', 'save', 'check');3
+Sequence;1995;('finish editing', 'decide', 'begin editing');872
+Sequence;1995;('decide', 'insert document', 'begin payment');959
+Sequence;1995;('calculate', 'insert document', 'save');901
+Sequence;1995;('calculate', 'save', 'save');3440
+Sequence;1995;('decide', 'begin editing', 'save');500
+Sequence;1995;('insert document', 'begin payment', 'finish payment');749
+Sequence;1995;('initialize', 'check', 'finish editing');53
+Sequence;1995;('calculate', 'remove document', 'save');137
+Sequence;1995;('remove document', 'save', 'check');7
+Sequence;1995;('performed', 'initialize', 'check');16
+Sequence;1995;('initialize', 'calculate', 'save');77
+Sequence;1995;('performed', 'check', 'insert document');135
+Sequence;1995;('save', 'initialize', 'save');799
+Sequence;1995;('save', 'initialize', 'calculate');62
+Sequence;1995;('finish payment', 'save', 'begin editing');113
+Sequence;1995;('save', 'performed', 'insert document');155
+Sequence;1995;('save', 'save', 'performed offline');1537
+Sequence;1995;('plan', 'save', 'performed');11
+Sequence;1995;('save', 'begin editing', 'begin editing');225
+Sequence;1995;('begin editing', 'begin editing', 'begin editing');104
+Sequence;1995;('performed offline', 'save', 'save');461
+Sequence;1995;('begin editing', 'check', 'insert document');94
+Sequence;1995;('finish editing', 'save', 'calculate');3503
+Sequence;1995;('finish payment', 'finish editing', 'insert document');45
+Sequence;1995;('performed', 'finish editing', 'insert document');145
+Sequence;1995;('begin payment', 'finish payment', 'finish editing');229
+Sequence;1995;('performed', 'performed', 'insert document');646
+Sequence;1995;('save', 'finish editing', 'performed');1307
+Sequence;1995;('abort external', 'begin preparations', 'prepare external');400
+Sequence;1995;('finish editing', 'initialize', 'plan');1477
+Sequence;1995;('prepare external', 'abort external', 'begin preparations');559
+Sequence;1995;('begin preparations', 'prepare external', 'finish preparations');405
+Sequence;1995;('prepare external', 'finish preparations', 'initialize');120
+Sequence;1995;('finish preparations', 'initialize', 'performed');320
+Sequence;1995;('save', 'finish editing', 'finish payment');388
+Sequence;1995;('finish editing', 'initialize', 'save');512
+Sequence;1995;('initialize', 'save', 'finish editing');529
+Sequence;1995;('save', 'finish editing', 'decide');141
+Sequence;1995;('prepare external', 'begin preparations', 'finish preparations');734
+Sequence;1995;('abort external', 'prepare external', 'begin preparations');732
+Sequence;1995;('finish preparations', 'abort external', 'prepare external');285
+Sequence;1995;('begin preparations', 'finish preparations', 'abort external');611
+Sequence;1995;('begin preparations', 'finish preparations', 'initialize');217
+Sequence;1995;('prepare external', 'abort external', 'prepare external');719
+Sequence;1995;('save', 'calculate', 'remove document');108
+Sequence;1995;('calculate', 'insert document', 'initialize');467
+Sequence;1995;('insert document', 'save', 'calculate');3023
+Sequence;1995;('remove document', 'insert document', 'initialize');534
+Sequence;1995;('calculate', 'begin editing', 'save');4186
+Sequence;1995;('performed', 'save', 'check');697
+Sequence;1995;('finish editing', 'performed', 'finish editing');22
+Sequence;1995;('performed', 'finish editing', 'save');503
+Sequence;1995;('performed', 'check', 'save');89
+Sequence;1995;('abort external', 'begin preparations', 'finish preparations');765
+Sequence;1995;('finish preparations', 'prepare external', 'abort external');612
+Sequence;1995;('prepare external', 'finish preparations', 'begin preparations');543
+Sequence;1995;('abort external', 'prepare external', 'finish preparations');543
+Sequence;1995;('finish preparations', 'initialize', 'save');5
+Sequence;1995;('finish editing', 'performed', 'finish preparations');128
+Sequence;1995;('begin preparations', 'finish preparations', 'prepare external');770
+Sequence;1995;('begin preparations', 'initialize', 'performed');479
+Sequence;1995;('finish preparations', 'begin preparations', 'initialize');168
+Sequence;1995;('performed', 'finish preparations', 'save');235
+Sequence;1995;('begin payment', 'begin editing', 'save');24
+Sequence;1995;('save', 'take original document', 'save');58
+Sequence;1995;('finish editing', 'begin payment', 'abort payment');134
+Sequence;1995;('finish editing', 'finish payment', 'begin editing');43
+Sequence;1995;('abort payment', 'begin payment', 'begin editing');25
+Sequence;1995;('finish payment', 'begin editing', 'save');537
+Sequence;1995;('finish editing', 'decide', 'finish editing');21
+Sequence;1995;('decide', 'finish editing', 'begin payment');8
+Sequence;1995;('decide', 'insert document', 'initialize');366
+Sequence;1995;('begin editing', 'begin editing', 'insert document');444
+Sequence;1995;('begin editing', 'insert document', 'initialize');205
+Sequence;1995;('plan', 'save', 'initialize');551
+Sequence;1995;('calculate', 'finish preparations', 'save');360
+Sequence;1995;('finish preparations', 'abort external', 'finish preparations');446
+Sequence;1995;('begin editing', 'calculate', 'finish preparations');73
+Sequence;1995;('initialize', 'save', 'begin editing');969
+Sequence;1995;('calculate', 'initialize', 'calculate');276
+Sequence;1995;('finish editing', 'performed', 'insert document');118
+Sequence;1995;('check', 'save', 'insert document');34
+Sequence;1995;('begin editing', 'check', 'save');5
+Sequence;1995;('insert document', 'save', 'revoke decision');42
+Sequence;1995;('save', 'revoke decision', 'save');20
+Sequence;1995;('begin payment', 'insert document', 'finish payment');16332
+Sequence;1995;('calculate', 'check admissibility', 'refuse');136
+Sequence;1995;('revoke decision', 'save', 'calculate');49
+Sequence;1995;('insert document', 'finish payment', 'initialize');33
+Sequence;1995;('check admissibility', 'calculate', 'refuse');110
+Sequence;1995;('calculate', 'refuse', 'begin admissibility check');17
+Sequence;1995;('save', 'finish editing', 'begin admissibility check');32
+Sequence;1995;('initialize', 'begin editing', 'insert document');848
+Sequence;1995;('refuse', 'begin admissibility check', 'calculate');17
+Sequence;1995;('finish editing', 'begin admissibility check', 'check admissibility');40
+Sequence;1995;('begin editing', 'save', 'take original document');36
+Sequence;1995;('take original document', 'save', 'save');28
+Sequence;1995;('insert document', 'decide', 'insert document');20
+Sequence;1995;('finish editing', 'insert document', 'decide');46
+Sequence;1995;('calculate', 'calculate', 'insert document');467
+Sequence;1995;('revoke approval', 'begin admissibility check', 'calculate');6
+Sequence;1995;('refuse', 'calculate', 'begin editing from refused');25
+Sequence;1995;('calculate', 'refuse', 'calculate');19
+Sequence;1995;('decide', 'remove document', 'begin payment');55
+Sequence;1995;('begin editing from refused', 'calculate', 'save');10
+Sequence;1995;('remove document', 'begin payment', 'abort payment');73
+Sequence;1995;('revoke approval', 'begin admissibility check', 'check admissibility');8
+Sequence;1995;('calculate', 'begin editing from refused', 'calculate');34
+Sequence;1995;('check admissibility', 'refuse', 'calculate');18
+Sequence;1995;('calculate', 'refuse', 'insert document');49
+Sequence;1995;('finish editing', 'decide', 'remove document');100
+Sequence;1995;('finish editing', 'begin editing', 'begin editing');1551
+Sequence;1995;('begin editing', 'begin editing', 'save');930
+Sequence;1995;('refuse', 'calculate', 'insert document');9
+Sequence;1995;('refuse', 'insert document', 'save');63
+Sequence;1995;('decide', 'save', 'finish editing');162
+Sequence;1995;('save', 'finish editing', 'begin payment');124
+Sequence;1995;('save', 'finish editing', 'check');88
+Sequence;1995;('finish editing', 'check', 'insert document');249
+Sequence;1995;('begin editing', 'finish editing', 'check');656
+Sequence;1995;('finish editing', 'check', 'finish editing');388
+Sequence;1995;('initialize', 'begin editing', 'save');518
+Sequence;1995;('save', 'initialize', 'performed offline');11
+Sequence;1995;('finish editing', 'save', 'finish preparations');309
+Sequence;1995;('begin payment', 'finish payment', 'begin editing');196
+Sequence;1995;('initialize', 'performed offline', 'begin editing');7
+Sequence;1995;('begin editing', 'save', 'finish editing');4562
+Sequence;1995;('plan', 'save', 'insert document');47
+Sequence;1995;('performed offline', 'begin editing', 'calculate');37
+Sequence;1995;('check', 'check', 'check');96
+Sequence;1995;('finish payment', 'begin editing', 'begin editing');229
+Sequence;1995;('calculate', 'remove document', 'calculate');80
+Sequence;1995;('revoke decision', 'insert document', 'initialize');10
+Sequence;1995;('remove document', 'revoke withdrawal', 'remove document');17
+Sequence;1995;('save', 'insert document', 'remove document');49
+Sequence;1995;('save', 'calculate', 'withdraw');8
+Sequence;1995;('finish editing', 'finish editing', 'performed');75
+Sequence;1995;('calculate', 'remove document', 'begin editing');46
+Sequence;1995;('decide', 'revoke decision', 'revoke decision');198
+Sequence;1995;('decide', 'decide', 'save');21
+Sequence;1995;('calculate', 'calculate', 'revoke decision');9
+Sequence;1995;('insert document', 'insert document', 'revoke decision');29
+Sequence;1995;('revoke decision', 'revoke decision', 'insert document');43
+Sequence;1995;('calculate', 'revoke decision', 'insert document');12
+Sequence;1995;('insert document', 'remove document', 'insert document');268
+Sequence;1995;('calculate', 'remove document', 'revoke withdrawal');5
+Sequence;1995;('remove document', 'insert document', 'insert document');100
+Sequence;1995;('check admissibility', 'calculate', 'begin admissibility check');83
+Sequence;1995;('revoke decision', 'revoke decision', 'revoke decision');105
+Sequence;1995;('revoke decision', 'decide', 'revoke decision');6
+Sequence;1995;('calculate', 'withdraw', 'insert document');106
+Sequence;1995;('revoke decision', 'insert document', 'save');74
+Sequence;1995;('insert document', 'remove document', 'remove document');26
+Sequence;1995;('insert document', 'insert document', 'remove document');80
+Sequence;1995;('save', 'save', 'begin admissibility check');214
+Sequence;1995;('decide', 'save', 'insert document');41
+Sequence;1995;('remove document', 'remove document', 'save');10
+Sequence;1995;('calculate', 'begin admissibility check', 'calculate');24
+Sequence;1995;('remove document', 'insert document', 'remove document');95
+Sequence;1995;('remove document', 'calculate', 'finish editing');79
+Sequence;1995;('check', 'finish editing', 'finish editing');144
+Sequence;1995;('remove document', 'save', 'save');81
+Sequence;1995;('remove document', 'begin editing', 'calculate');35
+Sequence;1995;('insert document', 'revoke decision', 'remove document');16
+Sequence;1995;('withdraw', 'insert document', 'save');137
+Sequence;1995;('revoke decision', 'remove document', 'insert document');23
+Sequence;1995;('finish preparations', 'save', 'begin preparations');760
+Sequence;1995;('initialize', 'plan', 'finish preparations');573
+Sequence;1995;('prepare offline', 'save', 'begin editing');20
+Sequence;1995;('plan', 'finish preparations', 'save');514
+Sequence;1995;('save', 'initialize', 'finish preparations');15
+Sequence;1995;('begin preparations', 'save', 'performed');381
+Sequence;1995;('save', 'begin preparations', 'save');270
+Sequence;1995;('initialize', 'finish preparations', 'save');238
+Sequence;1995;('finish editing', 'initialize', 'calculate');1010
+Sequence;1995;('save', 'plan', 'initialize');354
+Sequence;1995;('save', 'performed offline', 'initialize');100
+Sequence;1995;('plan', 'save', 'plan');255
+Sequence;1995;('performed offline', 'initialize', 'begin editing');31
+Sequence;1995;('performed', 'begin editing', 'initialize');380
+Sequence;1995;('finish editing', 'performed', 'begin editing');723
+Sequence;1995;('calculate', 'initialize', 'plan');165
+Sequence;1995;('begin editing', 'begin admissibility check', 'calculate');5
+Sequence;1995;('initialize', 'insert document', 'insert document');62
+Sequence;1995;('save', 'remove document', 'remove document');11
+Sequence;1995;('performed', 'finish editing', 'calculate');551
+Sequence;1995;('calculate', 'begin admissibility check', 'check admissibility');53
+Sequence;1995;('begin preparations', 'performed', 'finish editing');605
+Sequence;1995;('remove document', 'remove document', 'insert document');42
+Sequence;1995;('insert document', 'save', 'remove document');237
+Sequence;1995;('save', 'begin preparations', 'performed');482
+Sequence;1995;('save', 'insert document', 'insert document');194
+Sequence;1995;('decide', 'decide', 'calculate');192
+Sequence;1995;('save', 'calculate', 'initialize');368
+Sequence;1995;('insert document', 'calculate', 'calculate');105
+Sequence;1995;('decide', 'begin editing', 'calculate');434
+Sequence;1995;('decide', 'decide', 'decide');184
+Sequence;1995;('insert document', 'begin admissibility check', 'check admissibility');170
+Sequence;1995;('begin admissibility check', 'check admissibility', 'approve');89
+Sequence;1995;('prepare offline', 'begin editing', 'calculate');82
+Sequence;1995;('begin preparations', 'prepare offline', 'begin editing');94
+Sequence;1995;('finish payment', 'finish editing', 'save');130
+Sequence;1995;('begin editing', 'save', 'begin editing');410
+Sequence;1995;('save', 'finish editing', 'withdraw');6
+Sequence;1995;('withdraw', 'initialize', 'withdraw');3
+Sequence;1995;('withdraw', 'save', 'finish editing');7
+Sequence;1995;('performed', 'performed', 'begin editing');861
+Sequence;1995;('save', 'begin editing', 'initialize');169
+Sequence;1995;('save', 'check admissibility', 'begin admissibility check');8
+Sequence;1995;('save', 'save', 'begin payment');230
+Sequence;1995;('begin editing', 'calculate', 'begin admissibility check');11
+Sequence;1995;('insert document', 'save', 'check admissibility');5
+Sequence;1995;('check admissibility', 'begin admissibility check', 'check admissibility');106
+Sequence;1995;('save', 'performed', 'begin editing');152
+Sequence;1995;('finish editing', 'check', 'save');52
+Sequence;1995;('finish editing', 'insert document', 'begin editing');29
+Sequence;1995;('calculate', 'finish editing', 'finish editing');401
+Sequence;1995;('finish editing', 'finish editing', 'begin editing');241
+Sequence;1995;('finish editing', 'calculate', 'insert document');99
+Sequence;1995;('finish editing', 'begin editing', 'finish editing');511
+Sequence;1995;('save', 'performed', 'finish preparations');7
+Sequence;1995;('performed', 'finish preparations', 'begin preparations');5
+Sequence;1995;('finish preparations', 'begin preparations', 'save');175
+Sequence;1995;('initialize', 'save', 'finish preparations');66
+Sequence;1995;('calculate', 'decide', 'begin editing');20
+Sequence;1995;('initialize', 'check', 'insert document');3
+Sequence;1995;('check', 'check', 'initialize');62
+Sequence;1995;('check', 'initialize', 'check');11
+Sequence;1995;('finish editing', 'begin editing', 'initialize');132
+Sequence;1995;('initialize', 'calculate', 'begin editing');177
+Sequence;1995;('save', 'decide', 'calculate');12
+Sequence;1995;('initialize', 'save', 'performed offline');21
+Sequence;1995;('finish editing', 'save', 'decide');30
+Sequence;1995;('finish preparations', 'begin preparations', 'abort external');419
+Sequence;1995;('begin preparations', 'abort external', 'prepare external');434
+Sequence;1995;('check', 'finish editing', 'check');56
+Sequence;1995;('revoke approval', 'approve', 'calculate');7
+Sequence;1995;('begin editing from refused', 'begin editing from refused', 'revoke approval');6
+Sequence;1995;('calculate', 'begin editing from refused', 'begin editing from refused');8
+Sequence;1995;('insert document', 'begin payment', 'abort payment');230
+Sequence;1995;('begin editing from refused', 'revoke approval', 'approve');11
+Sequence;1995;('insert document', 'insert document', 'begin payment');104
+Sequence;1995;('revoke decision', 'save', 'save');38
+Sequence;1995;('decide', 'revoke decision', 'save');88
+Sequence;1995;('save', 'insert document', 'finish payment');89
+Sequence;1995;('check admissibility', 'refuse', 'insert document');87
+Sequence;1995;('insert document', 'remove document', 'save');40
+Sequence;1995;('remove document', 'save', 'insert document');61
+Sequence;1995;('refuse', 'insert document', 'remove document');9
+Sequence;1995;('save', 'remove document', 'save');49
+Sequence;1995;('approve', 'insert document', 'save');3
+Sequence;1995;('begin editing', 'initialize', 'finish editing');4
+Sequence;1995;('finish editing', 'begin editing', 'performed');3
+Sequence;1995;('initialize', 'finish editing', 'save');30
+Sequence;1995;('finish preparations', 'insert document', 'save');11
+Sequence;1995;('plan', 'initialize', 'finish preparations');164
+Sequence;1995;('save', 'finish preparations', 'insert document');5
+Sequence;1995;('check admissibility', 'approve', 'insert document');4
+Sequence;1995;('finish editing', 'decide', 'check admissibility');3
+Sequence;1995;('begin admissibility check', 'save', 'save');4
+Sequence;1995;('performed', 'plan', 'initialize');98
+Sequence;1995;('performed', 'finish editing', 'begin editing');500
+Sequence;1995;('prepare external', 'begin preparations', 'initialize');341
+Sequence;1995;('begin preparations', 'performed', 'save');283
+Sequence;1995;('finish editing', 'performed', 'plan');22
+Sequence;1995;('calculate', 'save', 'begin editing');826
+Sequence;1995;('finish editing', 'decide', 'begin admissibility check');33
+Sequence;1995;('save', 'check admissibility', 'approve');25
+Sequence;1995;('decide', 'begin admissibility check', 'check admissibility');52
+Sequence;1995;('decide', 'save', 'save');88
+Sequence;1995;('initialize', 'check', 'save');9
+Sequence;1995;('finish editing', 'initialize', 'initialize');72
+Sequence;1995;('initialize', 'initialize', 'plan');29
+Sequence;1995;('performed', 'initialize', 'finish preparations');24
+Sequence;1995;('mail valid', 'mail valid', 'mail income');37
+Sequence;1995;('finish payment', 'initialize', 'begin editing');28
+Sequence;1995;('mail income', 'mail valid', 'initialize');24331
+Sequence;1995;('begin editing', 'insert document', 'calculate');114
+Sequence;1995;('performed', 'finish editing', 'initialize');420
+Sequence;1995;('save', 'decide', 'insert document');104
+Sequence;1995;('insert document', 'save', 'decide');140
+Sequence;1995;('finish editing', 'begin editing', 'remove document');17
+Sequence;1995;('begin editing', 'remove document', 'insert document');37
+Sequence;1995;('check', 'finish editing', 'calculate');128
+Sequence;1995;('performed', 'save', 'begin editing');106
+Sequence;1995;('begin editing', 'finish editing', 'plan');307
+Sequence;1995;('initialize', 'save', 'check');78
+Sequence;1995;('save', 'check', 'insert document');159
+Sequence;1995;('begin payment', 'abort payment', 'save');50
+Sequence;1995;('abort payment', 'save', 'finish editing');25
+Sequence;1995;('finish editing', 'finish editing', 'finish editing');5133
+Sequence;1995;('begin payment', 'save', 'check');181
+Sequence;1995;('decide', 'insert document', 'calculate');239
+Sequence;1995;('insert document', 'calculate', 'finish editing');362
+Sequence;1995;('abort payment', 'remove document', 'revoke decision');43
+Sequence;1995;('begin payment', 'abort payment', 'remove document');42
+Sequence;1995;('remove document', 'revoke decision', 'calculate');104
+Sequence;1995;('performed', 'save', 'performed offline');15
+Sequence;1995;('performed', 'finish editing', 'finish editing');60
+Sequence;1995;('finish preparations', 'prepare external', 'initialize');234
+Sequence;1995;('begin payment', 'save', 'abort payment');30
+Sequence;1995;('decide', 'insert document', 'revoke decision');49
+Sequence;1995;('finish payment', 'insert document', 'insert document');89
+Sequence;1995;('save', 'abort payment', 'begin payment');38
+Sequence;1995;('check', 'finish editing', 'decide');8
+Sequence;1995;('remove document', 'calculate', 'remove document');11
+Sequence;1995;('initialize', 'begin editing', 'begin editing');102
+Sequence;1995;('calculate', 'decide', 'insert document');166
+Sequence;1995;('insert document', 'calculate', 'save');87
+Sequence;1995;('finish editing', 'check', 'initialize');86
+Sequence;1995;('begin editing', 'save', 'finish payment');20
+Sequence;1995;('calculate', 'calculate', 'initialize');261
+Sequence;1995;('decide', 'calculate', 'calculate');181
+Sequence;1995;('finish preparations', 'begin preparations', 'performed');395
+Sequence;1995;('save', 'insert document', 'begin payment');41
+Sequence;1995;('decide', 'decide', 'revoke decision');85
+Sequence;1995;('decide', 'insert document', 'begin admissibility check');24
+Sequence;1995;('decide', 'revoke decision', 'remove document');9
+Sequence;1995;('finish editing', 'finish editing', 'calculate');274
+Sequence;1995;('calculate', 'check admissibility', 'calculate');26
+Sequence;1995;('calculate', 'calculate', 'begin admissibility check');7
+Sequence;1995;('finish editing', 'calculate', 'remove document');7
+Sequence;1995;('prepare external', 'finish preparations', 'abort external');304
+Sequence;1995;('save', 'take original document', 'initialize');20
+Sequence;1995;('insert document', 'save', 'take original document');40
+Sequence;1995;('check admissibility', 'refuse', 'begin admissibility check');23
+Sequence;1995;('insert document', 'finish editing', 'calculate');24
+Sequence;1995;('begin admissibility check', 'check admissibility', 'refuse');31
+Sequence;1995;('refuse', 'begin admissibility check', 'check admissibility');23
+Sequence;1995;('begin editing', 'initialize', 'performed');60
+Sequence;1995;('save', 'remove document', 'revoke decision');27
+Sequence;1995;('calculate', 'revoke decision', 'calculate');20
+Sequence;1995;('save', 'save', 'revoke decision');129
+Sequence;1995;('save', 'save', 'remove document');48
+Sequence;1995;('revoke decision', 'calculate', 'revoke decision');17
+Sequence;1995;('refuse', 'insert document', 'insert document');24
+Sequence;1995;('save', 'check', 'discard');5
+Sequence;1995;('performed', 'initialize', 'insert document');89
+Sequence;1995;('check', 'discard', 'finish editing');3
+Sequence;1995;('begin payment', 'abort payment', 'revoke decision');7
+Sequence;1995;('decide', 'begin editing', 'begin editing');57
+Sequence;1995;('finish payment', 'save', 'initialize');42
+Sequence;1995;('remove document', 'begin payment', 'insert document');4
+Sequence;1995;('finish editing', 'save', 'performed offline');41
+Sequence;1995;('remove document', 'finish payment', 'insert document');3
+Sequence;1995;('begin payment', 'insert document', 'remove document');10
+Sequence;1995;('insert document', 'remove document', 'finish payment');4
+Sequence;1995;('decide', 'insert document', 'remove document');143
+Sequence;1995;('insert document', 'remove document', 'begin payment');19
+Sequence;1995;('decide', 'remove document', 'revoke decision');25
+Sequence;1995;('revoke decision', 'calculate', 'calculate');157
+Sequence;1995;('begin editing', 'save', 'initialize');322
+Sequence;1995;('calculate', 'check', 'finish editing');19
+Sequence;1995;('calculate', 'calculate', 'check');11
+Sequence;1995;('decide', 'finish editing', 'decide');9
+Sequence;1995;('performed', 'insert document', 'insert document');41
+Sequence;1995;('begin editing', 'begin editing', 'initialize');96
+Sequence;1995;('save', 'calculate', 'insert document');249
+Sequence;1995;('finish editing', 'begin editing', 'insert document');1313
+Sequence;1995;('finish editing', 'begin editing', 'decide');10
+Sequence;1995;('begin editing', 'decide', 'insert document');11
+Sequence;1995;('performed', 'begin editing', 'save');2053
+Sequence;1995;('begin preparations', 'abort external', 'begin preparations');419
+Sequence;1995;('finish preparations', 'abort external', 'begin preparations');262
+Sequence;1995;('insert document', 'insert document', 'calculate');69
+Sequence;1995;('save', 'initialize', 'finish editing');26
+Sequence;1995;('calculate', 'insert document', 'remove document');51
+Sequence;1995;('decide', 'decide', 'begin editing');120
+Sequence;1995;('finish editing', 'decide', 'initialize');26
+Sequence;1995;('decide', 'initialize', 'begin editing');17
+Sequence;1995;('finish payment', 'insert document', 'remove document');6
+Sequence;1995;('begin editing', 'check', 'check');6
+Sequence;1995;('finish editing', 'initialize', 'finish editing');55
+Sequence;1995;('save', 'finish payment', 'begin editing');37
+Sequence;1995;('calculate', 'finish editing', 'begin admissibility check');23
+Sequence;1995;('check admissibility', 'calculate', 'save');39
+Sequence;1995;('save', 'calculate', 'approve');9
+Sequence;1995;('take original document', 'save', 'check');17
+Sequence;1995;('check', 'save', 'take original document');5
+Sequence;1995;('save', 'take original document', 'finish editing');5
+Sequence;1995;('take original document', 'finish editing', 'initialize');4
+Sequence;1995;('begin preparations', 'save', 'finish preparations');6
+Sequence;1995;('finish preparations', 'save', 'insert document');19
+Sequence;1995;('initialize', 'performed', 'plan');29
+Sequence;1995;('save', 'check', 'finish preparations');5
+Sequence;1995;('remove document', 'remove document', 'remove document');20
+Sequence;1995;('remove document', 'save', 'finish editing');28
+Sequence;1995;('finish editing', 'finish editing', 'check');23
+Sequence;1995;('decide', 'decide', 'begin admissibility check');38
+Sequence;1995;('decide', 'begin admissibility check', 'calculate');17
+Sequence;1995;('remove document', 'remove document', 'revoke decision');15
+Sequence;1995;('remove document', 'revoke decision', 'remove document');21
+Sequence;1995;('finish editing', 'finish payment', 'insert document');51
+Sequence;1995;('decide', 'revoke decision', 'insert document');68
+Sequence;1995;('save', 'calculate', 'performed');90
+Sequence;1995;('calculate', 'performed', 'calculate');625
+Sequence;1995;('performed', 'calculate', 'save');718
+Sequence;1995;('check', 'initialize', 'save');4
+Sequence;1995;('calculate', 'save', 'decide');9
+Sequence;1995;('performed', 'save', 'calculate');906
+Sequence;1995;('calculate', 'save', 'remove document');15
+Sequence;1995;('save', 'remove document', 'insert document');171
+Sequence;1995;('revoke decision', 'remove document', 'revoke decision');26
+Sequence;1995;('save', 'approve', 'begin editing');48
+Sequence;1995;('calculate', 'check admissibility', 'insert document');15
+Sequence;1995;('insert document', 'withdraw', 'withdraw');15
+Sequence;1995;('check admissibility', 'save', 'finish editing');11
+Sequence;1995;('calculate', 'check admissibility', 'save');28
+Sequence;1995;('withdraw', 'withdraw', 'save');14
+Sequence;1995;('check admissibility', 'insert document', 'initialize');8
+Sequence;1995;('approve', 'begin admissibility check', 'check admissibility');10
+Sequence;1995;('initialize', 'insert document', 'withdraw');22
+Sequence;1995;('insert document', 'initialize', 'begin admissibility check');210
+Sequence;1995;('save', 'approve', 'save');4
+Sequence;1995;('calculate', 'save', 'approve');8
+Sequence;1995;('approve', 'save', 'approve');13
+Sequence;1995;('initialize', 'begin admissibility check', 'calculate');75
+Sequence;1995;('calculate', 'approve', 'save');13
+Sequence;1995;('revoke approval', 'begin admissibility check', 'withdraw');17
+Sequence;1995;('refuse', 'revoke approval', 'begin admissibility check');7
+Sequence;1995;('finish editing', 'check', 'check');63
+Sequence;1995;('check admissibility', 'refuse', 'revoke approval');6
+Sequence;1995;('check', 'initialize', 'plan');24
+Sequence;1995;('save', 'finish editing', 'plan');47
+Sequence;1995;('begin admissibility check', 'check admissibility', 'begin editing');7
+Sequence;1995;('save', 'save', 'approve');21
+Sequence;1995;('check admissibility', 'begin editing', 'save');15
+Sequence;1995;('begin payment', 'save', 'insert document');70
+Sequence;1995;('save', 'performed offline', 'performed');7
+Sequence;1995;('initialize', 'begin editing', 'finish preparations');3
+Sequence;1995;('performed offline', 'performed', 'initialize');6
+Sequence;1995;('insert document', 'save', 'finish payment');88
+Sequence;1995;('performed', 'begin editing', 'begin editing');311
+Sequence;1995;('decide', 'initialize', 'plan');13
+Sequence;1995;('abort payment', 'save', 'save');15
+Sequence;1995;('finish editing', 'revoke decision', 'calculate');154
+Sequence;1995;('check', 'finish editing', 'finish preparations');24
+Sequence;1995;('check admissibility', 'insert document', 'begin admissibility check');3
+Sequence;1995;('performed', 'performed', 'finish editing');31
+Sequence;1995;('finish payment', 'initialize', 'plan');16
+Sequence;1995;('save', 'insert document', 'finish editing');7
+Sequence;1995;('take original document', 'calculate', 'finish editing');58
+Sequence;1995;('calculate', 'take original document', 'calculate');33
+Sequence;1995;('calculate', 'calculate', 'take original document');38
+Sequence;1995;('save', 'calculate', 'plan');9
+Sequence;1995;('calculate', 'plan', 'initialize');41
+Sequence;1995;('begin editing', 'calculate', 'plan');8
+Sequence;1995;('initialize', 'finish editing', 'insert document');5
+Sequence;1995;('remove document', 'insert document', 'begin payment');20
+Sequence;1995;('decide', 'calculate', 'insert document');60
+Sequence;1995;('begin payment', 'finish editing', 'finish payment');48
+Sequence;1995;('finish editing', 'finish payment', 'finish editing');15
+Sequence;1995;('abort payment', 'begin payment', 'finish editing');92
+Sequence;1995;('decide', 'calculate', 'save');34
+Sequence;1995;('calculate', 'save', 'revoke decision');5
+Sequence;1995;('save', 'decide', 'decide');18
+Sequence;1995;('finish editing', 'remove document', 'insert document');15
+Sequence;1995;('calculate', 'finish editing', 'remove document');46
+Sequence;1995;('remove document', 'begin admissibility check', 'calculate');7
+Sequence;1995;('insert document', 'calculate', 'insert document');48
+Sequence;1995;('calculate', 'insert document', 'insert document');64
+Sequence;1995;('insert document', 'begin editing from refused', 'calculate');15
+Sequence;1995;('begin editing from refused', 'calculate', 'begin editing from refused');18
+Sequence;1995;('save', 'begin editing', 'insert document');476
+Sequence;1995;('insert document', 'insert document', 'begin editing from refused');6
+Sequence;1995;('begin editing from refused', 'calculate', 'finish editing');25
+Sequence;1995;('remove document', 'remove document', 'begin admissibility check');4
+Sequence;1995;('calculate', 'check admissibility', 'remove document');3
+Sequence;1995;('begin editing', 'insert document', 'insert document');28
+Sequence;1995;('insert document', 'revoke decision', 'finish editing');4
+Sequence;1995;('insert document', 'begin editing', 'insert document');17
+Sequence;1995;('revoke decision', 'finish editing', 'begin editing');5
+Sequence;1995;('begin editing from refused', 'calculate', 'calculate');37
+Sequence;1995;('insert document', 'insert document', 'begin editing');18
+Sequence;1995;('performed', 'save', 'plan');4
+Sequence;1995;('begin payment', 'finish editing', 'save');28
+Sequence;1995;('save', 'revoke decision', 'revoke decision');15
+Sequence;1995;('calculate', 'calculate', 'decide');116
+Sequence;1995;('revoke decision', 'insert document', 'insert document');45
+Sequence;1995;('begin editing', 'calculate', 'revoke decision');10
+Sequence;1995;('revoke decision', 'remove document', 'remove document');6
+Sequence;1995;('begin payment', 'finish payment', 'remove document');5
+Sequence;1995;('decide', 'remove document', 'insert document');26
+Sequence;1995;('calculate', 'finish preparations', 'begin preparations');53
+Sequence;1995;('calculate', 'decide', 'finish editing');4
+Sequence;1995;('decide', 'remove document', 'decide');8
+Sequence;1995;('decide', 'decide', 'remove document');21
+Sequence;1995;('remove document', 'decide', 'decide');7
+Sequence;1995;('decide', 'finish editing', 'save');3
+Sequence;1995;('begin editing', 'finish editing', 'calculate');2046
+Sequence;1995;('approve', 'begin editing', 'finish editing');25
+Sequence;1995;('insert document', 'save', 'plan');19
+Sequence;1995;('finish editing', 'calculate', 'decide');100
+Sequence;1995;('save', 'remove document', 'begin payment');5
+Sequence;1995;('revoke decision', 'save', 'finish editing');13
+Sequence;1995;('finish payment', 'begin editing', 'insert document');176
+Sequence;1995;('save', 'performed offline', 'begin editing');51
+Sequence;1995;('check admissibility', 'save', 'save');14
+Sequence;1995;('withdraw', 'revoke withdrawal', 'insert document');4
+Sequence;1995;('revoke withdrawal', 'insert document', 'save');3
+Sequence;1995;('save', 'revoke decision', 'insert document');13
+Sequence;1995;('revoke decision', 'calculate', 'save');15
+Sequence;1995;('begin editing', 'calculate', 'performed offline');13
+Sequence;1995;('save', 'initialize', 'initialize');21
+Sequence;1995;('calculate', 'performed offline', 'save');27
+Sequence;1995;('take original document', 'save', 'initialize');39
+Sequence;1995;('remove document', 'insert document', 'calculate');14
+Sequence;1995;('save', 'save', 'take original document');39
+Sequence;1995;('begin payment', 'insert document', 'insert document');12473
+Sequence;1995;('performed offline', 'finish editing', 'initialize');7
+Sequence;1995;('finish editing', 'finish preparations', 'begin preparations');322
+Sequence;1995;('save', 'performed offline', 'finish editing');45
+Sequence;1995;('performed offline', 'initialize', 'performed');36
+Sequence;1995;('plan', 'save', 'check');43
+Sequence;1995;('save', 'calculate', 'finish preparations');15
+Sequence;1995;('check admissibility', 'approve', 'approve');5
+Sequence;1995;('insert document', 'save', 'abort payment');3
+Sequence;1995;('insert document', 'begin payment', 'save');7
+Sequence;1995;('calculate', 'calculate', 'refuse');5
+Sequence;1995;('check admissibility', 'calculate', 'calculate');26
+Sequence;1995;('withdraw', 'calculate', 'finish editing');67
+Sequence;1995;('calculate', 'withdraw', 'calculate');67
+Sequence;1995;('insert document', 'revoke decision', 'calculate');62
+Sequence;1995;('remove document', 'save', 'calculate');21
+Sequence;1995;('insert document', 'begin editing', 'calculate');63
+Sequence;1995;('finish editing', 'remove document', 'save');14
+Sequence;1995;('calculate', 'insert document', 'begin editing');25
+Sequence;1995;('initialize', 'calculate', 'calculate');319
+Sequence;1995;('calculate', 'calculate', 'withdraw');52
+Sequence;1995;('save', 'finish payment', 'finish editing');44
+Sequence;1995;('begin editing', 'initialize', 'insert document');10
+Sequence;1995;('save', 'performed', 'performed');16
+Sequence;1995;('finish editing', 'take original document', 'insert document');12
+Sequence;1995;('take original document', 'insert document', 'save');22
+Sequence;1995;('finish editing', 'finish editing', 'begin payment');8
+Sequence;1995;('check', 'take original document', 'save');14
+Sequence;1995;('performed offline', 'save', 'performed');3
+Sequence;1995;('save', 'check', 'take original document');24
+Sequence;1995;('save', 'approve', 'calculate');16
+Sequence;1995;('insert document', 'save', 'approve');12
+Sequence;1995;('check admissibility', 'calculate', 'insert document');14
+Sequence;1995;('save', 'save', 'withdraw');12
+Sequence;1995;('insert document', 'calculate', 'initialize');5
+Sequence;1995;('begin preparations', 'save', 'prepare offline');24
+Sequence;1995;('save', 'prepare offline', 'save');26
+Sequence;1995;('initialize', 'begin editing', 'take original document');8
+Sequence;1995;('check admissibility', 'begin admissibility check', 'calculate');28
+Sequence;1995;('insert document', 'insert document', 'finish editing');6
+Sequence;1995;('save', 'calculate', 'begin admissibility check');14
+Sequence;1995;('insert document', 'finish editing', 'begin editing');38
+Sequence;1995;('revoke approval', 'approve', 'begin editing');13
+Sequence;1995;('refuse', 'begin editing from refused', 'revoke approval');10
+Sequence;1995;('initialize', 'begin admissibility check', 'check admissibility');153
+Sequence;1995;('calculate', 'refuse', 'begin editing from refused');21
+Sequence;1995;('calculate', 'check admissibility', 'begin admissibility check');44
+Sequence;1995;('calculate', 'refuse', 'refuse');4
+Sequence;1995;('finish payment', 'finish editing', 'finish editing');20
+Sequence;1995;('revoke decision', 'save', 'insert document');21
+Sequence;1995;('remove document', 'revoke decision', 'save');4
+Sequence;1995;('begin editing', 'check', 'initialize');9
+Sequence;1995;('remove document', 'save', 'remove document');5
+Sequence;1995;('calculate', 'withdraw', 'save');6
+Sequence;1995;('withdraw', 'save', 'insert document');5
+Sequence;1995;('finish preparations', 'begin preparations', 'finish preparations');20
+Sequence;1995;('calculate', 'insert document', 'finish editing');13
+Sequence;1995;('check', 'finish preparations', 'save');3
+Sequence;1995;('decide', 'begin payment', 'insert document');18405
+Sequence;1995;('abort payment', 'save', 'begin payment');15
+Sequence;1995;('insert document', 'remove document', 'revoke decision');48
+Sequence;1995;('save', 'begin payment', 'save');14
+Sequence;1995;('save', 'save', 'abort payment');10
+Sequence;1995;('insert document', 'finish editing', 'decide');10
+Sequence;1995;('finish editing', 'withdraw', 'withdraw');4
+Sequence;1995;('refuse', 'begin editing from refused', 'insert document');16
+Sequence;1995;('check admissibility', 'refuse', 'begin editing from refused');42
+Sequence;1995;('begin editing from refused', 'insert document', 'insert document');3
+Sequence;1995;('calculate', 'save', 'finish preparations');227
+Sequence;1995;('performed', 'finish editing', 'plan');13
+Sequence;1995;('save', 'finish editing', 'remove document');13
+Sequence;1995;('save', 'insert document', 'calculate');38
+Sequence;1995;('decide', 'approve', 'begin editing');5
+Sequence;1995;('finish editing', 'decide', 'approve');10
+Sequence;1995;('begin editing', 'initialize', 'calculate');35
+Sequence;1995;('check', 'finish editing', 'plan');12
+Sequence;1995;('finish editing', 'take original document', 'save');18
+Sequence;1995;('save', 'finish editing', 'take original document');25
+Sequence;1995;('decide', 'begin editing', 'revoke decision');6
+Sequence;1995;('revoke decision', 'revoke decision', 'save');6
+Sequence;1995;('revoke decision', 'decide', 'insert document');3
+Sequence;1995;('decide', 'begin editing', 'finish editing');37
+Sequence;1995;('begin editing', 'revoke decision', 'revoke decision');3
+Sequence;1995;('check', 'finish editing', 'begin admissibility check');3
+Sequence;1995;('calculate', 'initialize', 'insert document');7
+Sequence;1995;('finish editing', 'begin admissibility check', 'calculate');23
+Sequence;1995;('check', 'initialize', 'insert document');6
+Sequence;1995;('initialize', 'save', 'insert document');58
+Sequence;1995;('begin editing from refused', 'begin editing from refused', 'begin editing from refused');7
+Sequence;1995;('refuse', 'begin editing from refused', 'begin editing from refused');10
+Sequence;1995;('calculate', 'remove document', 'remove document');28
+Sequence;1995;('save', 'withdraw', 'insert document');8
+Sequence;1995;('insert document', 'save', 'withdraw');23
+Sequence;1995;('initialize', 'plan', 'initialize');15
+Sequence;1995;('begin editing from refused', 'insert document', 'begin admissibility check');3
+Sequence;1995;('revoke decision', 'insert document', 'revoke decision');22
+Sequence;1995;('save', 'remove document', 'calculate');12
+Sequence;1995;('insert document', 'revoke decision', 'insert document');20
+Sequence;1995;('decide', 'insert document', 'begin editing');24
+Sequence;1995;('remove document', 'revoke decision', 'finish editing');5
+Sequence;1995;('revoke decision', 'finish editing', 'decide');23
+Sequence;1995;('begin payment', 'begin editing', 'begin editing');4
+Sequence;1995;('begin editing', 'begin editing', 'finish payment');3
+Sequence;1995;('refuse', 'insert document', 'calculate');22
+Sequence;1995;('revoke decision', 'revoke decision', 'remove document');7
+Sequence;1995;('revoke decision', 'begin payment', 'abort payment');4
+Sequence;1995;('remove document', 'revoke decision', 'revoke decision');17
+Sequence;1995;('finish editing', 'remove document', 'remove document');14
+Sequence;1995;('begin admissibility check', 'check admissibility', 'save');26
+Sequence;1995;('check admissibility', 'save', 'begin admissibility check');22
+Sequence;1995;('save', 'finish editing', 'approve');5
+Sequence;1995;('finish editing', 'approve', 'begin editing');5
+Sequence;1995;('begin preparations', 'save', 'save');35
+Sequence;1995;('check admissibility', 'begin editing', 'begin editing');5
+Sequence;1995;('calculate', 'calculate', 'approve');21
+Sequence;1995;('calculate', 'calculate', 'performed');497
+Sequence;1995;('begin editing', 'finish preparations', 'save');11
+Sequence;1995;('begin editing', 'save', 'begin admissibility check');34
+Sequence;1995;('calculate', 'check admissibility', 'begin editing');14
+Sequence;1995;('begin editing', 'initialize', 'plan');28
+Sequence;1995;('performed', 'begin editing', 'insert document');312
+Sequence;1995;('refuse', 'save', 'save');4
+Sequence;1995;('calculate', 'refuse', 'save');4
+Sequence;1995;('insert document', 'decide', 'save');9
+Sequence;1995;('save', 'insert document', 'begin editing');17
+Sequence;1995;('prepare offline', 'cancel offline', 'save');5
+Sequence;1995;('begin preparations', 'prepare offline', 'cancel offline');94
+Sequence;1995;('cancel offline', 'save', 'save');3
+Sequence;1995;('prepare offline', 'cancel offline', 'prepare offline');61
+Sequence;1995;('cancel offline', 'prepare offline', 'save');49
+Sequence;1995;('save', 'refuse', 'calculate');3
+Sequence;1995;('insert document', 'abort payment', 'begin payment');1885
+Sequence;1995;('begin payment', 'insert document', 'abort payment');1885
+Sequence;1995;('revoke decision', 'revoke decision', 'calculate');190
+Sequence;1995;('refuse', 'insert document', 'begin admissibility check');17
+Sequence;1995;('finish editing', 'remove document', 'begin editing');13
+Sequence;1995;('remove document', 'begin editing', 'remove document');27
+Sequence;1995;('decide', 'save', 'check');8
+Sequence;1995;('finish editing', 'abort external', 'finish preparations');110
+Sequence;1995;('check', 'finish editing', 'abort external');4
+Sequence;1995;('begin preparations', 'prepare external', 'check');3
+Sequence;1995;('performed offline', 'initialize', 'save');24
+Sequence;1995;('prepare external', 'check', 'finish editing');3
+Sequence;1995;('finish editing', 'decide', 'withdraw');7
+Sequence;1995;('decide', 'revoke decision', 'finish editing');34
+Sequence;1995;('insert document', 'insert document', 'finish payment');12450
+Sequence;1995;('insert document', 'decide', 'decide');8
+Sequence;1995;('check', 'finish editing', 'take original document');12
+Sequence;1995;('begin editing', 'withdraw', 'revoke withdrawal');7
+Sequence;1995;('withdraw', 'revoke withdrawal', 'begin editing');56
+Sequence;1995;('revoke withdrawal', 'begin editing', 'withdraw');4
+Sequence;1995;('discard', 'initialize', 'begin editing');5
+Sequence;1995;('remove document', 'begin editing', 'save');27
+Sequence;1995;('remove document', 'calculate', 'insert document');11
+Sequence;1995;('insert document', 'calculate', 'withdraw');9
+Sequence;1995;('finish editing', 'withdraw', 'revoke withdrawal');10
+Sequence;1995;('approve', 'begin editing', 'save');6
+Sequence;1995;('finish editing', 'save', 'revoke decision');36
+Sequence;1995;('begin payment', 'finish editing', 'finish editing');14
+Sequence;1995;('remove document', 'save', 'initialize');4
+Sequence;1995;('begin admissibility check', 'check admissibility', 'insert document');20
+Sequence;1995;('check admissibility', 'insert document', 'save');19
+Sequence;1995;('decide', 'save', 'begin payment');32
+Sequence;1995;('decide', 'begin payment', 'save');33
+Sequence;1995;('performed', 'prepare offline', 'cancel offline');6
+Sequence;1995;('prepare offline', 'cancel offline', 'initialize');13
+Sequence;1995;('begin preparations', 'check', 'finish editing');5
+Sequence;1995;('save', 'revoke decision', 'remove document');8
+Sequence;1995;('decide', 'approve', 'calculate');8
+Sequence;1995;('check admissibility', 'calculate', 'begin editing');15
+Sequence;1995;('decide', 'decide', 'approve');3
+Sequence;1995;('check admissibility', 'save', 'check');5
+Sequence;1995;('save', 'revoke approval', 'begin admissibility check');3
+Sequence;1995;('begin admissibility check', 'withdraw', 'insert document');22
+Sequence;1995;('save', 'save', 'plan');17
+Sequence;1995;('remove document', 'decide', 'begin editing');4
+Sequence;1995;('calculate', 'remove document', 'decide');9
+Sequence;1995;('finish editing', 'calculate', 'take original document');22
+Sequence;1995;('save', 'finish editing', 'prepare offline');4
+Sequence;1995;('finish editing', 'prepare offline', 'save');10
+Sequence;1995;('begin preparations', 'save', 'finish editing');8
+Sequence;1995;('revoke withdrawal', 'begin editing', 'calculate');71
+Sequence;1995;('insert document', 'save', 'revoke withdrawal');50
+Sequence;1995;('save', 'revoke withdrawal', 'remove document');48
+Sequence;1995;('calculate', 'finish editing', 'withdraw');12
+Sequence;1995;('save', 'revoke withdrawal', 'begin editing');9
+Sequence;1995;('save', 'begin editing', 'finish editing');107
+Sequence;1995;('remove document', 'decide', 'begin payment');4
+Sequence;1995;('finish editing', 'remove document', 'decide');3
+Sequence;1995;('finish editing', 'take original document', 'check');20
+Sequence;1995;('take original document', 'check', 'insert document');20
+Sequence;1995;('revoke decision', 'begin editing', 'calculate');7
+Sequence;1995;('check admissibility', 'begin admissibility check', 'begin admissibility check');3
+Sequence;1995;('approve', 'begin editing', 'decide');6
+Sequence;1995;('begin editing', 'decide', 'calculate');4
+Sequence;1995;('decide', 'begin editing', 'remove document');8
+Sequence;1995;('calculate', 'finish editing', 'check admissibility');6
+Sequence;1995;('finish editing', 'check admissibility', 'approve');4
+Sequence;1995;('begin admissibility check', 'begin admissibility check', 'check admissibility');6
+Sequence;1995;('finish editing', 'finish payment', 'initialize');16
+Sequence;1995;('begin editing', 'save', 'revoke withdrawal');3
+Sequence;1995;('save', 'decide', 'begin editing');27
+Sequence;1995;('finish editing', 'decide', 'plan');3
+Sequence;1995;('save', 'decide', 'begin payment');25
+Sequence;1995;('decide', 'plan', 'initialize');5
+Sequence;1995;('insert document', 'remove document', 'calculate');13
+Sequence;1995;('save', 'save', 'decide');7
+Sequence;1995;('begin admissibility check', 'begin editing', 'calculate');6
+Sequence;1995;('check admissibility', 'begin admissibility check', 'begin editing');6
+Sequence;1995;('performed', 'initialize', 'initialize');213
+Sequence;1995;('prepare offline', 'initialize', 'save');46
+Sequence;1995;('begin preparations', 'prepare offline', 'initialize');92
+Sequence;1995;('save', 'performed', 'plan');47
+Sequence;1995;('withdraw', 'begin editing', 'calculate');12
+Sequence;1995;('insert document', 'finish payment', 'insert document');1455
+Sequence;1995;('insert document', 'decide', 'begin editing');6
+Sequence;1995;('insert document', 'initialize', 'begin payment');9
+Sequence;1995;('insert document', 'insert document', 'decide');5
+Sequence;1995;('insert document', 'revoke withdrawal', 'begin admissibility check');4
+Sequence;1995;('withdraw', 'insert document', 'revoke withdrawal');5
+Sequence;1995;('revoke withdrawal', 'begin admissibility check', 'check admissibility');4
+Sequence;1995;('save', 'withdraw', 'withdraw');18
+Sequence;1995;('withdraw', 'withdraw', 'insert document');9
+Sequence;1995;('check', 'plan', 'initialize');6
+Sequence;1995;('save', 'check', 'plan');4
+Sequence;1995;('performed offline', 'initialize', 'calculate');4
+Sequence;1995;('insert document', 'begin payment', 'insert document');145
+Sequence;1995;('begin editing', 'take original document', 'calculate');3
+Sequence;1995;('begin editing from refused', 'begin editing from refused', 'insert document');5
+Sequence;1995;('remove document', 'finish editing', 'save');6
+Sequence;1995;('calculate', 'remove document', 'finish editing');12
+Sequence;1995;('prepare offline', 'save', 'initialize');17
+Sequence;1995;('begin editing', 'calculate', 'check');6
+Sequence;1995;('remove document', 'remove document', 'begin editing');14
+Sequence;1995;('finish editing', 'insert document', 'calculate');12
+Sequence;1995;('begin payment', 'finish payment', 'check');4
+Sequence;1995;('begin editing', 'decide', 'begin editing');5
+Sequence;1995;('finish payment', 'check', 'finish editing');5
+Sequence;1995;('decide', 'remove document', 'remove document');6
+Sequence;1995;('begin editing', 'take original document', 'insert document');6
+Sequence;1995;('revoke decision', 'calculate', 'insert document');22
+Sequence;1995;('calculate', 'begin editing', 'revoke decision');3
+Sequence;1995;('calculate', 'insert document', 'revoke decision');5
+Sequence;1995;('begin editing', 'revoke decision', 'calculate');7
+Sequence;1995;('revoke decision', 'initialize', 'begin editing');3
+Sequence;1995;('begin preparations', 'prepare offline', 'insert document');5
+Sequence;1995;('prepare offline', 'insert document', 'save');4
+Sequence;1995;('finish preparations', 'begin preparations', 'check');3
+Sequence;1995;('decide', 'begin editing', 'initialize');25
+Sequence;1995;('performed', 'save', 'finish preparations');33
+Sequence;1995;('save', 'check admissibility', 'refuse');8
+Sequence;1995;('remove document', 'begin payment', 'finish payment');6
+Sequence;1995;('calculate', 'performed', 'insert document');3
+Sequence;1995;('remove document', 'calculate', 'save');13
+Sequence;1995;('insert document', 'finish payment', 'save');752
+Sequence;1995;('initialize', 'finish preparations', 'begin preparations');18
+Sequence;1995;('performed', 'calculate', 'finish editing');1845
+Sequence;1995;('calculate', 'revoke withdrawal', 'begin editing');4
+Sequence;1995;('begin payment', 'finish payment', 'revoke withdrawal');3
+Sequence;1995;('withdraw', 'calculate', 'calculate');6
+Sequence;1995;('finish editing', 'save', 'begin payment');12
+Sequence;1995;('insert document', 'revoke withdrawal', 'begin editing');8
+Sequence;1995;('finish editing', 'remove document', 'withdraw');3
+Sequence;1995;('remove document', 'withdraw', 'remove document');3
+Sequence;1995;('decide', 'remove document', 'save');5
+Sequence;1995;('remove document', 'save', 'begin payment');7
+Sequence;1995;('begin editing', 'insert document', 'finish editing');83
+Sequence;1995;('revoke decision', 'decide', 'save');15
+Sequence;1995;('finish editing', 'insert document', 'finish editing');12
+Sequence;1995;('remove document', 'begin admissibility check', 'check admissibility');10
+Sequence;1995;('insert document', 'remove document', 'begin admissibility check');9
+Sequence;1995;('begin preparations', 'finish preparations', 'begin preparations');8
+Sequence;1995;('finish preparations', 'save', 'finish editing');13
+Sequence;1995;('begin preparations', 'save', 'check');3
+Sequence;1995;('save', 'performed offline', 'calculate');61
+Sequence;1995;('performed offline', 'calculate', 'save');26
+Sequence;1995;('check', 'remove document', 'save');3
+Sequence;1995;('save', 'check', 'remove document');3
+Sequence;1995;('save', 'initialize', 'begin admissibility check');6
+Sequence;1995;('check admissibility', 'begin admissibility check', 'withdraw');10
+Sequence;1995;('insert document', 'withdraw', 'insert document');7
+Sequence;1995;('begin admissibility check', 'withdraw', 'begin admissibility check');4
+Sequence;1995;('withdraw', 'begin admissibility check', 'check admissibility');5
+Sequence;1995;('save', 'remove document', 'begin editing');13
+Sequence;1995;('calculate', 'save', 'performed offline');66
+Sequence;1995;('cancel offline', 'prepare offline', 'initialize');10
+Sequence;1995;('begin editing', 'calculate', 'cancel offline');5
+Sequence;1995;('prepare offline', 'initialize', 'begin editing');21
+Sequence;1995;('calculate', 'cancel offline', 'prepare offline');5
+Sequence;1995;('approve', 'revoke approval', 'refuse');3
+Sequence;1995;('begin editing from refused', 'revoke approval', 'begin admissibility check');4
+Sequence;1995;('withdraw', 'insert document', 'insert document');4
+Sequence;1995;('calculate', 'approve', 'revoke approval');5
+Sequence;1995;('refuse', 'begin editing from refused', 'calculate');38
+Sequence;1995;('finish editing', 'finish editing', 'decide');16
+Sequence;1995;('insert document', 'insert document', 'begin admissibility check');18
+Sequence;1995;('decide', 'save', 'begin editing');28
+Sequence;1995;('check', 'take original document', 'initialize');7
+Sequence;1995;('calculate', 'remove document', 'begin admissibility check');3
+Sequence;1995;('calculate', 'decide', 'decide');32
+Sequence;1995;('initialize', 'plan', 'finish editing');4
+Sequence;1995;('cancel offline', 'prepare offline', 'cancel offline');22
+Sequence;1995;('remove document', 'save', 'begin editing');20
+Sequence;1995;('finish editing', 'insert document', 'insert document');28
+Sequence;1995;('discard', 'save', 'check');4
+Sequence;1995;('save', 'take original document', 'calculate');24
+Sequence;1995;('insert document', 'insert document', 'revoke approval');7
+Sequence;1995;('insert document', 'revoke approval', 'refuse');3
+Sequence;1995;('performed', 'performed', 'check');4
+Sequence;1995;('calculate', 'remove document', 'initialize');3
+Sequence;1995;('remove document', 'initialize', 'begin editing');6
+Sequence;1995;('check admissibility', 'refuse', 'save');6
+Sequence;1995;('decide', 'begin editing', 'insert document');47
+Sequence;1995;('revoke decision', 'insert document', 'remove document');15
+Sequence;1995;('decide', 'revoke decision', 'withdraw');37
+Sequence;1995;('begin payment', 'begin editing', 'finish editing');3
+Sequence;1995;('begin payment', 'check', 'finish editing');6
+Sequence;1995;('abort payment', 'begin payment', 'check');6
+Sequence;1995;('check admissibility', 'insert document', 'remove document');4
+Sequence;1995;('begin editing', 'finish editing', 'mail income');162
+Sequence;1995;('finish editing', 'mail income', 'mail valid');37
+Sequence;1995;('performed', 'finish editing', 'finish preparations');36
+Sequence;1995;('finish editing', 'initialize', 'finish preparations');49
+Sequence;1995;('calculate', 'decide', 'revoke decision');13
+Sequence;1995;('abort payment', 'insert document', 'save');6
+Sequence;1995;('begin payment', 'abort payment', 'insert document');12
+Sequence;1995;('finish preparations', 'begin editing', 'finish editing');4
+Sequence;1995;('withdraw', 'begin editing', 'save');3
+Sequence;1995;('finish editing', 'take original document', 'calculate');10
+Sequence;1995;('change department', 'change department', 'change department');8
+Sequence;1995;('finish payment', 'change department', 'change department');5
+Sequence;1995;('calculate', 'initialize', 'finish editing');16
+Sequence;1995;('performed', 'insert document', 'remove document');4
+Sequence;1995;('take original document', 'begin editing', 'calculate');401
+Sequence;1995;('insert document', 'insert document', 'finish preparations');18
+Sequence;1995;('insert document', 'finish preparations', 'save');22
+Sequence;1995;('finish editing', 'abort external', 'prepare external');5
+Sequence;1995;('finish editing', 'finish preparations', 'prepare external');131
+Sequence;1995;('begin editing from refused', 'calculate', 'insert document');5
+Sequence;1995;('finish payment', 'begin admissibility check', 'check admissibility');4
+Sequence;1995;('initialize', 'performed offline', 'save');4
+Sequence;1995;('calculate', 'withdraw', 'withdraw');3
+Sequence;1995;('decide', 'insert document', 'revoke withdrawal');5
+Sequence;1995;('check admissibility', 'refuse', 'refuse');4
+Sequence;1995;('begin editing from refused', 'insert document', 'save');15
+Sequence;1995;('calculate', 'finish editing', 'plan');29
+Sequence;1995;('remove document', 'finish editing', 'decide');10
+Sequence;1995;('revoke withdrawal', 'withdraw', 'revoke withdrawal');3
+Sequence;1995;('revoke withdrawal', 'begin admissibility check', 'calculate');5
+Sequence;1995;('withdraw', 'revoke withdrawal', 'withdraw');5
+Sequence;1995;('finish editing', 'begin editing', 'withdraw');3
+Sequence;1995;('begin editing', 'remove document', 'calculate');4
+Sequence;1995;('save', 'begin preparations', 'initialize');40
+Sequence;1995;('finish editing', 'save', 'begin preparations');25
+Sequence;1995;('begin preparations', 'initialize', 'finish preparations');10
+Sequence;1995;('revoke decision', 'insert document', 'calculate');32
+Sequence;1995;('begin editing', 'revoke decision', 'save');3
+Sequence;1995;('refuse', 'revoke approval', 'approve');3
+Sequence;1995;('remove document', 'revoke decision', 'insert document');37
+Sequence;1995;('remove document', 'remove document', 'calculate');4
+Sequence;1995;('calculate', 'finish editing', 'performed');3676
+Sequence;1995;('calculate', 'finish editing', 'check');7
+Sequence;1995;('finish editing', 'remove document', 'calculate');3
+Sequence;1995;('remove document', 'decide', 'insert document');8
+Sequence;1995;('finish editing', 'save', 'take original document');10
+Sequence;1995;('calculate', 'save', 'begin preparations');25
+Sequence;1995;('mail income', 'initialize', 'begin editing');3734
+Sequence;1995;('mail valid', 'mail income', 'initialize');3730
+Sequence;1995;('performed', 'finish editing', 'check');4
+Sequence;1995;('finish editing', 'save', 'remove document');8
+Sequence;1995;('decide', 'save', 'decide');11
+Sequence;1995;('begin editing', 'save', 'decide');4
+Sequence;1995;('save', 'withdraw', 'save');5
+Sequence;1995;('revoke withdrawal', 'begin editing', 'finish editing');3
+Sequence;1995;('calculate', 'initialize', 'finish preparations');4
+Sequence;1995;('save', 'take original document', 'insert document');3
+Sequence;1995;('begin editing', 'begin editing', 'finish editing');17
+Sequence;1995;('calculate', 'begin admissibility check', 'withdraw');8
+Sequence;1995;('decide', 'save', 'remove document');9
+Sequence;1995;('prepare offline', 'save', 'performed');5
+Sequence;1995;('finish editing', 'performed', 'check');3
+Sequence;1995;('save', 'calculate', 'decide');7
+Sequence;1995;('decide', 'insert document', 'decide');10
+Sequence;1995;('calculate', 'remove document', 'revoke decision');6
+Sequence;1995;('begin editing from refused', 'finish editing', 'begin editing');3
+Sequence;1995;('save', 'remove document', 'finish editing');4
+Sequence;1995;('calculate', 'begin editing from refused', 'finish editing');4
+Sequence;1995;('calculate', 'calculate', 'begin editing from refused');13
+Sequence;1995;('insert document', 'revoke approval', 'begin admissibility check');11
+Sequence;1995;('save', 'insert document', 'revoke approval');4
+Sequence;1995;('decide', 'decide', 'initialize');5
+Sequence;1995;('begin preparations', 'prepare offline', 'performed');8
+Sequence;1995;('begin editing', 'remove document', 'save');6
+Sequence;1995;('refuse', 'calculate', 'calculate');4
+Sequence;1995;('decide', 'insert document', 'approve');4
+Sequence;1995;('save', 'remove document', 'revoke withdrawal');6
+Sequence;1995;('initialize', 'finish editing', 'finish editing');32
+Sequence;1995;('finish payment', 'finish editing', 'begin editing');6
+Sequence;1995;('performed offline', 'begin editing', 'finish editing');4
+Sequence;1995;('save', 'abort payment', 'save');5
+Sequence;1995;('finish preparations', 'begin preparations', 'prepare offline');38
+Sequence;1995;('prepare offline', 'initialize', 'plan');7
+Sequence;1995;('check', 'begin editing', 'save');4
+Sequence;1995;('save', 'check', 'begin editing');5
+Sequence;1995;('refuse', 'insert document', 'revoke approval');5
+Sequence;1995;('refuse', 'save', 'refuse');4
+Sequence;1995;('insert document', 'approve', 'calculate');4
+Sequence;1995;('calculate', 'insert document', 'withdraw');3
+Sequence;1995;('take original document', 'save', 'finish editing');7
+Sequence;1995;('performed', 'calculate', 'calculate');1009
+Sequence;1995;('prepare offline', 'save', 'calculate');32
+Sequence;1995;('calculate', 'take original document', 'take original document');5
+Sequence;1995;('begin editing', 'calculate', 'take original document');27
+Sequence;1995;('take original document', 'take original document', 'calculate');6
+Sequence;1995;('refuse', 'insert document', 'begin editing from refused');4
+Sequence;1995;('calculate', 'refuse', 'revoke approval');4
+Sequence;1995;('cancel offline', 'finish preparations', 'save');33
+Sequence;1995;('finish editing', 'save', 'plan');10
+Sequence;1995;('remove document', 'calculate', 'calculate');12
+Sequence;1995;('calculate', 'performed', 'begin editing');187
+Sequence;1995;('decide', 'calculate', 'decide');22
+Sequence;1995;('check admissibility', 'approve', 'revoke approval');5
+Sequence;1995;('approve', 'revoke approval', 'begin admissibility check');3
+Sequence;1995;('begin admissibility check', 'withdraw', 'withdraw');5
+Sequence;1995;('save', 'begin preparations', 'calculate');21
+Sequence;1995;('cancel offline', 'initialize', 'begin editing');7
+Sequence;1995;('initialize', 'plan', 'begin editing');5
+Sequence;1995;('save', 'performed', 'check');7
+Sequence;1995;('begin editing', 'finish editing', 'mail valid');10
+Sequence;1995;('performed', 'prepare offline', 'save');11
+Sequence;1995;('begin payment', 'initialize', 'plan');3
+Sequence;1995;('abort payment', 'begin payment', 'initialize');3
+Sequence;1995;('begin editing', 'save', 'revoke decision');4
+Sequence;1995;('finish editing', 'calculate', 'initialize');611
+Sequence;1995;('revoke approval', 'refuse', 'insert document');4
+Sequence;1995;('remove document', 'insert document', 'finish payment');5
+Sequence;1995;('begin payment', 'remove document', 'insert document');3
+Sequence;1995;('finish editing', 'revoke decision', 'insert document');6
+Sequence;1995;('insert document', 'remove document', 'finish editing');3
+Sequence;1995;('cancel offline', 'begin editing', 'calculate');7
+Sequence;1995;('prepare offline', 'cancel offline', 'begin editing');9
+Sequence;1995;('begin editing', 'calculate', 'prepare offline');14
+Sequence;1995;('calculate', 'prepare offline', 'save');24
+Sequence;1995;('finish preparations', 'save', 'check');6
+Sequence;1995;('performed offline', 'finish editing', 'begin editing');17
+Sequence;1995;('check', 'initialize', 'finish editing');4
+Sequence;1995;('performed', 'check', 'initialize');8
+Sequence;1995;('performed', 'calculate', 'begin editing');39
+Sequence;1995;('save', 'take original document', 'check');5
+Sequence;1995;('take original document', 'check', 'save');3
+Sequence;1995;('performed offline', 'initialize', 'plan');7
+Sequence;1995;('begin editing', 'save', 'finish preparations');8
+Sequence;1995;('begin admissibility check', 'withdraw', 'calculate');4
+Sequence;1995;('revoke decision', 'finish editing', 'calculate');17
+Sequence;1995;('initialize', 'insert document', 'remove document');4
+Sequence;1995;('finish preparations', 'save', 'initialize');19
+Sequence;1995;('finish preparations', 'insert document', 'insert document');9
+Sequence;1995;('save', 'take original document', 'begin payment');15
+Sequence;1995;('approve', 'approve', 'save');4
+Sequence;1995;('revoke decision', 'save', 'check');3
+Sequence;1995;('calculate', 'calculate', 'plan');17
+Sequence;1995;('prepare offline', 'initialize', 'performed');24
+Sequence;1995;('plan', 'finish preparations', 'begin preparations');48
+Sequence;1995;('begin admissibility check', 'check admissibility', 'remove document');5
+Sequence;1995;('withdraw', 'begin admissibility check', 'calculate');3
+Sequence;1995;('begin editing', 'plan', 'initialize');12
+Sequence;1995;('calculate', 'approve', 'begin admissibility check');4
+Sequence;1995;('begin preparations', 'insert document', 'save');3
+Sequence;1995;('check admissibility', 'calculate', 'finish editing');4
+Sequence;1995;('begin editing', 'save', 'remove document');8
+Sequence;1995;('insert document', 'revoke decision', 'revoke decision');12
+Sequence;1995;('calculate', 'take original document', 'save');6
+Sequence;1995;('check', 'take original document', 'check');3
+Sequence;1995;('decide', 'save', 'calculate');11
+Sequence;1995;('check admissibility', 'insert document', 'insert document');4
+Sequence;1995;('save', 'finish editing', 'begin preparations');11
+Sequence;1995;('finish preparations', 'initialize', 'plan');17
+Sequence;1995;('finish editing', 'begin preparations', 'save');7
+Sequence;1995;('finish editing', 'finish preparations', 'initialize');8
+Sequence;1995;('finish editing', 'begin payment', 'finish payment');5
+Sequence;1995;('begin editing', 'save', 'begin payment');3
+Sequence;1995;('save', 'save', 'prepare offline');5
+Sequence;1995;('finish payment', 'plan', 'initialize');3
+Sequence;1995;('begin payment', 'finish payment', 'plan');3
+Sequence;1995;('initialize', 'save', 'initialize');118
+Sequence;1995;('calculate', 'calculate', 'finish preparations');221
+Sequence;1995;('performed offline', 'save', 'begin editing');6
+Sequence;1995;('initialize', 'performed', 'take original document');3
+Sequence;1995;('take original document', 'save', 'insert document');3
+Sequence;1995;('begin admissibility check', 'withdraw', 'save');3
+Sequence;1995;('insert document', 'begin admissibility check', 'withdraw');3
+Sequence;1995;('take original document', 'calculate', 'calculate');15
+Sequence;1995;('save', 'insert document', 'begin admissibility check');3
+Sequence;1995;('remove document', 'begin admissibility check', 'withdraw');3
+Sequence;1995;('withdraw', 'save', 'save');5
+Sequence;1995;('finish editing', 'save', 'withdraw');5
+Sequence;1995;('check admissibility', 'save', 'calculate');4
+Sequence;1995;('finish editing', 'insert document', 'remove document');15
+Sequence;1995;('begin editing from refused', 'begin editing from refused', 'calculate');5
+Sequence;1995;('calculate', 'revoke decision', 'revoke decision');5
+Sequence;1995;('calculate', 'withdraw', 'begin editing');11
+Sequence;1995;('take original document', 'begin payment', 'finish payment');3
+Sequence;1995;('finish payment', 'begin editing', 'finish editing');57
+Sequence;1995;('withdraw', 'insert document', 'initialize');16
+Sequence;1995;('finish payment', 'finish editing', 'initialize');3
+Sequence;1995;('refuse', 'save', 'insert document');3
+Sequence;1995;('remove document', 'insert document', 'begin editing');4
+Sequence;1995;('save', 'discard', 'save');3
+Sequence;1995;('abort payment', 'revoke decision', 'remove document');5
+Sequence;1995;('prepare offline', 'performed', 'save');7
+Sequence;1995;('plan', 'initialize', 'begin editing');3
+Sequence;1995;('finish payment', 'remove document', 'insert document');4
+Sequence;1995;('save', 'begin editing', 'begin admissibility check');3
+Sequence;1995;('remove document', 'finish editing', 'insert document');3
+Sequence;1995;('initialize', 'prepare offline', 'begin editing');3
+Sequence;1995;('calculate', 'finish editing', 'approve');3
+Sequence;1995;('calculate', 'finish preparations', 'insert document');6
+Sequence;1995;('remove document', 'withdraw', 'insert document');3
+Sequence;1995;('revoke decision', 'insert document', 'finish editing');3
+Sequence;1995;('begin editing', 'finish editing', 'finish payment');5
+Sequence;1995;('plan', 'finish preparations', 'performed');3
+Sequence;1995;('begin editing', 'finish editing', 'revoke decision');3
+Sequence;1995;('decide', 'revoke decision', 'begin editing');45
+Sequence;1995;('revoke decision', 'begin editing', 'begin editing');20
+Sequence;1995;('initialize', 'remove document', 'save');3
+Sequence;1995;('save', 'refuse', 'begin editing from refused');5
+Sequence;1995;('initialize', 'performed', 'begin editing');1539
+Sequence;1995;('decide', 'revoke decision', 'begin payment');3
+Sequence;1995;('revoke decision', 'revoke decision', 'begin editing');4
+Sequence;1995;('finish editing', 'finish editing', 'take original document');3
+Sequence;1995;('revoke decision', 'insert document', 'begin payment');3
+Sequence;1995;('revoke withdrawal', 'remove document', 'calculate');3
+Sequence;1995;('save', 'calculate', 'revoke decision');5
+Sequence;1995;('revoke decision', 'calculate', 'begin editing');11
+Sequence;1995;('begin editing', 'remove document', 'remove document');3
+Sequence;1995;('discard', 'save', 'save');5
+Sequence;1995;('begin editing', 'finish editing', 'performed');31
+Sequence;1995;('insert document', 'remove document', 'begin editing');4
+Sequence;1995;('calculate', 'withdraw', 'remove document');5
+Sequence;1995;('prepare offline', 'cancel offline', 'finish preparations');27
+Sequence;1995;('performed offline', 'insert document', 'save');6
+Sequence;1995;('save', 'performed offline', 'insert document');6
+Sequence;1995;('withdraw', 'remove document', 'revoke withdrawal');5
+Sequence;1995;('insert document', 'begin editing', 'finish editing');7
+Sequence;1995;('performed', 'performed offline', 'save');5
+Sequence;1995;('save', 'performed offline', 'finish preparations');4
+Sequence;1995;('calculate', 'finish editing', 'finish preparations');316
+Sequence;1995;('save', 'save', 'check admissibility');4
+Sequence;1995;('insert document', 'save', 'finish preparations');15
+Sequence;1995;('finish editing', 'remove document', 'revoke decision');3
+Sequence;1995;('begin preparations', 'begin editing', 'calculate');7
+Sequence;1995;('save', 'begin preparations', 'begin editing');11
+Sequence;1995;('insert document', 'begin editing', 'begin editing');15
+Sequence;1995;('decide', 'remove document', 'begin editing');4
+Sequence;1995;('finish editing', 'revoke decision', 'revoke decision');6
+Sequence;1995;('save', 'finish editing', 'revoke decision');12
+Sequence;1995;('performed offline', 'begin editing', 'save');10
+Sequence;1995;('remove document', 'save', 'begin admissibility check');3
+Sequence;1995;('calculate', 'approve', 'approve');3
+Sequence;1995;('initialize', 'performed', 'prepare offline');13
+Sequence;1995;('performed', 'save', 'begin preparations');11
+Sequence;1995;('calculate', 'begin editing from refused', 'save');3
+Sequence;1995;('save', 'calculate', 'begin editing from refused');3
+Sequence;1995;('calculate', 'save', 'begin admissibility check');4
+Sequence;1995;('begin admissibility check', 'begin editing', 'save');4
+Sequence;1995;('prepare offline', 'calculate', 'calculate');14
+Sequence;1995;('insert document', 'save', 'refuse');3
+Sequence;1995;('save', 'refuse', 'insert document');4
+Sequence;1995;('prepare offline', 'save', 'performed offline');5
+Sequence;1995;('take original document', 'check', 'initialize');3
+Sequence;1995;('performed offline', 'save', 'initialize');7
+Sequence;1995;('prepare external', 'begin preparations', 'save');15
+Sequence;1995;('finish editing', 'approve', 'calculate');3
+Sequence;1995;('performed', 'begin editing', 'finish editing');88
+Sequence;1995;('decide', 'begin editing', 'decide');4
+Sequence;1995;('initialize', 'cancel offline', 'prepare offline');3
+Sequence;1995;('finish editing', 'begin preparations', 'finish preparations');7
+Sequence;1995;('save', 'insert document', 'revoke decision');3
+Sequence;1995;('prepare offline', 'begin editing', 'save');16
+Sequence;1995;('decide', 'finish editing', 'begin editing');3
+Sequence;1995;('save', 'abort external', 'finish preparations');10
+Sequence;1995;('prepare external', 'save', 'save');65
+Sequence;1995;('save', 'save', 'abort external');6
+Sequence;1995;('finish preparations', 'prepare external', 'save');13
+Sequence;1995;('begin preparations', 'save', 'initialize');3
+Sequence;1995;('begin editing', 'save', 'approve');8
+Sequence;1995;('calculate', 'decide', 'save');3
+Sequence;1995;('insert document', 'finish editing', 'initialize');6
+Sequence;1995;('begin preparations', 'prepare external', 'save');77
+Sequence;1995;('prepare external', 'save', 'abort external');3
+Sequence;1995;('calculate', 'begin editing', 'plan');6
+Sequence;1995;('abort external', 'prepare offline', 'save');8
+Sequence;1995;('prepare external', 'abort external', 'prepare offline');11
+Sequence;1995;('save', 'begin preparations', 'prepare external');20
+Sequence;1995;('save', 'discard', 'finish editing');3
+Sequence;1995;('finish preparations', 'save', 'calculate');28
+Sequence;1995;('initialize', 'plan', 'calculate');3
+Sequence;1995;('abort payment', 'insert document', 'begin payment');3
+Sequence;1995;('save', 'take original document', 'take original document');4
+Sequence;1995;('begin preparations', 'prepare offline', 'finish editing');3
+Sequence;1995;('prepare offline', 'finish editing', 'save');4
+Sequence;1995;('remove document', 'begin editing', 'begin editing');4
+Sequence;1995;('begin editing', 'insert document', 'begin editing');32
+Sequence;1995;('discard', 'insert document', 'save');7
+Sequence;1995;('finish editing', 'calculate', 'performed');337
+Sequence;1995;('initialize', 'prepare offline', 'save');10
+Sequence;1995;('revoke decision', 'withdraw', 'revoke withdrawal');38
+Sequence;1995;('save', 'calculate', 'take original document');3
+Sequence;1995;('decide', 'take original document', 'begin payment');133
+Sequence;1995;('begin payment', 'insert document', 'initialize');3
+Sequence;1995;('finish editing', 'decide', 'take original document');133
+Sequence;1995;('insert document', 'decide', 'revoke decision');9
+Sequence;1995;('calculate', 'begin editing', 'finish preparations');7
+Sequence;1995;('calculate', 'finish editing', 'performed offline');9
+Sequence;1995;('prepare offline', 'calculate', 'save');101
+Sequence;1995;('begin preparations', 'prepare offline', 'calculate');123
+Sequence;1995;('remove document', 'insert document', 'revoke decision');10
+Sequence;1995;('performed offline', 'finish editing', 'save');5
+Sequence;1995;('revoke decision', 'begin editing', 'save');23
+Sequence;1995;('finish preparations', 'calculate', 'save');18
+Sequence;1995;('finish preparations', 'begin preparations', 'begin editing');3
+Sequence;1995;('insert document', 'calculate', 'begin editing from refused');6
+Sequence;1995;('calculate', 'begin editing from refused', 'revoke approval');4
+Sequence;1995;('begin preparations', 'initialize', 'prepare offline');11
+Sequence;1995;('insert document', 'calculate', 'begin editing');8
+Sequence;1995;('save', 'calculate', 'performed offline');17
+Sequence;1995;('take original document', 'save', 'calculate');7
+Sequence;1995;('finish editing', 'begin editing', 'plan');3
+Sequence;1995;('finish editing', 'revoke decision', 'save');3
+Sequence;1995;('remove document', 'begin editing', 'finish editing');3
+Sequence;1995;('begin editing', 'create', 'initialize');5423
+Sequence;1995;('create', 'initialize', 'begin editing');16760
+Sequence;1995;('finish editing', 'create', 'begin editing');3772
+Sequence;1995;('initialize', 'performed', 'calculate');2948
+Sequence;1995;('create', 'begin editing', 'create');2300
+Sequence;1995;('begin editing', 'finish editing', 'create');13912
+Sequence;1995;('finish editing', 'performed', 'calculate');37
+Sequence;1995;('calculate', 'initialize', 'performed');1267
+Sequence;1995;('initialize', 'begin editing', 'create');5494
+Sequence;1995;('create', 'create', 'initialize');1435
+Sequence;1995;('begin editing', 'create', 'create');1799
+Sequence;1995;('finish editing', 'create', 'initialize');16881
+Sequence;1995;('create', 'initialize', 'performed');7352
+Sequence;1995;('insert document', 'finish payment', 'begin editing');770
+Sequence;1995;('finish editing', 'restart editing', 'save');327
+Sequence;1995;('restart editing', 'save', 'restart editing');6
+Sequence;1995;('restart editing', 'finish pre-check', 'finish editing');26
+Sequence;1995;('calculate', 'finish editing', 'restart editing');330
+Sequence;1995;('finish pre-check', 'finish editing', 'begin editing');951
+Sequence;1995;('save', 'restart editing', 'finish pre-check');3
+Sequence;1995;('begin editing', 'create', 'calculate');455
+Sequence;1995;('create', 'calculate', 'initialize');409
+Sequence;1995;('finish editing', 'create', 'create');384
+Sequence;1995;('create', 'begin editing', 'initialize');21
+Sequence;1995;('create', 'calculate', 'calculate');85
+Sequence;1995;('finish payment', 'restart editing', 'save');120
+Sequence;1995;('restart editing', 'save', 'finish editing');308
+Sequence;1995;('create', 'create', 'calculate');322
+Sequence;1995;('insert document', 'finish payment', 'restart editing');207
+Sequence;1995;('create', 'create', 'create');423
+Sequence;1995;('create', 'calculate', 'save');227
+Sequence;1995;('finish pre-check', 'finish editing', 'restart editing');23
+Sequence;1995;('finish editing', 'decide', 'restart editing');54
+Sequence;1995;('finish pre-check', 'finish editing', 'calculate');211
+Sequence;1995;('restart editing', 'restart editing', 'save');86
+Sequence;1995;('save', 'calculate', 'finish pre-check');2049
+Sequence;1995;('finish editing', 'restart editing', 'calculate');7
+Sequence;1995;('decide', 'restart editing', 'restart editing');5
+Sequence;1995;('calculate', 'finish pre-check', 'finish editing');2152
+Sequence;1995;('restart editing', 'save', 'calculate');274
+Sequence;1995;('finish pre-check', 'finish editing', 'save');635
+Sequence;1995;('begin editing', 'create', 'save');515
+Sequence;1995;('create', 'save', 'initialize');43
+Sequence;1995;('insert document', 'restart editing', 'save');18
+Sequence;1995;('begin payment', 'insert document', 'restart editing');23
+Sequence;1995;('restart editing', 'save', 'save');99
+Sequence;1995;('withdraw', 'calculate', 'insert document');7
+Sequence;1995;('create', 'finish editing', 'create');9
+Sequence;1995;('begin editing', 'create', 'finish editing');12
+Sequence;1995;('restart editing', 'finish editing', 'save');13
+Sequence;1995;('finish payment', 'restart editing', 'finish editing');35
+Sequence;1995;('save', 'restart editing', 'save');81
+Sequence;1995;('save', 'save', 'restart editing');84
+Sequence;1995;('insert document', 'initialize', 'save');17
+Sequence;1995;('save', 'save', 'finish pre-check');558
+Sequence;1995;('finish pre-check', 'save', 'insert document');14
+Sequence;1995;('save', 'finish pre-check', 'finish editing');1890
+Sequence;1995;('save', 'begin editing', 'finish pre-check');33
+Sequence;1995;('begin editing', 'finish pre-check', 'save');16
+Sequence;1995;('prepare external', 'initialize', 'begin editing');46
+Sequence;1995;('create', 'create', 'save');277
+Sequence;1995;('create', 'save', 'save');419
+Sequence;1995;('initialize', 'save', 'plan');44
+Sequence;1995;('begin editing', 'save', 'restart editing');13
+Sequence;1995;('finish editing', 'begin editing', 'create');209
+Sequence;1995;('calculate', 'create', 'save');8
+Sequence;1995;('create', 'save', 'calculate');985
+Sequence;1995;('save', 'performed', 'calculate');28
+Sequence;1995;('performed', 'begin editing', 'calculate');218
+Sequence;1995;('create', 'initialize', 'plan');719
+Sequence;1995;('decide', 'begin payment', 'restart editing');18
+Sequence;1995;('save', 'begin payment', 'insert document');82
+Sequence;1995;('begin editing', 'calculate protocol', 'save');27
+Sequence;1995;('finish pre-check', 'finish editing', 'insert document');93
+Sequence;1995;('calculate', 'save', 'finish pre-check');42
+Sequence;1995;('begin editing', 'begin editing', 'calculate protocol');3
+Sequence;1995;('calculate protocol', 'save', 'calculate');30
+Sequence;1995;('insert document', 'decide', 'begin payment');14
+Sequence;1995;('decide', 'revoke decision', 'restart editing');28
+Sequence;1995;('restart editing', 'save', 'begin editing');4
+Sequence;1995;('revoke decision', 'restart editing', 'save');18
+Sequence;1995;('finish pre-check', 'insert document', 'save');76
+Sequence;1995;('calculate', 'finish pre-check', 'insert document');35
+Sequence;1995;('finish pre-check', 'calculate', 'calculate');38
+Sequence;1995;('calculate', 'finish pre-check', 'calculate');387
+Sequence;1995;('finish pre-check', 'calculate', 'finish pre-check');87
+Sequence;1995;('calculate', 'finish editing', 'finish pre-check');19
+Sequence;1995;('finish editing', 'finish pre-check', 'calculate');22
+Sequence;1995;('calculate', 'calculate', 'finish pre-check');189
+Sequence;1995;('save', 'finish preparations', 'initialize');7
+Sequence;1995;('calculate', 'begin editing from refused', 'insert document');8
+Sequence;1995;('create', 'plan', 'initialize');124
+Sequence;1995;('finish editing', 'create', 'plan');92
+Sequence;1995;('performed', 'calculate', 'initialize');10
+Sequence;1995;('finish editing', 'finish editing', 'create');9519
+Sequence;1995;('begin preparations', 'initialize', 'plan');21
+Sequence;1995;('save', 'restart editing', 'restart editing');13
+Sequence;1995;('finish editing', 'begin editing', 'finish pre-check');116
+Sequence;1995;('begin editing', 'finish pre-check', 'finish editing');5729
+Sequence;1995;('begin payment', 'restart editing', 'restart editing');5
+Sequence;1995;('save', 'restart editing', 'finish editing');31
+Sequence;1995;('calculate', 'save', 'restart editing');7
+Sequence;1995;('create', 'calculate', 'finish editing');219
+Sequence;1995;('initialize', 'performed', 'create');13
+Sequence;1995;('performed', 'create', 'calculate');3
+Sequence;1995;('decide', 'restart editing', 'save');45
+Sequence;1995;('finish payment', 'begin editing', 'calculate protocol');24
+Sequence;1995;('calculate protocol', 'save', 'finish editing');42
+Sequence;1995;('finish editing', 'calculate protocol', 'save');5
+Sequence;1995;('calculate protocol', 'finish editing', 'calculate protocol');4
+Sequence;1995;('finish editing', 'create', 'save');890
+Sequence;1995;('insert document', 'initialize', 'restart editing');16
+Sequence;1995;('initialize', 'restart editing', 'save');12
+Sequence;1995;('begin editing', 'begin editing', 'finish pre-check');2472
+Sequence;1995;('restart editing', 'finish editing', 'begin editing');35
+Sequence;1995;('save', 'calculate', 'restart editing');14
+Sequence;1995;('calculate', 'restart editing', 'save');46
+Sequence;1995;('finish payment', 'restart editing', 'restart editing');43
+Sequence;1995;('calculate protocol', 'calculate protocol', 'save');52
+Sequence;1995;('begin editing', 'insert document', 'calculate protocol');23
+Sequence;1995;('insert document', 'calculate protocol', 'calculate protocol');23
+Sequence;1995;('restart editing', 'restart editing', 'finish pre-check');18
+Sequence;1995;('begin editing', 'create', 'insert document');37
+Sequence;1995;('clear', 'begin editing', 'create');113
+Sequence;1995;('finish editing', 'clear', 'begin editing');475
+Sequence;1995;('create', 'insert document', 'save');180
+Sequence;1995;('create', 'save', 'finish editing');149
+Sequence;1995;('performed', 'calculate', 'create');3
+Sequence;1995;('calculate', 'create', 'calculate');3
+Sequence;1995;('save', 'finish pre-check', 'calculate');259
+Sequence;1995;('begin editing', 'save', 'finish pre-check');441
+Sequence;1995;('finish pre-check', 'calculate', 'finish editing');580
+Sequence;1995;('finish editing', 'create', 'calculate');389
+Sequence;1995;('performed', 'initialize', 'performed');29
+Sequence;1995;('performed', 'begin editing', 'create');55
+Sequence;1995;('calculate', 'finish preparations', 'calculate');10
+Sequence;1995;('calculate', 'calculate', 'restart editing');23
+Sequence;1995;('prepare external', 'initialize', 'plan');116
+Sequence;1995;('begin preparations', 'performed', 'begin editing');6
+Sequence;1995;('finish editing', 'calculate', 'finish preparations');116
+Sequence;1995;('begin editing', 'begin editing', 'restart editing');3
+Sequence;1995;('begin editing', 'restart editing', 'save');6
+Sequence;1995;('abort payment', 'begin payment', 'restart editing');4
+Sequence;1995;('begin payment', 'restart editing', 'save');16
+Sequence;1995;('calculate protocol', 'calculate protocol', 'calculate protocol');39
+Sequence;1995;('save', 'finish payment', 'restart editing');3
+Sequence;1995;('finish editing', 'save', 'restart editing');24
+Sequence;1995;('revoke decision', 'restart editing', 'restart editing');11
+Sequence;1995;('calculate', 'begin editing', 'calculate protocol');14
+Sequence;1995;('save', 'mail income', 'mail valid');3
+Sequence;1995;('restart editing', 'insert document', 'save');31
+Sequence;1995;('clear', 'restart editing', 'restart editing');4
+Sequence;1995;('create', 'insert document', 'initialize');3
+Sequence;1995;('finish editing', 'create', 'insert document');79
+Sequence;1995;('finish pre-check', 'finish editing', 'create');2212
+Sequence;1995;('create', 'begin editing', 'finish editing');83
+Sequence;1995;('save', 'finish editing', 'restart editing');35
+Sequence;1995;('begin editing', 'finish editing', 'finish preparations');13
+Sequence;1995;('finish pre-check', 'finish editing', 'begin admissibility check');3
+Sequence;1995;('finish preparations', 'calculate', 'calculate');8
+Sequence;1995;('calculate', 'begin editing', 'create');12
+Sequence;1995;('create', 'create', 'plan');4
+Sequence;1995;('performed', 'performed', 'finish preparations');12
+Sequence;1995;('initialize', 'performed', 'finish preparations');93
+Sequence;1995;('performed offline', 'calculate', 'finish editing');5
+Sequence;1995;('begin payment', 'insert document', 'begin editing');6
+Sequence;1995;('initialize', 'initialize', 'performed');11
+Sequence;1995;('finish pre-check', 'finish editing', 'finish editing');3015
+Sequence;1995;('performed offline', 'calculate', 'begin editing');14
+Sequence;1995;('initialize', 'performed', 'performed offline');4
+Sequence;1995;('begin editing', 'create', 'plan');15
+Sequence;1995;('calculate', 'save', 'clear');3
+Sequence;1995;('save', 'clear', 'begin editing');4
+Sequence;1995;('insert document', 'initialize', 'initialize');3
+Sequence;1995;('insert document', 'initialize', 'withdraw');6
+Sequence;1995;('finish payment', 'restart editing', 'calculate');8
+Sequence;1995;('restart editing', 'calculate', 'finish editing');13
+Sequence;1995;('save', 'revoke decision', 'restart editing');3
+Sequence;1995;('insert document', 'save', 'finish pre-check');288
+Sequence;1995;('prepare offline', 'calculate', 'cancel offline');4
+Sequence;1995;('begin editing', 'calculate', 'restart editing');16
+Sequence;1995;('finish preparations', 'initialize', 'begin editing');14
+Sequence;1995;('finish editing', 'finish editing', 'calculate protocol');3
+Sequence;1995;('create', 'finish preparations', 'save');3
+Sequence;1995;('calculate', 'finish preparations', 'initialize');4
+Sequence;1995;('performed', 'create', 'save');5
+Sequence;1995;('clear', 'create', 'save');236
+Sequence;1995;('create', 'save', 'begin editing');28
+Sequence;1995;('calculate protocol', 'insert document', 'calculate protocol');4
+Sequence;1995;('begin editing', 'save', 'refuse');4
+Sequence;1995;('initialize', 'save', 'begin admissibility check');9
+Sequence;1995;('begin preparations', 'initialize', 'begin editing');26
+Sequence;1995;('finish editing', 'restart editing', 'restart editing');25
+Sequence;1995;('restart editing', 'save', 'finish pre-check');25
+Sequence;1995;('save', 'prepare offline', 'cancel offline');3
+Sequence;1995;('begin payment', 'finish payment', 'begin admissibility check');4
+Sequence;1995;('initialize', 'begin payment', 'finish payment');8
+Sequence;1995;('begin editing', 'calculate', 'finish pre-check');79
+Sequence;1995;('calculate', 'calculate', 'clear');4
+Sequence;1995;('begin editing', 'create', 'begin editing');8
+Sequence;1995;('create', 'begin editing', 'save');468
+Sequence;1995;('calculate', 'clear', 'begin editing');5
+Sequence;1995;('begin editing', 'save', 'performed offline');3
+Sequence;1995;('restart editing', 'finish editing', 'restart editing');14
+Sequence;1995;('save', 'restart editing', 'insert document');9
+Sequence;1995;('finish editing', 'restart editing', 'finish editing');25
+Sequence;1995;('create', 'begin editing', 'calculate');22
+Sequence;1995;('performed offline', 'finish editing', 'calculate');14
+Sequence;1995;('create', 'initialize', 'save');6
+Sequence;1995;('begin editing', 'discard', 'calculate');7
+Sequence;1995;('save', 'begin editing', 'discard');5
+Sequence;1995;('calculate', 'finish editing', 'create');4
+Sequence;1995;('finish preparations', 'save', 'begin editing');16
+Sequence;1995;('performed', 'calculate', 'insert document');6
+Sequence;1995;('finish editing', 'finish editing', 'restart editing');15
+Sequence;1995;('finish editing', 'restart editing', 'finish pre-check');3
+Sequence;1995;('finish editing', 'finish preparations', 'calculate');5
+Sequence;1995;('initialize', 'finish editing', 'create');3
+Sequence;1995;('performed offline', 'calculate', 'calculate');21
+Sequence;1995;('restart editing', 'calculate', 'finish pre-check');9
+Sequence;1995;('finish pre-check', 'restart editing', 'finish pre-check');6
+Sequence;1995;('save', 'finish pre-check', 'restart editing');6
+Sequence;1995;('finish payment', 'insert document', 'begin editing');14
+Sequence;1995;('finish payment', 'save', 'restart editing');4
+Sequence;1995;('finish preparations', 'prepare external', 'calculate');7
+Sequence;1995;('calculate', 'finish preparations', 'begin editing');5
+Sequence;1995;('finish preparations', 'begin editing', 'insert document');10
+Sequence;1995;('restart editing', 'save', 'insert document');16
+Sequence;1995;('create', 'save', 'insert document');99
+Sequence;1995;('calculate', 'performed', 'finish preparations');3
+Sequence;1995;('restart editing', 'finish editing', 'finish editing');10
+Sequence;1995;('finish editing', 'begin payment', 'insert document');37
+Sequence;1995;('restart editing', 'finish editing', 'calculate');6
+Sequence;1995;('begin editing', 'calculate protocol', 'calculate protocol');28
+Sequence;1995;('insert document', 'calculate protocol', 'save');4
+Sequence;1995;('create', 'create', 'finish editing');3
+Sequence;1995;('calculate', 'finish pre-check', 'save');341
+Sequence;1995;('finish pre-check', 'save', 'finish pre-check');520
+Sequence;1995;('save', 'finish pre-check', 'save');195
+Sequence;1995;('insert document', 'save', 'begin preparations');3
+Sequence;1995;('begin preparations', 'calculate', 'prepare offline');8
+Sequence;1995;('finish pre-check', 'save', 'finish editing');39
+Sequence;1995;('save', 'decide', 'revoke decision');6
+Sequence;1995;('insert document', 'save', 'performed offline');3
+Sequence;1995;('save', 'insert document', 'finish preparations');6
+Sequence;1995;('insert document', 'restart editing', 'finish editing');4
+Sequence;1995;('restart editing', 'finish editing', 'finish payment');5
+Sequence;1995;('calculate', 'restart editing', 'restart editing');5
+Sequence;1995;('finish editing', 'calculate', 'plan');8
+Sequence;1995;('prepare external', 'calculate', 'finish editing');16
+Sequence;1995;('save', 'begin editing', 'performed offline');4
+Sequence;1995;('restart editing', 'calculate', 'calculate');3
+Sequence;1995;('save', 'calculate protocol', 'save');4
+Sequence;1995;('save', 'calculate protocol', 'calculate protocol');8
+Sequence;1995;('finish editing', 'begin editing', 'calculate protocol');7
+Sequence;1995;('calculate protocol', 'save', 'save');5
+Sequence;1995;('calculate protocol', 'save', 'calculate protocol');9
+Sequence;1995;('finish editing', 'revoke decision', 'begin editing');4
+Sequence;1995;('calculate', 'prepare offline', 'calculate');3
+Sequence;1995;('save', 'prepare external', 'begin preparations');4
+Sequence;1995;('save', 'save', 'prepare external');5
+Sequence;1995;('mail income', 'initialize', 'plan');10
+Sequence;1995;('calculate', 'performed offline', 'calculate');5
+Sequence;1995;('calculate', 'finish editing', 'finish payment');11
+Sequence;1995;('save', 'finish editing', 'abort external');39
+Sequence;1995;('calculate', 'calculate', 'create');5
+Sequence;1995;('change department', 'initialize', 'performed');3
+Sequence;1995;('change department', 'begin editing', 'calculate');3
+Sequence;1995;('change department', 'change department', 'initialize');4
+Sequence;1995;('begin editing', 'initialize', 'initialize');6
+Sequence;1995;('save', 'begin editing', 'calculate protocol');11
+Sequence;1995;('calculate', 'begin editing', 'finish pre-check');16
+Sequence;1995;('begin editing', 'discard', 'insert document');4
+Sequence;1995;('begin preparations', 'begin editing', 'insert document');6
+Sequence;1995;('insert document', 'finish payment', 'remove document');3
+Sequence;1995;('finish preparations', 'begin editing', 'calculate');3
+Sequence;1995;('save', 'begin editing', 'create');3
+Sequence;1995;('prepare external', 'finish preparations', 'save');4
+Sequence;1995;('finish editing', 'begin preparations', 'prepare external');5
+Sequence;1995;('calculate', 'finish editing', 'begin preparations');9
+Sequence;1995;('calculate', 'finish editing', 'clear');7
+Sequence;1995;('begin preparations', 'calculate', 'finish editing');8
+Sequence;1995;('finish editing', 'prepare offline', 'cancel offline');3
+Sequence;1995;('calculate', 'finish editing', 'prepare offline');12
+Sequence;1995;('finish editing', 'restart editing', 'insert document');5
+Sequence;1995;('finish editing', 'mail income', 'initialize');4
+Sequence;1995;('finish pre-check', 'finish editing', 'initialize');4278
+Sequence;1995;('calculate', 'begin editing', 'discard');12
+Sequence;1995;('begin editing', 'discard', 'save');14
+Sequence;1995;('discard', 'save', 'finish editing');4
+Sequence;1995;('insert document', 'save', 'restart editing');5
+Sequence;1995;('plan', 'finish preparations', 'calculate');7
+Sequence;1995;('performed offline', 'save', 'calculate');10
+Sequence;1995;('begin editing', 'finish pre-check', 'begin editing');10
+Sequence;1995;('finish pre-check', 'begin editing', 'finish pre-check');21
+Sequence;1995;('finish editing', 'begin editing', 'discard');5
+Sequence;1995;('discard', 'calculate', 'finish editing');7
+Sequence;1995;('finish pre-check', 'finish editing', 'revoke decision');3
+Sequence;1995;('restart editing', 'restart editing', 'insert document');5
+Sequence;1995;('finish editing', 'calculate', 'finish pre-check');127
+Sequence;1995;('insert document', 'finish pre-check', 'finish editing');7
+Sequence;1995;('begin editing', 'insert document', 'finish pre-check');9
+Sequence;1995;('plan', 'finish preparations', 'begin editing');7
+Sequence;1995;('prepare external', 'save', 'calculate');7
+Sequence;1995;('finish preparations', 'begin editing', 'save');7
+Sequence;1995;('finish editing', 'calculate protocol', 'calculate protocol');7
+Sequence;1995;('begin preparations', 'calculate', 'calculate');4
+Sequence;1995;('calculate', 'calculate', 'prepare offline');4
+Sequence;1995;('discard', 'save', 'calculate');7
+Sequence;1995;('calculate', 'finish editing', 'begin payment');32
+Sequence;1995;('calculate', 'finish pre-check', 'restart editing');4
+Sequence;1995;('begin editing', 'finish editing', 'clear');520
+Sequence;1995;('finish editing', 'clear', 'create');80
+Sequence;1995;('calculate protocol', 'calculate protocol', 'finish editing');6
+Sequence;1995;('finish payment', 'restart editing', 'insert document');5
+Sequence;1995;('finish editing', 'insert document', 'finish payment');6
+Sequence;1995;('begin editing', 'save', 'discard');3
+Sequence;1995;('initialize', 'create', 'begin editing');19
+Sequence;1995;('begin editing', 'initialize', 'create');11
+Sequence;1995;('withdraw', 'withdraw', 'withdraw');4
+Sequence;1995;('begin editing', 'finish editing', 'performed offline');4
+Sequence;1995;('discard', 'calculate', 'finish pre-check');3
+Sequence;1995;('calculate', 'clear', 'create');3
+Sequence;1995;('clear', 'create', 'calculate');59
+Sequence;1995;('begin editing', 'finish pre-check', 'calculate');18
+Sequence;1995;('finish pre-check', 'finish pre-check', 'calculate');23
+Sequence;1995;('save', 'finish pre-check', 'finish pre-check');84
+Sequence;1995;('finish pre-check', 'finish pre-check', 'finish pre-check');44
+Sequence;1995;('calculate', 'begin preparations', 'save');4
+Sequence;1995;('calculate', 'finish preparations', 'finish preparations');3
+Sequence;1995;('abort payment', 'begin editing', 'save');3
+Sequence;1995;('performed', 'begin editing', 'discard');4
+Sequence;1995;('prepare offline', 'cancel offline', 'calculate');3
+Sequence;1995;('performed offline', 'begin editing', 'insert document');6
+Sequence;1995;('calculate', 'restart editing', 'finish editing');4
+Sequence;1995;('finish pre-check', 'calculate', 'save');37
+Sequence;1995;('finish editing', 'begin editing', 'restart editing');3
+Sequence;1995;('save', 'finish pre-check', 'begin editing');34
+Sequence;1995;('finish pre-check', 'begin editing', 'save');29
+Sequence;1995;('save', 'restart editing', 'calculate');5
+Sequence;1995;('finish editing', 'mail valid', 'mail income');3
+Sequence;1995;('begin preparations', 'plan', 'initialize');5
+Sequence;1995;('prepare external', 'begin preparations', 'plan');5
+Sequence;1995;('save', 'begin payment', 'begin editing');3
+Sequence;1995;('restart editing', 'finish editing', 'insert document');6
+Sequence;1995;('prepare offline', 'begin editing', 'insert document');3
+Sequence;1995;('create', 'finish editing', 'calculate');6
+Sequence;1995;('finish pre-check', 'save', 'calculate');298
+Sequence;1995;('calculate', 'calculate protocol', 'calculate protocol');3
+Sequence;1995;('begin editing', 'save', 'begin preparations');5
+Sequence;1995;('prepare offline', 'calculate', 'finish editing');13
+Sequence;1995;('save', 'clear', 'create');3
+Sequence;1995;('save', 'finish preparations', 'calculate');6
+Sequence;1995;('create', 'finish editing', 'begin editing');62
+Sequence;1995;('insert document', 'begin payment', 'begin editing');3
+Sequence;1995;('calculate', 'calculate', 'performed offline');5
+Sequence;1995;('save', 'finish editing', 'calculate protocol');3
+Sequence;1995;('begin preparations', 'save', 'calculate');3
+Sequence;1995;('finish pre-check', 'save', 'save');197
+Sequence;1995;('abort external', 'performed', 'save');5
+Sequence;1995;('prepare external', 'abort external', 'performed');5
+Sequence;1995;('calculate', 'finish editing', 'calculate protocol');3
+Sequence;1995;('calculate', 'finish pre-check', 'finish pre-check');43
+Sequence;1995;('finish pre-check', 'finish pre-check', 'save');159
+Sequence;1995;('prepare external', 'begin preparations', 'begin editing');6
+Sequence;1995;('calculate', 'finish pre-check', 'begin editing');18
+Sequence;1995;('begin editing', 'finish pre-check', 'finish pre-check');3
+Sequence;1995;('begin preparations', 'begin editing', 'save');7
+Sequence;1995;('insert document', 'finish editing', 'finish editing');4
+Sequence;1995;('finish preparations', 'calculate', 'finish editing');4
+Sequence;1995;('finish editing', 'cancel offline', 'prepare offline');3
+Sequence;1995;('create', 'finish editing', 'save');93
+Sequence;1995;('calculate', 'finish editing', 'abort external');35
+Sequence;1995;('create', 'finish editing', 'insert document');14
+Sequence;1995;('finish editing', 'finish preparations', 'begin editing');4
+Sequence;1995;('create', 'clear', 'create');383
+Sequence;1995;('finish editing', 'create', 'clear');1856
+Sequence;1995;('clear', 'create', 'clear');218
+Sequence;1995;('create', 'finish pre-check', 'save');317
+Sequence;1995;('clear', 'create', 'finish pre-check');90
+Sequence;1995;('initialize', 'begin editing', 'finish pre-check');11020
+Sequence;1995;('begin editing', 'finish pre-check', 'initialize');6156
+Sequence;1995;('create', 'clear', 'begin editing');1739
+Sequence;1995;('clear', 'begin editing', 'finish pre-check');341
+Sequence;1995;('finish pre-check', 'create', 'clear');259
+Sequence;1995;('begin editing', 'finish pre-check', 'create');1114
+Sequence;1995;('finish pre-check', 'initialize', 'begin editing');6127
+Sequence;1995;('finish editing', 'create', 'finish editing');277
+Sequence;1995;('create', 'begin editing', 'finish pre-check');199
+Sequence;1995;('finish pre-check', 'create', 'save');265
+Sequence;1995;('finish pre-check', 'create', 'begin editing');142
+Sequence;1995;('finish editing', 'create', 'mail income');280
+Sequence;1995;('create', 'mail income', 'clear');101
+Sequence;1995;('mail income', 'clear', 'begin editing');100
+Sequence;1995;('create', 'calculate', 'insert document');11
+Sequence;1995;('finish pre-check', 'create', 'calculate');94
+Sequence;1995;('create', 'begin editing', 'begin editing');701
+Sequence;1995;('finish pre-check', 'create', 'initialize');565
+Sequence;1995;('create', 'mail income', 'begin editing');127
+Sequence;1995;('mail income', 'begin editing', 'begin editing');143
+Sequence;1995;('finish editing', 'finish pre-check', 'finish editing');187
+Sequence;1995;('begin editing', 'finish editing', 'finish pre-check');287
+Sequence;1995;('finish editing', 'take original document', 'begin editing');362
+Sequence;1995;('calculate', 'finish editing', 'take original document');371
+Sequence;1995;('finish editing', 'save', 'finish pre-check');130
+Sequence;1995;('clear', 'create', 'create');12
+Sequence;1995;('create', 'calculate', 'finish pre-check');387
+Sequence;1995;('clear', 'begin editing', 'begin editing');1553
+Sequence;1995;('finish editing', 'mail income', 'create');36
+Sequence;1995;('mail income', 'create', 'save');84
+Sequence;1995;('create', 'save', 'finish pre-check');554
+Sequence;1995;('finish editing', 'create', 'finish pre-check');512
+Sequence;1995;('finish pre-check', 'create', 'finish editing');100
+Sequence;1995;('create', 'finish editing', 'initialize');163
+Sequence;1995;('finish pre-check', 'finish editing', 'finish preparations');89
+Sequence;1995;('begin editing', 'begin editing', 'create');286
+Sequence;1995;('finish pre-check', 'create', 'insert document');67
+Sequence;1995;('finish editing', 'finish pre-check', 'save');78
+Sequence;1995;('initialize', 'performed', 'finish pre-check');6
+Sequence;1995;('performed', 'finish pre-check', 'finish editing');5
+Sequence;1995;('prepare external', 'begin editing', 'save');55
+Sequence;1995;('begin preparations', 'prepare external', 'begin editing');103
+Sequence;1995;('finish pre-check', 'create', 'plan');8
+Sequence;1995;('insert document', 'insert document', 'abort payment');6
+Sequence;1995;('save', 'finish pre-check', 'insert document');28
+Sequence;1995;('begin editing', 'create', 'finish pre-check');118
+Sequence;1995;('create', 'finish pre-check', 'calculate');38
+Sequence;1995;('create', 'begin editing', 'insert document');203
+Sequence;1995;('calculate', 'take original document', 'begin editing');46
+Sequence;1995;('finish editing', 'mail income', 'begin editing');56
+Sequence;1995;('finish editing', 'mail income', 'clear');28
+Sequence;1995;('clear', 'create', 'plan');3
+Sequence;1995;('take original document', 'begin editing', 'save');5
+Sequence;1995;('create', 'finish pre-check', 'finish editing');409
+Sequence;1995;('create', 'finish pre-check', 'finish pre-check');55
+Sequence;1995;('create', 'finish pre-check', 'create');12
+Sequence;1995;('create', 'create', 'finish pre-check');92
+Sequence;1995;('create', 'create', 'clear');52
+Sequence;1995;('mail income', 'create', 'create');11
+Sequence;1995;('create', 'mail income', 'create');112
+Sequence;1995;('mail income', 'create', 'finish pre-check');23
+Sequence;1995;('mail valid', 'clear', 'begin editing');6
+Sequence;1995;('mail valid', 'mail valid', 'clear');3
+Sequence;1995;('prepare external', 'begin editing', 'begin editing');31
+Sequence;1995;('finish pre-check', 'finish editing', 'abort external');36
+Sequence;1995;('begin editing', 'create', 'clear');70
+Sequence;1995;('revoke decision', 'begin editing', 'insert document');8
+Sequence;1995;('mail income', 'begin editing', 'finish pre-check');57
+Sequence;1995;('finish pre-check', 'initialize', 'create');7
+Sequence;1995;('insert document', 'finish pre-check', 'save');6
+Sequence;1995;('take original document', 'begin payment', 'insert document');132
+Sequence;1995;('create', 'finish editing', 'clear');30
+Sequence;1995;('begin preparations', 'prepare external', 'calculate');25
+Sequence;1995;('initialize', 'save', 'finish pre-check');5
+Sequence;1995;('clear', 'finish pre-check', 'create');4
+Sequence;1995;('create', 'clear', 'finish pre-check');13
+Sequence;1995;('finish editing', 'finish pre-check', 'create');6
+Sequence;1995;('finish pre-check', 'calculate', 'begin editing');7
+Sequence;1995;('finish pre-check', 'finish pre-check', 'insert document');10
+Sequence;1995;('finish pre-check', 'initialize', 'calculate');3
+Sequence;1995;('finish pre-check', 'finish pre-check', 'initialize');3
+Sequence;1995;('mail income', 'create', 'calculate');18
+Sequence;1995;('finish editing', 'finish pre-check', 'finish pre-check');17
+Sequence;1995;('create', 'create', 'mail income');18
+Sequence;1995;('save', 'finish pre-check', 'initialize');18
+Sequence;1995;('finish pre-check', 'initialize', 'plan');5
+Sequence;1995;('performed', 'begin editing', 'finish pre-check');9
+Sequence;1995;('create', 'calculate', 'begin editing');4
+Sequence;1995;('finish pre-check', 'create', 'mail income');29
+Sequence;1995;('finish pre-check', 'begin editing', 'insert document');11
+Sequence;1995;('mail income', 'clear', 'create');29
+Sequence;1995;('performed', 'mail income', 'begin editing');18
+Sequence;1995;('initialize', 'performed', 'mail income');18
+Sequence;1995;('begin editing', 'create', 'mail income');15
+Sequence;1995;('insert document', 'begin editing', 'finish pre-check');3
+Sequence;1995;('mail valid', 'clear', 'create');3
+Sequence;1995;('mail income', 'mail valid', 'clear');3
+Sequence;1995;('prepare external', 'plan', 'initialize');6
+Sequence;1995;('begin preparations', 'prepare external', 'plan');6
+Sequence;1995;('begin editing', 'insert document', 'remove document');7
+Sequence;1995;('clear', 'finish pre-check', 'finish editing');12
+Sequence;1995;('finish editing', 'create', 'mail valid');4
+Sequence;1995;('create', 'finish editing', 'finish editing');17
+Sequence;1995;('insert document', 'initialize', 'performed');13
+Sequence;1995;('begin editing', 'finish pre-check', 'insert document');5
+Sequence;1995;('clear', 'create', 'insert document');3
+Sequence;1995;('finish pre-check', 'initialize', 'finish editing');24
+Sequence;1995;('finish pre-check', 'initialize', 'performed');16
+Sequence;1995;('prepare external', 'save', 'finish pre-check');13
+Sequence;1995;('save', 'begin preparations', 'abort external');4
+Sequence;1995;('prepare offline', 'initialize', 'calculate');5
+Sequence;1995;('finish pre-check', 'save', 'begin editing');6
+Sequence;1995;('save', 'correction GFM17', 'calculate');3
+Sequence;1995;('correction GFM17', 'calculate', 'finish pre-check');10
+Sequence;1995;('plan', 'initialize', 'performed');5
+Sequence;1995;('save', 'create', 'save');4
+Sequence;1995;('save', 'save', 'create');3
+Sequence;1995;('create', 'mail income', 'initialize');3
+Sequence;1995;('save', 'finish pre-check', 'create');3
+Sequence;1995;('mail income', 'finish pre-check', 'finish editing');5
+Sequence;1995;('create', 'mail income', 'finish pre-check');8
+Sequence;1995;('take original document', 'decide', 'begin payment');4
+Sequence;1995;('finish editing', 'take original document', 'decide');4
+Sequence;1995;('finish editing', 'create', 'correction GFM17');3
+Sequence;1995;('create', 'correction GFM17', 'calculate');5
+Sequence;1995;('prepare external', 'begin editing', 'insert document');20
+Sequence;1995;('calculate', 'finish pre-check', 'initialize');7
+Sequence;1995;('create', 'mail income', 'save');4
+Sequence;1995;('mail income', 'save', 'finish pre-check');3
+Sequence;1995;('clear', 'create', 'mail income');17
+Sequence;1995;('initialize', 'calculate', 'finish preparations');15
+Sequence;1995;('clear', 'create', 'initialize');20
+Sequence;1995;('performed offline', 'abort external', 'finish preparations');10
+Sequence;1995;('save', 'performed offline', 'abort external');10
+Sequence;1995;('mail income', 'finish pre-check', 'create');9
+Sequence;1995;('prepare external', 'finish pre-check', 'finish editing');8
+Sequence;1995;('finish pre-check', 'clear', 'create');3
+Sequence;1995;('save', 'save', 'correction GFM17');3
+Sequence;1995;('create', 'insert document', 'calculate');4
+Sequence;1995;('finish editing', 'mail income', 'finish pre-check');6
+Sequence;1995;('begin preparations', 'save', 'finish pre-check');3
+Sequence;1995;('mail income', 'create', 'initialize');5
+Sequence;1995;('plan', 'begin editing', 'save');3
+Sequence;1995;('save', 'insert document', 'finish pre-check');3
+Sequence;1995;('initialize', 'calculate', 'initialize');9
+Sequence;1995;('prepare external', 'calculate', 'finish pre-check');14
+Sequence;1995;('performed', 'save', 'finish pre-check');5
+Sequence;1995;('finish pre-check', 'finish editing', 'mail income');4
+Sequence;1995;('finish pre-check', 'initialize', 'save');4
+Sequence;1995;('calculate', 'begin admissibility check', 'begin editing');3
+Sequence;1995;('prepare offline', 'abort external', 'finish preparations');5
+Sequence;1995;('begin preparations', 'prepare offline', 'abort external');4
+Sequence;1995;('initialize', 'calculate', 'insert document');8
+Sequence;1995;('save', 'finish editing', 'finish pre-check');3
+Sequence;1995;('begin preparations', 'prepare external', 'finish pre-check');9
+Sequence;1995;('mail valid', 'begin editing', 'begin editing');5
+Sequence;1995;('finish pre-check', 'calculate', 'insert document');3
+Sequence;1995;('cancel offline', 'initialize', 'performed');3
+Sequence;1995;('finish pre-check', 'insert document', 'finish pre-check');4
+Sequence;1995;('insert document', 'calculate', 'finish pre-check');6
+Sequence;1995;('calculate protocol', 'begin editing', 'save');3
+Sequence;1995;('create', 'finish pre-check', 'insert document');4
+Sequence;1995;('create', 'mail income', 'mail valid');4
+Sequence;1995;('finish pre-check', 'finish editing', 'plan');3
+Sequence;1995;('begin preparations', 'prepare external', 'performed offline');3
+Sequence;1995;('prepare external', 'performed offline', 'save');3
+Sequence;1995;('save', 'decide', 'remove document');3
+Sequence;1995;('finish pre-check', 'finish preparations', 'begin preparations');4
+Sequence;1995;('calculate', 'finish pre-check', 'finish preparations');4
+Sequence;1995;('mail income', 'begin editing', 'create');3
+Sequence;1995;('finish pre-check', 'begin editing', 'calculate');4
