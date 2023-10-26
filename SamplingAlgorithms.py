@@ -309,15 +309,21 @@ class FeatureGuidedLogSampler(GuidedLogSampler):
         count = 0
         while sampled_trace is None or log[sampled_trace] in self.sample.traces:
             # choose a feature using distribtution
+            count += 1
             chosen_feature = self._choose_feature(distribution)
 
             # choose a trace from those that contain selected feature
             potential_traces = self.partitioned_log[chosen_feature]
-            if count >= len(potential_traces) * len(distribution):
-                return self.explore(log)
             sampled_trace = random.choice(potential_traces)
-            count += 1
 
+            if count > len(potential_traces) * len(distribution) * 2:
+                for feature in distribution.keys():
+                    for trace in self.partitioned_log[feature]:
+                        if log[trace] not in self.sample.traces:
+                            sampled_trace = trace
+                            return sampled_trace
+                return self.explore(log)
+            
         if self.verbose:
             print(" > " + str(log[sampled_trace]))
 
