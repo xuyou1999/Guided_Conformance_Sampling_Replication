@@ -276,11 +276,11 @@ def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=1
             total_t = time.time() - start_t
             print(" > " + str(str(total_t)))
 
-            runtime_results.write(";".join("complete;" + str(total_t) + "\n",
+            runtime_results.write(";".join("complete" + str(total_t) + "\n",
                                            ))
         else:
             print(" > TIMEOUT REACHED")
-            runtime_results.write(";".join("complete;>" + str(timeout) + "\n",
+            runtime_results.write(";".join("complete", ">" + str(timeout) + "\n",
                                            ))
     runtime_results.close()
 
