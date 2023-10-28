@@ -29,9 +29,9 @@ def main():
     for log_name in log_names:
         log, model, initial_marking, final_marking = load_inputs(log_name, modelpath="models")
 
-        eval_partitions(log, log_name)
-        eval_quality(log, log_name, model, initial_marking, final_marking)
-        # eval_runtime(log, log_name, model, initial_marking, final_marking)
+        # eval_partitions(log, log_name)
+        # eval_quality(log, log_name, model, initial_marking, final_marking)
+        eval_runtime(log, log_name, model, initial_marking, final_marking)
 
 
 def eval_partitions(log, log_name):
@@ -232,7 +232,7 @@ def jaccard_sim(s, t):
 
 # evaluates total runtime of alignment calculations on increasing sample sizes until either one run exceeds timeout or
 # complete log has been considered
-def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=10800):
+def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=2700):
     """
     For a given log and model, samples n traces, constructing alignments for newly sampled trace variants, until
     n trace have been sampled, or a timeout is reached. Results are written to alignment_runtime_<log_name>.csv
@@ -244,7 +244,8 @@ def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=1
     timeout_reached = False
     mean_runtime = 0
     for sample_size in samples_sizes:
-        for i in range(10):
+        # for i in range(10):
+        for i in range(repetitions):
             print("Runtime Evaluation: " + str(log_name) + " : " + str(
                 sample_size) + " : " + str(i))
 
@@ -270,7 +271,8 @@ def eval_runtime(log, log_name, model, initial_marking, final_marking, timeout=1
                 runtime_results.write(";".join((str(sample_size), ">" + str(timeout) + "\n",
                                                 )))
 
-    for i in range(10):
+    # for i in range(10):
+    for i in range(repetitions):
         if (not timeout_reached) and mean_runtime * len(log) < timeout:
             print(f" > FULL LOG ANALYSIS (Expected time={mean_runtime * len(log)})")
             start_t = time.time()
