@@ -16,10 +16,11 @@ from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler
     LongestTraceVariantLogSampler
 
 # EVALUATION PARAMETER #
-log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
+# log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
+log_names = ["BPI_Challenge_2018.xes"]
 approaches = ["Random", "Longest", "Feature", "Sequence"]
 samples_sizes = [100, 200, 300, 400, 500]
-repetitions = 10
+repetitions = 2
 # cached_alignments = True
 cached_alignments = False
 
@@ -30,7 +31,7 @@ def main():
 
         eval_partitions(log, log_name)
         eval_quality(log, log_name, model, initial_marking, final_marking)
-        eval_runtime(log, log_name, model, initial_marking, final_marking)
+        # eval_runtime(log, log_name, model, initial_marking, final_marking)
 
 
 def eval_partitions(log, log_name):
@@ -151,6 +152,7 @@ def eval_quality(log, log_name, model, initial_marking, final_marking):
 
                 print(" > " + str(sample.times["partitioning"]) + ", " + str(sample.times["alignment"]) + ", "
                       + str(sample.times["sampling"]))
+                print(str(sample.trace_deviations), str(sample.total_deviations))
                 fitness_results.write(
                     ";".join((str(approach), str(sample_size), str(i), str(len(trace_variants)),
                               str(sample.trace_deviations), str(sample.total_deviations),
