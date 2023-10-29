@@ -20,7 +20,7 @@ from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler
 log_names = ["BPI_Challenge_2018.xes"]
 approaches = ["Random", "Longest", "Feature", "Sequence"]
 samples_sizes = [100, 200, 300, 400, 500]
-repetitions = 2
+repetitions = 3
 # cached_alignments = True
 cached_alignments = False
 
@@ -30,8 +30,8 @@ def main():
         log, model, initial_marking, final_marking = load_inputs(log_name, modelpath="models")
 
         # eval_partitions(log, log_name)
-        # eval_quality(log, log_name, model, initial_marking, final_marking)
-        eval_runtime(log, log_name, model, initial_marking, final_marking)
+        eval_quality(log, log_name, model, initial_marking, final_marking)
+        # eval_runtime(log, log_name, model, initial_marking, final_marking)
 
 
 def eval_partitions(log, log_name):
