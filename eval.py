@@ -30,8 +30,8 @@ def main():
         log, model, initial_marking, final_marking = load_inputs(log_name, modelpath="models")
 
         # eval_partitions(log, log_name)
-        eval_quality(log, log_name, model, initial_marking, final_marking)
-        # eval_runtime(log, log_name, model, initial_marking, final_marking)
+        # eval_quality(log, log_name, model, initial_marking, final_marking)
+        eval_runtime(log, log_name, model, initial_marking, final_marking)
 
 
 def eval_partitions(log, log_name):
