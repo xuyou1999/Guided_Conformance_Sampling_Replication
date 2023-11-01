@@ -7,7 +7,7 @@ paper/main.pdf
 *.synctex.gz
 *.idea
 *__pycache__/
-models/*
+# models/*
 logs/*
 local/
 venv/
