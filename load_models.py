@@ -13,7 +13,10 @@ def load_inputs(log_name, modelpath=None):
     log = xes_importer.apply(os.path.join("logs", log_name))
     if modelpath is None or not os.path.exists(os.path.join(str(modelpath), str(log_name) + ".pnml")):
         print("Model Discovery for log " + log_name)
-        model, initial_marking, final_marking = pm4py.discover_petri_net_inductive(log, noise_threshold=0.2)
+        if log_name == "BPI_Challenge_2012.xes":
+            model, initial_marking, final_marking = pm4py.discover_petri_net_alpha(log, noise_threshold=0.3)
+        else:
+            model, initial_marking, final_marking = pm4py.discover_petri_net_inductive(log, noise_threshold=0.2)
         pnml_exporter.apply(model, initial_marking, os.path.join(str(modelpath), str(log_name) + ".pnml"),
                             final_marking=final_marking)
     print("Done")
