@@ -17,10 +17,10 @@ from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler
 
 # EVALUATION PARAMETER #
 # log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
-log_names = ["BPI_Challenge_2012.xes"]
+log_names = ["BPI_Challenge_2018.xes"]
 approaches = ["Random", "Longest", "Feature", "Sequence"]
 samples_sizes = [100, 200, 300, 400, 500]
-repetitions = 10
+repetitions = 5
 # cached_alignments = True
 cached_alignments = False
 
@@ -29,7 +29,7 @@ def main():
     for log_name in log_names:
         log, model, initial_marking, final_marking = load_inputs(log_name, modelpath="models")
 
-        eval_partitions(log, log_name)
+        # eval_partitions(log, log_name)
         eval_quality(log, log_name, model, initial_marking, final_marking)
         eval_runtime(log, log_name, model, initial_marking, final_marking)
 
