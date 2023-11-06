@@ -16,11 +16,10 @@ from SamplingAlgorithms import FeatureGuidedLogSampler, SequenceGuidedLogSampler
     LongestTraceVariantLogSampler
 
 # EVALUATION PARAMETER #
-# log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
-log_names = ["BPI_Challenge_2018.xes"]
+log_names = ["Sepsis_Cases_-_Event_Log.xes", "BPI_Challenge_2012.xes", "BPI_Challenge_2018.xes"]
 approaches = ["Random", "Longest", "Feature", "Sequence"]
 samples_sizes = [100, 200, 300, 400, 500]
-repetitions = 5
+repetitions = 10
 # cached_alignments = True
 cached_alignments = False
 
